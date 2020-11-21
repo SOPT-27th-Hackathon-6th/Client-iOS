@@ -250,10 +250,19 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 {
                 case .success(_):
                     
-                    
-                    self.titleTopLabel.text = "이번달 마라 먹은지"
-                    self.titleBottomLabel.text = "벌써 4일"
-                    self.subtitleBottomLabel.text = "이나 됐다"
+                    if isMara == true
+                    {
+                        self.titleTopLabel.text = "오늘... 마라에 빠져버리고"
+                        self.titleBottomLabel.text = "마라탕"
+                        self.subtitleBottomLabel.text = ""
+                    }
+                    else
+                    {
+                        self.titleTopLabel.text = "뜨끈하고 든든한"
+                        self.titleBottomLabel.text = "국밥"
+                        self.subtitleBottomLabel.text = "을 먹어버렸다.."
+                    }
+
                     
                     self.present(confirmVC, animated: true, completion: nil)
 
