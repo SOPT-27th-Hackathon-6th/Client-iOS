@@ -261,6 +261,7 @@
                         <outlet property="maraImageView" destination="ocq-x1-ypu" id="7k9-Y8-Pjc"/>
                         <outlet property="maraLabel" destination="Npb-8K-AFD" id="DAG-Sl-kJL"/>
                         <outlet property="stampCollectionView" destination="jwa-X3-az7" id="1EX-AJ-HXi"/>
+                        <outlet property="subtitleBottomLabel" destination="WzA-1T-SW3" id="baO-lI-vJx"/>
                         <outlet property="titleBottomLabel" destination="YmY-r9-Gle" id="iVA-aY-Buy"/>
                         <outlet property="titleTopLabel" destination="5f3-33-hoC" id="ftD-rb-QV1"/>
                     </connections>

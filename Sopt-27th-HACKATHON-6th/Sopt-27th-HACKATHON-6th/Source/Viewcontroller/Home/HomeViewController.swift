@@ -32,6 +32,10 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     @IBOutlet weak var titleTopLabel: UILabel!
     @IBOutlet weak var titleBottomLabel: UILabel!
+    @IBOutlet weak var subtitleBottomLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var stampCollectionView: UICollectionView! // 스탬프가 들어가는 전체 콜렉션 뷰
     @IBOutlet weak var currentPageController: UIPageControl!
     // 현재 페이지가 어딘지 나타내는 pageControl
@@ -51,6 +55,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     var gukbabCount : Int = 0
     
     
+    
+    
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -64,6 +70,11 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultSetting()
+        
+        
+        titleTopLabel.text = "이번달 마라 먹은지"
+        titleBottomLabel.text = "벌써 4일"
+        subtitleBottomLabel.text = "이나 됐다"
         
 
 
@@ -232,10 +243,17 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 isMara = true
             }
             
+            //할까말까 했을때는
+            //마라
             AddStampService.shared.addStamp(isMara: isMara) { (result) in
                 switch(result)
                 {
                 case .success(_):
+                    
+                    
+                    self.titleTopLabel.text = "이번달 마라 먹은지"
+                    self.titleBottomLabel.text = "벌써 4일"
+                    self.subtitleBottomLabel.text = "이나 됐다"
                     
                     self.present(confirmVC, animated: true, completion: nil)
 
