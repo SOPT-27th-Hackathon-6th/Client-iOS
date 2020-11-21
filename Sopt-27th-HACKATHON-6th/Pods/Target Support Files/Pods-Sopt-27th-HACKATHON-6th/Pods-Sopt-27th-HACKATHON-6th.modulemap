@@ -1,0 +1,6 @@
+framework module Pods_Sopt_27th_HACKATHON_6th {
+  umbrella header "Pods-Sopt-27th-HACKATHON-6th-umbrella.h"
+
+  export *
+  module * { export * }
+}

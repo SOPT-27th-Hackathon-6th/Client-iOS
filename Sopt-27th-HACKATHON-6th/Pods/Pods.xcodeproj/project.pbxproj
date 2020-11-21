@@ -59,6 +59,7 @@
 		338366E6762002CDF447808FD6E7AB86 /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032550D502FCA69DC071D383217E4D89 /* InterpolatableExtensions.swift */; };
 		33C7935FAFF578A13D784DA2A3528E82 /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4EC9DAE5AC2C4EA36854157E502ED /* GradientFillNode.swift */; };
 		3444CE0C0F13606121BF559011C4C662 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBADE61C1EDB0DDFCBD9A1621B741C1 /* RedirectHandler.swift */; };
+		36AA2A23BB8B4708DD11FD04CC3AE5EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93B89B4A289CE40673582EAB3EEABF /* Foundation.framework */; };
 		3803EDA965588719CA8C54F9B13E997F /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48108A98665C877158C7C0A84AFCB7CB /* GroupNode.swift */; };
 		381FF05F8B4F611EE9C2FDBE4457BB89 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56A193BFA64C2FFB8E450E737854D68 /* SessionDelegate.swift */; };
 		3AB381D0AE115FF6FD925F521872976E /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0E7A22BA5AF0CCC5CE161063AD105A /* ImageCompositionLayer.swift */; };
@@ -81,7 +82,7 @@
 		518C88703149A2FCCB23D4DA0C7F13D6 /* RetryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6E8E98F1591D633F6340D0B090F213 /* RetryStrategy.swift */; };
 		51AE4EA704D96E54347A8479EE186E39 /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55498B3C2937674AA35EFF186EFCEA90 /* ImageDataProvider.swift */; };
 		521ECD5380E7E443AFB3C2A566D79250 /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2DCC15871DFAC23AA495AED9D34F96 /* ImageDataProcessor.swift */; };
-		52413AD2C88D425BC620B113F8331F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93B89B4A289CE40673582EAB3EEABF /* Foundation.framework */; };
+		5227345712778AD2126BFC2ADEBFFDCA /* Pods-Sopt-27th-HACKATHON-6th-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C57E448ABD7702D039A605D43765A79C /* Pods-Sopt-27th-HACKATHON-6th-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		530DCDE9EF6CADD6AEAAAD2978C6C6BF /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DFBF683C2D9FC350CCBA439D9C9AB /* AnyValueProvider.swift */; };
 		5323BB7033DDFBB8DF91A570B47E37F4 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26EE05D7E42D4BACEA9D230924D4C9 /* Mask.swift */; };
 		5429E317969AAD6CFD490D60443CB9B3 /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0812566ED99B5C894D1E0602F07746C4 /* BundleImageProvider.swift */; };
@@ -165,7 +166,6 @@
 		AC0AB63D4857B7BE72409748962ED419 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A00BCF42B9EF0EFD005DD4100A25B9 /* Merge.swift */; };
 		AD50648805D42A29B7130FEB8278FC77 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0B0901A3E40E6D4226DE20C7DDB9B /* Source.swift */; };
 		B031E191E7D54FBED9ED1B5DAE63EA32 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E35004713A1D41CF43A8AF46E660E11 /* ImagePrefetcher.swift */; };
-		B08DE53209D223FCF9C163CED150DB26 /* Pods-SOPT-27th-HACKATHON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 479358A5904B9D1429C12E5120A0D409 /* Pods-SOPT-27th-HACKATHON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B12033FCEF029B8D2F8BFC8AC5F9F336 /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85385C3A4C5601DA746DA55419974697 /* CompositionLayersInitializer.swift */; };
 		B18ED58C8DF81C079B5015D356A49817 /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBE9ED303413063FFE4A5B58F38950 /* SolidLayerModel.swift */; };
 		B1D7B4A10BD29854A979065125CD2BB7 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885C8DC1C66EB2AA5E1DC6CCA9D4641 /* Trim.swift */; };
@@ -208,7 +208,6 @@
 		DB64698482B57470F644E7A916619EE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93B89B4A289CE40673582EAB3EEABF /* Foundation.framework */; };
 		DB8CB26680625363B4223412D88C3041 /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2E0684D6FE92E34AAE972737D2EBA /* AnimationSubview.swift */; };
 		DC627AFC5B585686898B014184AFCABD /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B062850FF0662B5ACE63FDAD36CE8 /* AuthenticationInterceptor.swift */; };
-		DD24C6375BF100F03875E579994930A4 /* Pods-SOPT-27th-HACKATHON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D85BEB78A01B4BBEA5EC05D98E348 /* Pods-SOPT-27th-HACKATHON-dummy.m */; };
 		DE66E6F35287CBE5875652B44E5DB76E /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DB00F5763970E5466BF8515CCF188 /* AnyValueContainer.swift */; };
 		DF4BF92C8C1919D42C17B5128D243FD2 /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912CF31829284ECB4769B31A41E612BA /* WKInterfaceImage+Kingfisher.swift */; };
 		DF75937FFEF23A62DBDE3B7632BCD1C4 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB277961226AC70C1B00C21FADA6C59 /* lottie-ios-dummy.m */; };
@@ -239,6 +238,7 @@
 		F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE053E0EF647885A21A72F82CAC92E /* URLSessionConfiguration+Alamofire.swift */; };
 		F734F4F307A445DC8CDD50ED2FBDD8CC /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2D2698F2C95CC4F98E461D503E22C /* AnimationPublic.swift */; };
 		F79C6CF75F09D963BC5B8C2C9680D862 /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2044458EB2CE1CDF56A5EC30E9EAB2E /* NodePropertyMap.swift */; };
+		F7C592148BB9053A1A606DDA4A0E057A /* Pods-Sopt-27th-HACKATHON-6th-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A21917FCD9F74BAE9D61C4F0A3119F75 /* Pods-Sopt-27th-HACKATHON-6th-dummy.m */; };
 		FA6BCAE8F1D4B6B2376C0FC7E40D57F5 /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA1F7043A405DEA0F99849707C8F15 /* TrimPathNode.swift */; };
 		FCDF01F307B7D764C958133DDBB0B880 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11DE2A77598ABA34DDF5613A0DBD24F /* Storage.swift */; };
 		FEC9061C02A16F7449132B5407416BDA /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33AB876FF76EE12092456D84950B2E /* AnimationContainer.swift */; };
@@ -248,28 +248,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2BE0CBA122E5971140E887812F32F422 /* PBXContainerItemProxy */ = {
+		1E2AF1167D4BFFAF919953346D40DF3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0B967D7F8561D42493EE289EC8D450D1;
 			remoteInfo = "lottie-ios";
 		};
-		3B2B66770699EA22932D3A909ED5F107 /* PBXContainerItemProxy */ = {
+		82A2E9ADB3A0877584822D8CE7419088 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
 		};
-		52A30A7E846C1C8758F6B454B519885D /* PBXContainerItemProxy */ = {
+		9B8600EF6A4469BC0996A97C6869E0CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
 		};
-		7F65D23AC726DAA4CD26024C90354C02 /* PBXContainerItemProxy */ = {
+		CBCC475CE65E6D6D54190BBB77D499E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -324,12 +324,10 @@
 		1B26EE05D7E42D4BACEA9D230924D4C9 /* Mask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = "lottie-swift/src/Private/Model/Objects/Mask.swift"; sourceTree = "<group>"; };
 		1D777837C45933F0A9506BDC504E8568 /* AnimationTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTime.swift; path = "lottie-swift/src/Public/Primitives/AnimationTime.swift"; sourceTree = "<group>"; };
 		1E2DCC15871DFAC23AA495AED9D34F96 /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
-		1E849122678A978F9B97691AC2AEBB3B /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOPT-27th-HACKATHON.debug.xcconfig"; sourceTree = "<group>"; };
 		2131FF2AA2C01E5D9A193D7003905C42 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		21D1E76E49AC43E7EE88C07300EE7BF2 /* MaskContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskContainerLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/MaskContainerLayer.swift"; sourceTree = "<group>"; };
 		229B062850FF0662B5ACE63FDAD36CE8 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
 		2300AD69AB54EC10C8F31C2999C6A6EA /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
-		237CBBE963D9960FC0ABC451F93582CF /* Pods-SOPT-27th-HACKATHON-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SOPT-27th-HACKATHON-frameworks.sh"; sourceTree = "<group>"; };
 		23BEA14782C2CDD171941D20CDA4A3BC /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		23E0B0901A3E40E6D4226DE20C7DDB9B /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
 		2433E2CE4ACC52D3F1E76F733B704D2C /* AnimatedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedControl.swift; path = "lottie-swift/src/Public/iOS/AnimatedControl.swift"; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 		35028CF5BE80A4F524C2CD8FEF26FFC1 /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
 		3693F34AADC14CF333375DDA90255429 /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationKeypath.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationKeypath.swift"; sourceTree = "<group>"; };
 		3840ADEEA83120599F9EFE1A3F8DBCB8 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
-		3873ECDBA287ACD8BEE21598DE287DEE /* Pods-SOPT-27th-HACKATHON-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SOPT-27th-HACKATHON-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3AC9FFE36D8619D3B3DB451F4EA815AF /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
 		3ADDBD808F036DFA08ED9F9F02DC20A6 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		3BDC6175B5746A4F451B0AB252EFB0B8 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = "lottie-swift/src/Public/ImageProvider/AnimationImageProvider.swift"; sourceTree = "<group>"; };
@@ -370,12 +367,12 @@
 		418F1B957BC5F14082A096866F8A809B /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = "lottie-swift/src/Private/Utility/Extensions/AnimationKeypathExtension.swift"; sourceTree = "<group>"; };
 		43EBE9ED303413063FFE4A5B58F38950 /* SolidLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/SolidLayerModel.swift"; sourceTree = "<group>"; };
 		475E28C4490CD06C42CE6E416EA1C963 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
-		479358A5904B9D1429C12E5120A0D409 /* Pods-SOPT-27th-HACKATHON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SOPT-27th-HACKATHON-umbrella.h"; sourceTree = "<group>"; };
 		48108A98665C877158C7C0A84AFCB7CB /* GroupNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderContainers/GroupNode.swift"; sourceTree = "<group>"; };
 		4885C8DC1C66EB2AA5E1DC6CCA9D4641 /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Trim.swift"; sourceTree = "<group>"; };
 		49A601583084288EC70F2BAB4148DA7A /* Runtime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Utility/Runtime.swift; sourceTree = "<group>"; };
 		49BA1F7043A405DEA0F99849707C8F15 /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift"; sourceTree = "<group>"; };
 		4A591333E10128EE2DA1D0DC4E94601B /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		4B481E40ECB968DA6562BA5C9D0250E1 /* Pods_Sopt_27th_HACKATHON_6th.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sopt_27th_HACKATHON_6th.framework; path = "Pods-Sopt-27th-HACKATHON-6th.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4E139A91F183DD30B262BD07ED8346 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
 		4B86A5656CC5BDED988C330D1BFB3885 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
 		4BA6366EB021AF55116C5F6C216E7C1E /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
@@ -385,6 +382,7 @@
 		4CFF53EE16BF991208EEA1FA94D24D31 /* ColorValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/ColorValueProvider.swift"; sourceTree = "<group>"; };
 		4D59D058147C1C260F953582C70EFEB2 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
 		4D8BD6D3DB3D1B9D8CF11A155A0E9156 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		51795CADB37273AF493F12F327399FEB /* Pods-Sopt-27th-HACKATHON-6th-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sopt-27th-HACKATHON-6th-Info.plist"; sourceTree = "<group>"; };
 		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lottie.framework; path = "lottie-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CD852B15F732F471C124E10941CD3F /* StrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/StrokeRenderer.swift"; sourceTree = "<group>"; };
 		5233F26C8E510E92DB8F77E6482133B1 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
@@ -408,6 +406,7 @@
 		603CB5197DB1801FE7EA1D489BACD101 /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift"; sourceTree = "<group>"; };
 		60ADCA5186FE5693E7BA872F2BDCAE97 /* Asset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = "lottie-swift/src/Private/Model/Assets/Asset.swift"; sourceTree = "<group>"; };
 		63249FACDF8F52F95D906AD0C0859908 /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeResponsable.swift; path = Sources/Networking/AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
+		660DBC29218877E11D737FC80C594473 /* Pods-Sopt-27th-HACKATHON-6th.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sopt-27th-HACKATHON-6th.modulemap"; sourceTree = "<group>"; };
 		664D81FC007E247E8835F62B8D0CFEB7 /* AnimationTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTextProvider.swift; path = "lottie-swift/src/Public/TextProvider/AnimationTextProvider.swift"; sourceTree = "<group>"; };
 		687456C6A888A886AA10B621AF8B2DEE /* Star.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Star.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Star.swift"; sourceTree = "<group>"; };
 		6925CC56BFEA77831046BB21AEC4D3B0 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
@@ -429,9 +428,9 @@
 		7382B06932F9F9F246A3D3A35FD29ABC /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
 		740C389C10E5565B67F83381DA656AAA /* ShapeLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ShapeLayerModel.swift"; sourceTree = "<group>"; };
 		74B789FED7B77ED1575EF62DA638FC43 /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift"; sourceTree = "<group>"; };
+		7565801E5D20CBBE4EB046FFB44A327C /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		77B6275C69D580BF19779668C1535C77 /* TextAnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/Text/TextAnimatorNode.swift"; sourceTree = "<group>"; };
 		78486B94C695817D37B58304C2FD7899 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = "lottie-swift/src/Private/Model/Objects/Marker.swift"; sourceTree = "<group>"; };
-		788CE267E7225D45D8748B1CB9DEE458 /* Pods-SOPT-27th-HACKATHON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SOPT-27th-HACKATHON-Info.plist"; sourceTree = "<group>"; };
 		7B9D970946E537A4DBEFA2547214878D /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
 		7C9DB193F54763B774F2F7BE0B48EF25 /* NullCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NullCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/NullCompositionLayer.swift"; sourceTree = "<group>"; };
 		7CF46C4471FC434200D59B95440A636F /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
@@ -441,7 +440,6 @@
 		85385C3A4C5601DA746DA55419974697 /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayersInitializer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/CompositionLayersInitializer.swift"; sourceTree = "<group>"; };
 		85A5F6AFD4E8682AF2A7A44C418EF740 /* AnyNodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyNodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyNodeProperty.swift"; sourceTree = "<group>"; };
 		8842026C83EA9600D8AB528BD75A2B7F /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
-		8984607CFD092EA09FC301DDF59A2C7F /* Pods-SOPT-27th-HACKATHON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOPT-27th-HACKATHON.release.xcconfig"; sourceTree = "<group>"; };
 		8A63DF8F084E446504C402023588CD0C /* LayerImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerImageProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerImageProvider.swift"; sourceTree = "<group>"; };
 		8C7792C6C49933C7049DE1F46FCBF34A /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
 		8D3A9C46AC65E3FCEBDD9203C4ECCF53 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
@@ -471,7 +469,7 @@
 		A04DFB00FE2BA69D1500614FB4FDCF05 /* AVAssetImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVAssetImageDataProvider.swift; path = Sources/General/ImageSource/AVAssetImageDataProvider.swift; sourceTree = "<group>"; };
 		A04E9BAA9A6FA3F2B135CBB36BD234CF /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
 		A1A734D170ABCCABF2237687AFEBFD73 /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		A2E755B1175D882AE1EF4B7A9597294E /* Pods_SOPT_27th_HACKATHON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SOPT_27th_HACKATHON.framework; path = "Pods-SOPT-27th-HACKATHON.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21917FCD9F74BAE9D61C4F0A3119F75 /* Pods-Sopt-27th-HACKATHON-6th-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sopt-27th-HACKATHON-6th-dummy.m"; sourceTree = "<group>"; };
 		A2EB23479CCEC25899FAFA4511341532 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
 		A30F5285159BCC8917A5C1FD9829AAC8 /* FillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/FillNode.swift"; sourceTree = "<group>"; };
 		A4186796C81F0970E796DEC75D1E167C /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = "lottie-swift/src/Public/iOS/AnimatedSwitch.swift"; sourceTree = "<group>"; };
@@ -491,8 +489,8 @@
 		BFEAFCF8C68AABA1F97A6F7BB7D8DFEE /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		C15C1DDB8F43086E9FDDD6E9FBD744A7 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
 		C2361819C982354A72D9AB9F0BB09A36 /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTextProvider.swift"; sourceTree = "<group>"; };
-		C33D85BEB78A01B4BBEA5EC05D98E348 /* Pods-SOPT-27th-HACKATHON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SOPT-27th-HACKATHON-dummy.m"; sourceTree = "<group>"; };
 		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57E448ABD7702D039A605D43765A79C /* Pods-Sopt-27th-HACKATHON-6th-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sopt-27th-HACKATHON-6th-umbrella.h"; sourceTree = "<group>"; };
 		C924F8577F6BB64B8DA9B7771C9D659D /* FillI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillI.swift; path = "lottie-swift/src/Private/Model/ShapeItems/FillI.swift"; sourceTree = "<group>"; };
 		CA69F06AD0E9E7F606E63168D7A0A278 /* RectNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/RectNode.swift"; sourceTree = "<group>"; };
 		CD15A3CB30C24C930303F8333EC8A25B /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
@@ -524,6 +522,7 @@
 		E41A452B3A206356A04004CA453A36AC /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		E53AC9149A3CC94DF41773D72065C433 /* PreCompLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/PreCompLayerModel.swift"; sourceTree = "<group>"; };
 		E707B370EF423CF27475E3F52F7081F7 /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/PathNode.swift"; sourceTree = "<group>"; };
+		E861B3F40267B25E436A0B03593D3962 /* Pods-Sopt-27th-HACKATHON-6th-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sopt-27th-HACKATHON-6th-acknowledgements.plist"; sourceTree = "<group>"; };
 		EAC1F5A09A6503DE92E9B3BFF7870F2C /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/Interpolatable.swift"; sourceTree = "<group>"; };
 		EC12A073A944A91C79A6880A58671F6F /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		EDA69C26A7EC31A567F123767E6CF5D2 /* AnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypath.swift; path = "lottie-swift/src/Public/DynamicProperties/AnimationKeypath.swift"; sourceTree = "<group>"; };
@@ -531,14 +530,15 @@
 		EEB1F7D7DD510FD6EEC05D086111A9A0 /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
 		EEEFD3852B0012F87BFA7595AC887AE3 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
 		F11DE2A77598ABA34DDF5613A0DBD24F /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
+		F1BF7EB865C1B0BF94E3D7C16F4C7F0D /* Pods-Sopt-27th-HACKATHON-6th-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sopt-27th-HACKATHON-6th-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F1ED39F94A9539AB4BA0019B47C2A2F2 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		F29C8070C598ECAC8EFBAC9F3517EC84 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
-		F74132F370A860823A66328DA25CB435 /* Pods-SOPT-27th-HACKATHON-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SOPT-27th-HACKATHON-acknowledgements.plist"; sourceTree = "<group>"; };
+		F6962F086EA3F84080FCC2D8ACD271F2 /* Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig"; sourceTree = "<group>"; };
 		F75332958AEA532443816346ABB31DB1 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		F79D7784D8F630FD607773C4E9246955 /* Pods-SOPT-27th-HACKATHON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SOPT-27th-HACKATHON.modulemap"; sourceTree = "<group>"; };
 		F7B50810F8A997CC77AD588245A8BC6F /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift"; sourceTree = "<group>"; };
 		FCC2E0684D6FE92E34AAE972737D2EBA /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
 		FCCAAA21770624FCD7AE2FDFC79F74F5 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
+		FD3742930E09B67F660E2F8C17D17D4E /* Pods-Sopt-27th-HACKATHON-6th-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sopt-27th-HACKATHON-6th-frameworks.sh"; sourceTree = "<group>"; };
 		FD7AF050C7F66F9596DB3250B26EF760 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		FDD0695E875F8E3270FD70DAEB793526 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		FE2E9F4DA8EF196DDB9295847AB993C8 /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
@@ -548,11 +548,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C1C44C937DB2200D9B0D9E107831C09 /* Frameworks */ = {
+		0729E2F096B14B9A0245A83BB51B1C81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52413AD2C88D425BC620B113F8331F60 /* Foundation.framework in Frameworks */,
+				36AA2A23BB8B4708DD11FD04CC3AE5EE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,18 +708,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		6A6516F0B35AD5CBCD33329A360EF5A4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
-				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
-				A2E755B1175D882AE1EF4B7A9597294E /* Pods_SOPT_27th_HACKATHON.framework */,
-				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		773057C360D3C95BE482C7C2791B219E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,29 +723,16 @@
 			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		7BC6A206786D9BB77E4CF7922D8F00E6 /* Pods-SOPT-27th-HACKATHON */ = {
+		A73146AF12015E633B330D636DFA7AB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F79D7784D8F630FD607773C4E9246955 /* Pods-SOPT-27th-HACKATHON.modulemap */,
-				3873ECDBA287ACD8BEE21598DE287DEE /* Pods-SOPT-27th-HACKATHON-acknowledgements.markdown */,
-				F74132F370A860823A66328DA25CB435 /* Pods-SOPT-27th-HACKATHON-acknowledgements.plist */,
-				C33D85BEB78A01B4BBEA5EC05D98E348 /* Pods-SOPT-27th-HACKATHON-dummy.m */,
-				237CBBE963D9960FC0ABC451F93582CF /* Pods-SOPT-27th-HACKATHON-frameworks.sh */,
-				788CE267E7225D45D8748B1CB9DEE458 /* Pods-SOPT-27th-HACKATHON-Info.plist */,
-				479358A5904B9D1429C12E5120A0D409 /* Pods-SOPT-27th-HACKATHON-umbrella.h */,
-				1E849122678A978F9B97691AC2AEBB3B /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */,
-				8984607CFD092EA09FC301DDF59A2C7F /* Pods-SOPT-27th-HACKATHON.release.xcconfig */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
+				4B481E40ECB968DA6562BA5C9D0250E1 /* Pods_Sopt_27th_HACKATHON_6th.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
 			);
-			name = "Pods-SOPT-27th-HACKATHON";
-			path = "Target Support Files/Pods-SOPT-27th-HACKATHON";
-			sourceTree = "<group>";
-		};
-		898713548F10156BEA8308F3A3A21AF6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BC6A206786D9BB77E4CF7922D8F00E6 /* Pods-SOPT-27th-HACKATHON */,
-			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A838AF251CD9ABAE14AFBA9D24820223 /* Support Files */ = {
@@ -825,8 +800,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D68CA58901FBF589D75F5E40F1EAF5BA /* Frameworks */,
 				DE8DE712E9FE58A1A4ED94FE94CCC7A8 /* Pods */,
-				6A6516F0B35AD5CBCD33329A360EF5A4 /* Products */,
-				898713548F10156BEA8308F3A3A21AF6 /* Targets Support Files */,
+				A73146AF12015E633B330D636DFA7AB9 /* Products */,
+				F702C003B802C4DAC4F491A94A01D3C9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -838,6 +813,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB2507C8E348C3D16792E6C1F878DD5D /* Pods-Sopt-27th-HACKATHON-6th */ = {
+			isa = PBXGroup;
+			children = (
+				660DBC29218877E11D737FC80C594473 /* Pods-Sopt-27th-HACKATHON-6th.modulemap */,
+				F1BF7EB865C1B0BF94E3D7C16F4C7F0D /* Pods-Sopt-27th-HACKATHON-6th-acknowledgements.markdown */,
+				E861B3F40267B25E436A0B03593D3962 /* Pods-Sopt-27th-HACKATHON-6th-acknowledgements.plist */,
+				A21917FCD9F74BAE9D61C4F0A3119F75 /* Pods-Sopt-27th-HACKATHON-6th-dummy.m */,
+				FD3742930E09B67F660E2F8C17D17D4E /* Pods-Sopt-27th-HACKATHON-6th-frameworks.sh */,
+				51795CADB37273AF493F12F327399FEB /* Pods-Sopt-27th-HACKATHON-6th-Info.plist */,
+				C57E448ABD7702D039A605D43765A79C /* Pods-Sopt-27th-HACKATHON-6th-umbrella.h */,
+				F6962F086EA3F84080FCC2D8ACD271F2 /* Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig */,
+				7565801E5D20CBBE4EB046FFB44A327C /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */,
+			);
+			name = "Pods-Sopt-27th-HACKATHON-6th";
+			path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th";
+			sourceTree = "<group>";
+		};
 		DE8DE712E9FE58A1A4ED94FE94CCC7A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,6 +839,14 @@
 				1BFD50BE0053592E3D1346C5BF42445B /* SwiftyJSON */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F702C003B802C4DAC4F491A94A01D3C9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB2507C8E348C3D16792E6C1F878DD5D /* Pods-Sopt-27th-HACKATHON-6th */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		F88907FB5AF7D53DA2BD619E831E0BBB /* Kingfisher */ = {
@@ -1009,14 +1009,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F89C565BB78EBAFD8C50A9BDBE3998E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B08DE53209D223FCF9C163CED150DB26 /* Pods-SOPT-27th-HACKATHON-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4AFA5C3731ED759693CDC686A5C2479C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1042,6 +1034,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F250ED669FBE05E6142BBEEF52B0C4DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5227345712778AD2126BFC2ADEBFFDCA /* Pods-Sopt-27th-HACKATHON-6th-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1063,26 +1063,26 @@
 			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		358AAE663ABD437DFB1B553A0FF56CD6 /* Pods-SOPT-27th-HACKATHON */ = {
+		583DEA4D14F240F6D866C7FA2FC7BE42 /* Pods-Sopt-27th-HACKATHON-6th */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8E21D3F4C3FED84D2BA189488EADAC9 /* Build configuration list for PBXNativeTarget "Pods-SOPT-27th-HACKATHON" */;
+			buildConfigurationList = D2A18D5DFE1A4FB9E7B18749B004EE4C /* Build configuration list for PBXNativeTarget "Pods-Sopt-27th-HACKATHON-6th" */;
 			buildPhases = (
-				3F89C565BB78EBAFD8C50A9BDBE3998E /* Headers */,
-				638CA43471D221EEA378216FC442B7D4 /* Sources */,
-				2C1C44C937DB2200D9B0D9E107831C09 /* Frameworks */,
-				8748F7831D3701ECED64EF82DEA060C9 /* Resources */,
+				F250ED669FBE05E6142BBEEF52B0C4DB /* Headers */,
+				36C4DE0C2008078E2175E7491693ABBC /* Sources */,
+				0729E2F096B14B9A0245A83BB51B1C81 /* Frameworks */,
+				44FD682780899841B070147717665145 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FF017CF5ABB86F0101CE3EDA9CD9E445 /* PBXTargetDependency */,
-				D7DA29A1D68429A69720B0448A676A99 /* PBXTargetDependency */,
-				20652B2B384BA60E6107CD14C6ACEF57 /* PBXTargetDependency */,
-				F722E70344689B4C420ECCDBA59E5A9F /* PBXTargetDependency */,
+				DDC320C354C0914D798DF8C2DF1DFB43 /* PBXTargetDependency */,
+				8A930CCC591DCF24C13E56DA3EF70638 /* PBXTargetDependency */,
+				0AFFF28306AE42A7D84D83533EBB3698 /* PBXTargetDependency */,
+				FA7D3C487A12B21B8774299EC0E61809 /* PBXTargetDependency */,
 			);
-			name = "Pods-SOPT-27th-HACKATHON";
-			productName = "Pods-SOPT-27th-HACKATHON";
-			productReference = A2E755B1175D882AE1EF4B7A9597294E /* Pods_SOPT_27th_HACKATHON.framework */;
+			name = "Pods-Sopt-27th-HACKATHON-6th";
+			productName = "Pods-Sopt-27th-HACKATHON-6th";
+			productReference = 4B481E40ECB968DA6562BA5C9D0250E1 /* Pods_Sopt_27th_HACKATHON_6th.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
@@ -1157,28 +1157,28 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 6A6516F0B35AD5CBCD33329A360EF5A4 /* Products */;
+			productRefGroup = A73146AF12015E633B330D636DFA7AB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
 				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
-				358AAE663ABD437DFB1B553A0FF56CD6 /* Pods-SOPT-27th-HACKATHON */,
+				583DEA4D14F240F6D866C7FA2FC7BE42 /* Pods-Sopt-27th-HACKATHON-6th */,
 				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7141B8BFD91321B48D2EC833C693184F /* Resources */ = {
+		44FD682780899841B070147717665145 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8748F7831D3701ECED64EF82DEA060C9 /* Resources */ = {
+		7141B8BFD91321B48D2EC833C693184F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1258,6 +1258,14 @@
 				D5EAAFB6FAD77A8F0699345149BA3CBB /* URLRequest+Alamofire.swift in Sources */,
 				F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */,
 				F0F3224FF592F9BA2A044A2FC2BD4CCD /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36C4DE0C2008078E2175E7491693ABBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C592148BB9053A1A606DDA4A0E057A /* Pods-Sopt-27th-HACKATHON-6th-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,14 +1407,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		638CA43471D221EEA378216FC442B7D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD24C6375BF100F03875E579994930A4 /* Pods-SOPT-27th-HACKATHON-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9263B1AD147FB677C85235151B9CE5D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1468,29 +1468,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20652B2B384BA60E6107CD14C6ACEF57 /* PBXTargetDependency */ = {
+		0AFFF28306AE42A7D84D83533EBB3698 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = 3B2B66770699EA22932D3A909ED5F107 /* PBXContainerItemProxy */;
+			targetProxy = 82A2E9ADB3A0877584822D8CE7419088 /* PBXContainerItemProxy */;
 		};
-		D7DA29A1D68429A69720B0448A676A99 /* PBXTargetDependency */ = {
+		8A930CCC591DCF24C13E56DA3EF70638 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kingfisher;
 			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
-			targetProxy = 7F65D23AC726DAA4CD26024C90354C02 /* PBXContainerItemProxy */;
+			targetProxy = CBCC475CE65E6D6D54190BBB77D499E1 /* PBXContainerItemProxy */;
 		};
-		F722E70344689B4C420ECCDBA59E5A9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "lottie-ios";
-			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
-			targetProxy = 2BE0CBA122E5971140E887812F32F422 /* PBXContainerItemProxy */;
-		};
-		FF017CF5ABB86F0101CE3EDA9CD9E445 /* PBXTargetDependency */ = {
+		DDC320C354C0914D798DF8C2DF1DFB43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 52A30A7E846C1C8758F6B454B519885D /* PBXContainerItemProxy */;
+			targetProxy = 9B8600EF6A4469BC0996A97C6869E0CD /* PBXContainerItemProxy */;
+		};
+		FA7D3C487A12B21B8774299EC0E61809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "lottie-ios";
+			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
+			targetProxy = 1E2AF1167D4BFFAF919953346D40DF3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1530,78 +1530,69 @@
 			};
 			name = Debug;
 		};
-		30A3A24EDBC11CFFB4B08D04CE57E9F9 /* Release */ = {
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8984607CFD092EA09FC301DDF59A2C7F /* Pods-SOPT-27th-HACKATHON.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3E01308BA0018A1BFDB1675BEA7E342E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E849122678A978F9B97691AC2AEBB3B /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
@@ -1674,7 +1665,44 @@
 			};
 			name = Release;
 		};
-		5B82FA55F6A12DBC8196D07B0C1EEB40 /* Release */ = {
+		601DE12EB381CB399B48FC9A0C48152F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6962F086EA3F84080FCC2D8ACD271F2 /* Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1724,7 +1752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1735,72 +1763,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		6C6178559BD9074C26E073DF5769DB42 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
 		};
 		9B66E952E27F29569285AB82461A2F34 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1943,6 +1905,44 @@
 			};
 			name = Release;
 		};
+		B750852436903035CDA679AC57C1A365 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7565801E5D20CBBE4EB046FFB44A327C /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F77A824DFA5CC3A5F0F1213006E6AE86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7118EAEEC964289C8327405617990E6 /* Kingfisher.debug.xcconfig */;
@@ -1984,8 +1984,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C6178559BD9074C26E073DF5769DB42 /* Debug */,
-				5B82FA55F6A12DBC8196D07B0C1EEB40 /* Release */,
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2017,11 +2017,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8E21D3F4C3FED84D2BA189488EADAC9 /* Build configuration list for PBXNativeTarget "Pods-SOPT-27th-HACKATHON" */ = {
+		D2A18D5DFE1A4FB9E7B18749B004EE4C /* Build configuration list for PBXNativeTarget "Pods-Sopt-27th-HACKATHON-6th" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E01308BA0018A1BFDB1675BEA7E342E /* Debug */,
-				30A3A24EDBC11CFFB4B08D04CE57E9F9 /* Release */,
+				601DE12EB381CB399B48FC9A0C48152F /* Debug */,
+				B750852436903035CDA679AC57C1A365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

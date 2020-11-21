@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SOPT-27th-HACKATHON.xcodeproj">
+      location = "group:Sopt-27th-HACKATHON-6th.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

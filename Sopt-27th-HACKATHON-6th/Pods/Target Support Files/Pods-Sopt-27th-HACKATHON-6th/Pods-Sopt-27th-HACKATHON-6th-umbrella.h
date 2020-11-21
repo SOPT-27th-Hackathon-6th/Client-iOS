@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SOPT_27th_HACKATHONVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SOPT_27th_HACKATHONVersionString[];
+FOUNDATION_EXPORT double Pods_Sopt_27th_HACKATHON_6thVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Sopt_27th_HACKATHON_6thVersionString[];
 

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SOPT-27th-HACKATHON
+//  Sopt-27th-HACKATHON-6th
 //
 //  Created by 송지훈 on 2020/11/21.
 //

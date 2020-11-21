@@ -1,15 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'SOPT-27th-HACKATHON' do
+target 'Sopt-27th-HACKATHON-6th' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SOPT-27th-HACKATHON
+  # Pods for Sopt-27th-HACKATHON-6th
   pod 'Kingfisher', '~> 5.0' 
   pod 'SwiftyJSON','~>4.0'  
   pod 'Alamofire', '~> 5.1'
   pod 'lottie-ios' 
-
 
 end
