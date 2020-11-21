@@ -96,7 +96,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga4-nr-obp">
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="100"/>
+                                                <connections>
+                                                    <action selector="maraButtonClicked:" destination="7Nh-r5-q8M" eventType="touchUpInside" id="DSu-w4-SmL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ga4-nr-obp" firstAttribute="leading" secondItem="wd0-SO-HRK" secondAttribute="leading" id="jCw-D2-78G"/>
+                                            <constraint firstItem="ga4-nr-obp" firstAttribute="top" secondItem="wd0-SO-HRK" secondAttribute="top" id="jmH-UO-M7c"/>
+                                            <constraint firstAttribute="trailing" secondItem="ga4-nr-obp" secondAttribute="trailing" id="kDJ-rV-7S0"/>
+                                            <constraint firstAttribute="bottom" secondItem="ga4-nr-obp" secondAttribute="bottom" id="xag-aO-nEB"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijE-em-Nha" userLabel="gukbabView">
                                         <rect key="frame" x="127" y="0.0" width="127" height="100"/>
@@ -106,13 +118,25 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-ty-hp4">
-                                                <rect key="frame" x="42" y="74" width="42" height="21"/>
+                                                <rect key="frame" x="42" y="49" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU9-yF-MCN">
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="100"/>
+                                                <connections>
+                                                    <action selector="gukbabButtonClicked:" destination="7Nh-r5-q8M" eventType="touchUpInside" id="SYu-sK-p4j"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="oU9-yF-MCN" firstAttribute="top" secondItem="ijE-em-Nha" secondAttribute="top" id="3nA-Gl-31p"/>
+                                            <constraint firstAttribute="bottom" secondItem="oU9-yF-MCN" secondAttribute="bottom" id="F7a-Z1-Y3U"/>
+                                            <constraint firstAttribute="trailing" secondItem="oU9-yF-MCN" secondAttribute="trailing" id="Idg-mA-ffW"/>
+                                            <constraint firstItem="oU9-yF-MCN" firstAttribute="leading" secondItem="ijE-em-Nha" secondAttribute="leading" id="K8S-QL-3lK"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,8 +183,8 @@
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-OK-WhU">
                                 <rect key="frame" x="155.5" y="738" width="103.5" height="28"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" systemColor="systemPurpleColor"/>
+                                <color key="pageIndicatorTintColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-P0-U2B">
                                 <rect key="frame" x="241" y="202" width="46" height="30"/>
@@ -168,6 +192,14 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="addPhotoButotnClicked:" destination="7Nh-r5-q8M" eventType="touchUpInside" id="dZU-MK-j1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGb-Um-yKI">
+                                <rect key="frame" x="302" y="33" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="shareActionClicked:" destination="7Nh-r5-q8M" eventType="touchUpInside" id="URc-yw-rou"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,7 +221,11 @@
                     <connections>
                         <outlet property="currentPageController" destination="5gj-OK-WhU" id="9pp-IK-z5u"/>
                         <outlet property="gukbabAreaView" destination="ijE-em-Nha" id="eip-i9-B3z"/>
+                        <outlet property="gukbabImageView" destination="w3Z-ZO-hdf" id="Mqc-YQ-xBV"/>
+                        <outlet property="gukbabLabel" destination="fnz-ty-hp4" id="Dys-f2-Di1"/>
                         <outlet property="maraAreaView" destination="wd0-SO-HRK" id="gdh-SC-Is0"/>
+                        <outlet property="maraImageView" destination="ocq-x1-ypu" id="7k9-Y8-Pjc"/>
+                        <outlet property="maraLabel" destination="Npb-8K-AFD" id="DAG-Sl-kJL"/>
                         <outlet property="stampCollectionView" destination="jwa-X3-az7" id="1EX-AJ-HXi"/>
                         <outlet property="titleBottomLabel" destination="YmY-r9-Gle" id="iVA-aY-Buy"/>
                         <outlet property="titleTopLabel" destination="5f3-33-hoC" id="ftD-rb-QV1"/>
@@ -245,9 +281,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import KakaoSDKLink
+import KakaoSDKTemplate
 
 class HomeViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -16,16 +19,20 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
 
     @IBOutlet weak var maraAreaView: UIView!
-    
-    
     @IBOutlet weak var gukbabAreaView: UIView!
+    
+    
+    @IBOutlet weak var maraImageView: UIImageView!
+    @IBOutlet weak var gukbabImageView: UIImageView!
+    @IBOutlet weak var maraLabel: UILabel!
+    @IBOutlet weak var gukbabLabel: UILabel!
+    
+    
     
     
     @IBOutlet weak var titleTopLabel: UILabel!
     @IBOutlet weak var titleBottomLabel: UILabel!
-    
     @IBOutlet weak var stampCollectionView: UICollectionView! // 스탬프가 들어가는 전체 콜렉션 뷰
-    
     @IBOutlet weak var currentPageController: UIPageControl!
     // 현재 페이지가 어딘지 나타내는 pageControl
     
@@ -36,6 +43,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     
     let imagePicker = UIImagePickerController()
+    
+    var selectIndex : Int = 0
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -57,6 +66,74 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
     
+    
+    @IBAction func maraButtonClicked(_ sender: Any) {
+
+        maraSelect()
+        
+        
+    }
+    
+    @IBAction func gukbabButtonClicked(_ sender: Any) {
+        
+        gukbabSelect()
+    }
+    
+    
+    
+    @IBAction func shareActionClicked(_ sender: Any) {
+        
+
+        
+        let feedTemplateJsonStringData =
+            """
+                    {
+                        "object_type": "feed",
+                        "content": {
+                            "title": "국밥마라",
+                            "description": "내가 이런 사람이야~~~~",
+                            "image_url": "http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+                            "link" : {
+                                    "mobile_web_url": "https://developers.kakao.com",
+                                    "web_url": "https://developers.kakao.com"
+                            }
+
+                        },
+                    
+                        "buttons": [
+                    
+                            {
+                                "title": "앱으로 이동하기",
+                                "link": {
+                                    "android_execution_params": "key1=value1&key2=value2",
+                                    "ios_execution_params": "key1=qna&key2=1"
+                                }
+                            }
+                        ]
+                    }
+                    """.data(using: .utf8)!
+        
+        
+        // templatable은 메시지 만들기 항목 참고
+        
+        if let templatable = try?
+            SdkJSONDecoder.custom.decode(FeedTemplate.self, from: feedTemplateJsonStringData) {
+            LinkApi.shared.defaultLink(templatable: templatable) {(linkResult, error) in
+                if let error = error {
+                    print("error")
+                }
+                else {
+                    print("defaultLink() success.")
+                    
+                    if let linkResult = linkResult {
+                        UIApplication.shared.open(linkResult.url, options: [:], completionHandler: nil)
+                    }
+                }
+            }
+        }
+            
+        
+    }
     
     @IBAction func addPhotoButotnClicked(_ sender: Any) {
         
@@ -104,7 +181,27 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         imagePicker.delegate = self
         
+        maraLabel.text = "마라"
+    
+        gukbabLabel.text = "국밥"
+        
+        maraSelect()
+        
+        
+        
     }
+    
+
+
+    //MARK:- Function Part
+    /// 로직을 구현 하는 함수 부분입니다. // 함수명 lowerCamelCase 사용
+    /// ex) func tableViewSetting() {
+    ///         myTableView.delegate = self
+    ///         myTableView.datasource = self
+    ///    }
+    
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
@@ -120,13 +217,31 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
 
         
     }
-
-    //MARK:- Function Part
-    /// 로직을 구현 하는 함수 부분입니다. // 함수명 lowerCamelCase 사용
-    /// ex) func tableViewSetting() {
-    ///         myTableView.delegate = self
-    ///         myTableView.datasource = self
-    ///    }
+    
+    func maraSelect()
+    {
+        
+        selectIndex = 0
+           maraLabel.textColor = .init(red: 208/255, green: 56/255, blue: 56/255, alpha: 1)
+           maraLabel.font = UIFont.boldSystemFont(ofSize: 16)
+           
+           gukbabLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
+           gukbabLabel.font = UIFont.systemFont(ofSize: 16)
+           
+    }
+    
+    func gukbabSelect()
+    {
+        
+        selectIndex = 1
+        
+        maraLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
+        maraLabel.font = UIFont.systemFont(ofSize: 16)
+             
+      
+        gukbabLabel.textColor = .init(red: 111/255, green: 79/255, blue: 40/255, alpha: 1)
+        gukbabLabel.font = UIFont.boldSystemFont(ofSize: 16)
+    }
 
 
 }
