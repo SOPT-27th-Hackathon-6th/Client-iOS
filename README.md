@@ -51,3 +51,18 @@
 |    프로필   |   직급에 따른 뷰 레이아웃 분기 처리   |✅| 유진 |
 |    프로필  |   카카오톡으로 친구에게 프로필 공유하기 |✅| 지훈 |
 
+</br>
+</br>
+
+## 📱앱 구동화면
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 03](https://user-images.githubusercontent.com/68267763/99889522-6d483800-2c99-11eb-9ee5-645b31eaf8d7.png)
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 11](https://user-images.githubusercontent.com/68267763/99889523-6de0ce80-2c99-11eb-94b8-9788a809312e.png)
+
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 24](https://user-images.githubusercontent.com/68267763/99889543-9f599a00-2c99-11eb-855b-5ac042b9fc74.png)
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 29](https://user-images.githubusercontent.com/68267763/99889544-9ff23080-2c99-11eb-8986-b6a06efb1372.png)
+
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 36](https://user-images.githubusercontent.com/68267763/99889552-ae404c80-2c99-11eb-8308-16cd1a532bb4.png)
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 40](https://user-images.githubusercontent.com/68267763/99889553-af717980-2c99-11eb-9567-0f89ed70273a.png)
+
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 50 46](https://user-images.githubusercontent.com/68267763/99889560-bb5d3b80-2c99-11eb-9929-18dccf3ea2f3.png)
+![Simulator Screen Shot - iPhone 11 - 2020-11-22 at 07 51 24](https://user-images.githubusercontent.com/68267763/99889561-bbf5d200-2c99-11eb-94b4-7d436c70fe5e.png)
