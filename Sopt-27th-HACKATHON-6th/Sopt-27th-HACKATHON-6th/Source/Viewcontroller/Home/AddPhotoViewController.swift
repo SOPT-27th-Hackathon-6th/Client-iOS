@@ -14,13 +14,11 @@ class AddPhotoViewController: UIViewController {
     
     
     
-    @IBOutlet weak var photoImageView: UIImageView!
         
     
     
     //MARK:- Variable Part
 
-    var imageData = UIImage()
 
     //MARK:- Constraint Part
     
@@ -30,16 +28,19 @@ class AddPhotoViewController: UIViewController {
     //MARK:- Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
-        self.photoImageView.image = imageData
     }
     //MARK:- IBAction Part
     
-    @IBAction func closeButtonClicked(_ sender: Any) {
+
+    
+    @IBAction func goHomeButtonClicked(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
+
     }
-    
     
     //MARK:- default Setting Function Part
     
