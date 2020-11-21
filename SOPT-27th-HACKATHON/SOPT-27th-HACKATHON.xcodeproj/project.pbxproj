@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3B08E7538E84B186ADDC2DB4 /* Pods_SOPT_27th_HACKATHON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABA87C3B4DAF6D2DE13AC16 /* Pods_SOPT_27th_HACKATHON.framework */; };
+		FDB4D05A2569217000931E12 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0592569217000931E12 /* APIConstants.swift */; };
+		FDB4D05E2569221200931E12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D05D2569221200931E12 /* HomeViewController.swift */; };
+		FDB4D0642569226000931E12 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0632569226000931E12 /* RankingViewController.swift */; };
+		FDB4D0672569226900931E12 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0662569226900931E12 /* MyViewController.swift */; };
+		FDB4D06D256922B000931E12 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB4D06C256922B000931E12 /* Home.storyboard */; };
+		FDB4D070256922C200931E12 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB4D06F256922C200931E12 /* My.storyboard */; };
+		FDB4D073256922CA00931E12 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB4D072256922CA00931E12 /* Ranking.storyboard */; };
+		FDB4D0762569271B00931E12 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0752569271B00931E12 /* TabBarViewController.swift */; };
 		FDDA677D2568E4170047D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA677C2568E4170047D3D4 /* AppDelegate.swift */; };
 		FDDA677F2568E4170047D3D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */; };
 		FDDA67812568E4170047D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA67802568E4170047D3D4 /* ViewController.swift */; };
@@ -23,6 +31,14 @@
 		1D578E137B5DBCA23906B16D /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-27th-HACKATHON.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON.debug.xcconfig"; sourceTree = "<group>"; };
 		339D1F20DF72FC7D138915B3 /* Pods-SOPT-27th-HACKATHON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-27th-HACKATHON.release.xcconfig"; path = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON.release.xcconfig"; sourceTree = "<group>"; };
 		DABA87C3B4DAF6D2DE13AC16 /* Pods_SOPT_27th_HACKATHON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_27th_HACKATHON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB4D0592569217000931E12 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		FDB4D05D2569221200931E12 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FDB4D0632569226000931E12 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		FDB4D0662569226900931E12 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		FDB4D06C256922B000931E12 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FDB4D06F256922C200931E12 /* My.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		FDB4D072256922CA00931E12 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
+		FDB4D0752569271B00931E12 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FDDA67792568E4170047D3D4 /* SOPT-27th-HACKATHON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-27th-HACKATHON.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDA677C2568E4170047D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +79,62 @@
 				DABA87C3B4DAF6D2DE13AC16 /* Pods_SOPT_27th_HACKATHON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDB4D05625691D1900931E12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D05D2569221200931E12 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FDB4D05825691DD400931E12 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D0592569217000931E12 /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FDB4D0612569221600931E12 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D0632569226000931E12 /* RankingViewController.swift */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		FDB4D0622569221F00931E12 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D0662569226900931E12 /* MyViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		FDB4D0692569228C00931E12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D06C256922B000931E12 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FDB4D06A2569229200931E12 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D06F256922C200931E12 /* My.storyboard */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		FDB4D06B2569229600931E12 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D072256922CA00931E12 /* Ranking.storyboard */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 		FDDA67702568E4170047D3D4 = {
@@ -107,6 +179,7 @@
 		FDDA67992568EA180047D3D4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				FDB4D05825691DD400931E12 /* Network */,
 				FDDA67852568E4180047D3D4 /* Assets.xcassets */,
 				FDDA679B2568EA890047D3D4 /* Storyboard */,
 			);
@@ -116,7 +189,11 @@
 		FDDA679A2568EA6E0047D3D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FDB4D0622569221F00931E12 /* My */,
+				FDB4D0612569221600931E12 /* Ranking */,
+				FDB4D05625691D1900931E12 /* Home */,
 				FDDA67802568E4170047D3D4 /* ViewController.swift */,
+				FDB4D0752569271B00931E12 /* TabBarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -124,6 +201,9 @@
 		FDDA679B2568EA890047D3D4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				FDB4D06B2569229600931E12 /* Ranking */,
+				FDB4D06A2569229200931E12 /* My */,
+				FDB4D0692569228C00931E12 /* Home */,
 				FDDA67822568E4170047D3D4 /* Main.storyboard */,
 				FDDA67872568E4180047D3D4 /* LaunchScreen.storyboard */,
 			);
@@ -200,8 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDDA67892568E4180047D3D4 /* LaunchScreen.storyboard in Resources */,
+				FDB4D073256922CA00931E12 /* Ranking.storyboard in Resources */,
 				FDDA67862568E4180047D3D4 /* Assets.xcassets in Resources */,
 				FDDA67842568E4170047D3D4 /* Main.storyboard in Resources */,
+				FDB4D070256922C200931E12 /* My.storyboard in Resources */,
+				FDB4D06D256922B000931E12 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +338,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDDA67812568E4170047D3D4 /* ViewController.swift in Sources */,
+				FDB4D05A2569217000931E12 /* APIConstants.swift in Sources */,
+				FDB4D0762569271B00931E12 /* TabBarViewController.swift in Sources */,
 				FDDA67A62568F8B30047D3D4 /* setImge + UIImageView.swift in Sources */,
+				FDB4D05E2569221200931E12 /* HomeViewController.swift in Sources */,
 				FDDA679E2568EBC20047D3D4 /* makeAlert + UIView.swift in Sources */,
 				FDDA677D2568E4170047D3D4 /* AppDelegate.swift in Sources */,
 				FDDA677F2568E4170047D3D4 /* SceneDelegate.swift in Sources */,
 				FDDA67A32568EC360047D3D4 /* scrollToTop + scrollView.swift in Sources */,
+				FDB4D0672569226900931E12 /* MyViewController.swift in Sources */,
+				FDB4D0642569226000931E12 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

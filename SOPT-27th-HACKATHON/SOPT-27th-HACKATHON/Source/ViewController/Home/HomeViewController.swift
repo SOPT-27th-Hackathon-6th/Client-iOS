@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  SOPT-27th-HACKATHON
 //
 //  Created by 송지훈 on 2020/11/21.
 //
 
 import UIKit
-class ViewController: UIViewController {
 
+class HomeViewController: UIViewController {
 
+    
     //MARK:- IBOutlet Part
     /// Label, ColelctionView, TextField, ImageView 등 @IBOutlet 변수들을 선언합니다.  // 변수명 lowerCamelCase 사용
     /// ex)  @IBOutlet weak var qnaTextBoxBackgroundImage: UIImageView!
