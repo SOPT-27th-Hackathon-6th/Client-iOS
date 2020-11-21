@@ -75,7 +75,7 @@ class MyCollectionCell: UICollectionViewCell {
         if (food == "Mala") {
             userNameLabel.text = "국밥마라"
             profileImageView.image = UIImage(named: "img\(self.foodArr[0])Profile")
-            if count == 0 {
+            if UserDefaults.standard.bool(forKey: "showLEVELUP") == false {
                 levelLabel.text = "마라초 6학년"
                 fooldLabel.text = "마라혈중농도"
                 subDialogLabel.text = "내가 마라초 짱이다 ㅋ\n최고학년에 오르고 자신감에 가득찬 국밥마라..\n하지만 너에겐 중학교가 기다리고 있어"
@@ -86,10 +86,10 @@ class MyCollectionCell: UICollectionViewCell {
             else {
                 levelLabel.text = "마라중 1학년"
                 fooldLabel.text = "마라혈중농도"
-                subDialogLabel.text = "기세등등하던 초딩 국밥마라.\n중학교에 진학하더니 더욱 깊게 마라에 바지고 마라탕..."
+                subDialogLabel.text = "기세등등하던 초딩 국밥마라.\n중학교에 진학하더니 더욱 깊게 마라에 빠지고 마라탕..."
                 progressBar(percentage: 1.0, r: 203, g: 65, b: 30)
                 countLabel.text = "18회"
-                countLabel.textColor = .init(red: 203, green: 65, blue: 30, alpha: 1)
+                percentageLabel.textColor = .init(red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
                 boldNormal(food: "마라탕")
             }
         }
