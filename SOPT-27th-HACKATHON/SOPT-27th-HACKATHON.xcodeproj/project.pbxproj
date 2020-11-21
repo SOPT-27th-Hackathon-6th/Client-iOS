@@ -16,6 +16,7 @@
 		FDB4D070256922C200931E12 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB4D06F256922C200931E12 /* My.storyboard */; };
 		FDB4D073256922CA00931E12 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB4D072256922CA00931E12 /* Ranking.storyboard */; };
 		FDB4D0762569271B00931E12 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0752569271B00931E12 /* TabBarViewController.swift */; };
+		FDB4D07B2569344800931E12 /* SOPT-27th-HACKATHON.app in Resources */ = {isa = PBXBuildFile; fileRef = FDDA67792568E4170047D3D4 /* SOPT-27th-HACKATHON.app */; };
 		FDDA677D2568E4170047D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA677C2568E4170047D3D4 /* AppDelegate.swift */; };
 		FDDA677F2568E4170047D3D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */; };
 		FDDA67812568E4170047D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA67802568E4170047D3D4 /* ViewController.swift */; };
@@ -282,6 +283,7 @@
 				FDDA67892568E4180047D3D4 /* LaunchScreen.storyboard in Resources */,
 				FDB4D073256922CA00931E12 /* Ranking.storyboard in Resources */,
 				FDDA67862568E4180047D3D4 /* Assets.xcassets in Resources */,
+				FDB4D07B2569344800931E12 /* SOPT-27th-HACKATHON.app in Resources */,
 				FDDA67842568E4170047D3D4 /* Main.storyboard in Resources */,
 				FDB4D070256922C200931E12 /* My.storyboard in Resources */,
 				FDB4D06D256922B000931E12 /* Home.storyboard in Resources */,
@@ -424,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -479,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
