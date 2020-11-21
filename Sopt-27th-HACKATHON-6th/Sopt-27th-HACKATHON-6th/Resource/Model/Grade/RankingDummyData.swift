@@ -7,6 +7,8 @@
 
 import Foundation
 
+var count: Int = 0
+
 let maraDummy: [MaraGradeDataModel] = [
     MaraGradeDataModel(maraRank: "1", maraName: "이영지", maraCount:"87", maraLevel:"마라전자 전무"),
     MaraGradeDataModel(maraRank: "2", maraName: "신룽푸", maraCount:"82", maraLevel:"마라전자 상무"),
