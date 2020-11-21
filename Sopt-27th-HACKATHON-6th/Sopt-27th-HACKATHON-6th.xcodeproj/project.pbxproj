@@ -11,6 +11,9 @@
 		6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
+		D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DC2569744A00C8207E /* GradeDataModel.swift */; };
+		D16B30E02569769600C8207E /* RankingDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DF2569769600C8207E /* RankingDummyData.swift */; };
+		D16B30E325699A2800C8207E /* calculateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30E225699A2800C8207E /* calculateLevel.swift */; };
 		FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0B6256937D300931E12 /* AppDelegate.swift */; };
 		FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0B8256937D300931E12 /* SceneDelegate.swift */; };
 		FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0BA256937D300931E12 /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		D16B30DC2569744A00C8207E /* GradeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDataModel.swift; sourceTree = "<group>"; };
+		D16B30DF2569769600C8207E /* RankingDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDummyData.swift; sourceTree = "<group>"; };
+		D16B30E225699A2800C8207E /* calculateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateLevel.swift; sourceTree = "<group>"; };
 		ED4F2B165C97A5EC1421C093 /* Pods_Sopt_27th_HACKATHON_6th.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sopt_27th_HACKATHON_6th.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40F46BB6E61ECABF9FFE5EE /* Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig"; sourceTree = "<group>"; };
 		FDB4D0B3256937D300931E12 /* Sopt-27th-HACKATHON-6th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sopt-27th-HACKATHON-6th.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D16B30D92569741900C8207E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D16B30DB2569743F00C8207E /* Grade */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D16B30DB2569743F00C8207E /* Grade */ = {
+			isa = PBXGroup;
+			children = (
+				D16B30DC2569744A00C8207E /* GradeDataModel.swift */,
+				D16B30DF2569769600C8207E /* RankingDummyData.swift */,
+			);
+			path = Grade;
+			sourceTree = "<group>";
+		};
 		FDB4D0AA256937D300931E12 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +164,7 @@
 		FDB4D0CC256937E400931E12 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D16B30D92569741900C8207E /* Model */,
 				FDB4D0BF256937D500931E12 /* Assets.xcassets */,
 				FDB4D0D02569382900931E12 /* Storyboard */,
 				FDB4D0CF2569382300931E12 /* Network */,
@@ -153,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB4D0F825693BBD00931E12 /* calculateTime.swift */,
+				D16B30E225699A2800C8207E /* calculateLevel.swift */,
 				FDB4D11A2569929100931E12 /* makeAlert + UIView.swift */,
 			);
 			path = Extension;
@@ -384,6 +409,7 @@
 				FDB4D102256945B100931E12 /* StampCell.swift in Sources */,
 				FDB4D121256996AA00931E12 /* stampCountDataModel.swift in Sources */,
 				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
+				D16B30E02569769600C8207E /* RankingDummyData.swift in Sources */,
 				FDB4D0E32569395D00931E12 /* APIConstants.swift in Sources */,
 				6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */,
 				FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */,
@@ -393,9 +419,11 @@
 				FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */,
 				FDB4D0FE256945A100931E12 /* StampPageCell.swift in Sources */,
 				FDB4D0EC256939B200931E12 /* RankingViewController.swift in Sources */,
+				D16B30E325699A2800C8207E /* calculateLevel.swift in Sources */,
 				FDB4D0E6256939A400931E12 /* TabBarViewController.swift in Sources */,
 				FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */,
 				FDB4D0EF256939B800931E12 /* MyViewController.swift in Sources */,
+				D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */,
 				FDB4D11B2569929100931E12 /* makeAlert + UIView.swift in Sources */,
 				FDB4D11E2569930F00931E12 /* getStampCountService.swift in Sources */,
 				FDB4D0E9256939AD00931E12 /* HomeViewController.swift in Sources */,
