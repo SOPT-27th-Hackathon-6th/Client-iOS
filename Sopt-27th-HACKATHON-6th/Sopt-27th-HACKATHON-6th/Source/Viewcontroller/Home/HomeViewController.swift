@@ -249,6 +249,31 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 self.stampCollectionView.reloadData()
                 
                 
+                if self.maraCount % 3 == 0
+                {
+                    
+                    if (UserDefaults.standard.bool(forKey: "showLEVELUP")) == false
+                    {
+                        UserDefaults.standard.set(true, forKey:"showLEVELUP")
+                        let alert = UIAlertController(title: "Level up!", message: "마라 레벨이 올랐습니다. 마이페이지에서 확인해보세요", preferredStyle: .alert)
+                        let ok = UIAlertAction(title: "확인하러 가기", style: .default) { (_) in
+                            
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "levelUP"), object: nil)
+                        }
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
+                        
+                       
+                    }
+                    
+
+                }
+                else
+                {
+                    UserDefaults.standard.set(false, forKey:"showLEVELUP")
+                }
+                
+                
             default:
                 makeAlert(title: "알림", message: "개수 정보를 가져오는데 실패하였습니다", vc: self)
             }

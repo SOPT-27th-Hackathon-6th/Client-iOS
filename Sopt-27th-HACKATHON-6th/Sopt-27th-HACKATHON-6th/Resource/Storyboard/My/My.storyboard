@@ -57,7 +57,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-U9-LZf">
-                                                    <rect key="frame" x="29" y="423.5" width="319" height="29"/>
+                                                    <rect key="frame" x="38" y="423.5" width="310" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                                 <constraint firstItem="eN6-Hd-WZZ" firstAttribute="top" secondItem="Ngb-Yk-aSi" secondAttribute="bottom" constant="-70" id="oqi-la-DyZ"/>
                                                 <constraint firstItem="MlF-Ve-2Ma" firstAttribute="leading" secondItem="2eG-ro-t6X" secondAttribute="leading" constant="109" id="qrB-Em-aYi"/>
                                                 <constraint firstAttribute="trailing" secondItem="qge-gg-fHu" secondAttribute="trailing" id="rDz-cg-3MG"/>
-                                                <constraint firstItem="LlG-U9-LZf" firstAttribute="leading" secondItem="2eG-ro-t6X" secondAttribute="leading" constant="29" id="rjg-wE-jcL"/>
+                                                <constraint firstItem="LlG-U9-LZf" firstAttribute="leading" secondItem="2eG-ro-t6X" secondAttribute="leading" constant="38" id="rjg-wE-jcL"/>
                                                 <constraint firstItem="ioL-L8-Uhi" firstAttribute="top" secondItem="LlG-U9-LZf" secondAttribute="bottom" constant="24" id="uM5-Ka-Y3U"/>
                                                 <constraint firstAttribute="trailing" secondItem="LlG-U9-LZf" secondAttribute="trailing" constant="29" id="vzB-if-64E"/>
                                             </constraints>

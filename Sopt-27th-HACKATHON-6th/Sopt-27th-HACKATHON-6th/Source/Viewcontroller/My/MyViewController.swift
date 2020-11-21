@@ -10,6 +10,10 @@ import KakaoSDKLink
 import KakaoSDKCommon
 import KakaoSDKTemplate
 
+
+
+
+
 class MyViewController: UIViewController {
 
     @IBOutlet var myCollectionView: UICollectionView!
