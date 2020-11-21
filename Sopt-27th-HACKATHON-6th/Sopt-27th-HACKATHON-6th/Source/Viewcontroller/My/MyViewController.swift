@@ -49,9 +49,20 @@ class MyViewController: UIViewController {
         // 임시로 여기에
         topUIView.backgroundColor  = UIColor(displayP3Red: 196/255, green: 196/255, blue: 196/255, alpha: 1)
         
+        //progress bar
+        levelProgressView.progress = 0.8
+        
         levelProgressView.progressTintColor = UIColor(displayP3Red: 196/255, green: 196/255, blue: 196/255, alpha: 1)
         levelProgressView.trackTintColor = UIColor(displayP3Red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
-        levelProgressView.transform = levelProgressView.transform.scaledBy(x: 1, y: 2)
+        levelProgressView.transform = levelProgressView.transform.scaledBy(x: 1, y: 1.5)
+        
+        // Set the rounded edge for the outer bar
+//        levelProgressView.layer.cornerRadius = 0
+//        levelProgressView.clipsToBounds = true
+
+        // Set the rounded edge for the inner bar
+//        levelProgressView.layer.sublayers![1].cornerRadius = 0
+//        levelProgressView.subviews[1].clipsToBounds = true
         
         profileBackgroundLabel.layer.masksToBounds = true
         profileBackgroundLabel.layer.cornerRadius = 60
