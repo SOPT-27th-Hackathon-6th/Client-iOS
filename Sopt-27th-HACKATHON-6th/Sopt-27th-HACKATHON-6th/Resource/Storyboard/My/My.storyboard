@@ -40,6 +40,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="377" height="621"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qge-gg-fHu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="621"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgGukbab" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-Yk-aSi">
                                                     <rect key="frame" x="0.0" y="0.0" width="377" height="172.5"/>
                                                     <constraints>
@@ -113,10 +117,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imgMalaProfile" translatesAutoresizingMaskIntoConstraints="NO" id="DoG-QO-HX9">
                                                     <rect key="frame" x="139" y="121.5" width="99" height="87"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qge-gg-fHu">
-                                                    <rect key="frame" x="1" y="0.0" width="377" height="621"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="oWd-DB-yt1" secondAttribute="trailing" constant="30" id="52k-aj-B2z"/>
