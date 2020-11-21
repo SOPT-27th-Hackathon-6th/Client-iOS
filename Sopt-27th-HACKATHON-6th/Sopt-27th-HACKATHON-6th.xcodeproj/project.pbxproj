@@ -24,6 +24,12 @@
 		FDB4D0E9256939AD00931E12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0E8256939AD00931E12 /* HomeViewController.swift */; };
 		FDB4D0EC256939B200931E12 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0EB256939B200931E12 /* RankingViewController.swift */; };
 		FDB4D0EF256939B800931E12 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0EE256939B800931E12 /* MyViewController.swift */; };
+		FDB4D0F925693BBD00931E12 /* calculateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0F825693BBD00931E12 /* calculateTime.swift */; };
+		FDB4D0FE256945A100931E12 /* StampPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0FD256945A100931E12 /* StampPageCell.swift */; };
+		FDB4D102256945B100931E12 /* StampCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D101256945B100931E12 /* StampCell.swift */; };
+		FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D104256951F700931E12 /* AddPhotoViewController.swift */; };
+		FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D11225695B8300931E12 /* AddStampService.swift */; };
+		FDB4D11725695F1C00931E12 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D11625695F1C00931E12 /* NetworkResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		FDB4D0E8256939AD00931E12 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FDB4D0EB256939B200931E12 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		FDB4D0EE256939B800931E12 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		FDB4D0F825693BBD00931E12 /* calculateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateTime.swift; sourceTree = "<group>"; };
+		FDB4D0FD256945A100931E12 /* StampPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampPageCell.swift; sourceTree = "<group>"; };
+		FDB4D101256945B100931E12 /* StampCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCell.swift; sourceTree = "<group>"; };
+		FDB4D104256951F700931E12 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		FDB4D11225695B8300931E12 /* AddStampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStampService.swift; sourceTree = "<group>"; };
+		FDB4D11625695F1C00931E12 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,7 @@
 		FDB4D0CD256937FF00931E12 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FDB4D0F825693BBD00931E12 /* calculateTime.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -150,7 +163,9 @@
 		FDB4D0CF2569382300931E12 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FDB4D11125695B6500931E12 /* Service */,
 				FDB4D0E22569395D00931E12 /* APIConstants.swift */,
+				FDB4D11625695F1C00931E12 /* NetworkResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -186,7 +201,9 @@
 		FDB4D0D42569386400931E12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FDB4D0FC2569458900931E12 /* Cell */,
 				FDB4D0E8256939AD00931E12 /* HomeViewController.swift */,
+				FDB4D104256951F700931E12 /* AddPhotoViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -215,6 +232,23 @@
 				D16B30BC2569428200C8207E /* RankingTableViewCell.xib */,
 			);
 			path = Ranking;
+			sourceTree = "<group>";
+		};
+		FDB4D0FC2569458900931E12 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D0FD256945A100931E12 /* StampPageCell.swift */,
+				FDB4D101256945B100931E12 /* StampCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FDB4D11125695B6500931E12 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4D11225695B8300931E12 /* AddStampService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,15 +369,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB4D102256945B100931E12 /* StampCell.swift in Sources */,
+				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
 				FDB4D0E32569395D00931E12 /* APIConstants.swift in Sources */,
 				FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */,
 				D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */,
 				FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */,
+				FDB4D0F925693BBD00931E12 /* calculateTime.swift in Sources */,
+				FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */,
+				FDB4D0FE256945A100931E12 /* StampPageCell.swift in Sources */,
 				FDB4D0EC256939B200931E12 /* RankingViewController.swift in Sources */,
 				FDB4D0E6256939A400931E12 /* TabBarViewController.swift in Sources */,
 				FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */,
 				FDB4D0EF256939B800931E12 /* MyViewController.swift in Sources */,
 				FDB4D0E9256939AD00931E12 /* HomeViewController.swift in Sources */,
+				FDB4D11725695F1C00931E12 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L9D5M5DM3Y;
 				INFOPLIST_FILE = "Sopt-27th-HACKATHON-6th/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,7 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L9D5M5DM3Y;
 				INFOPLIST_FILE = "Sopt-27th-HACKATHON-6th/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

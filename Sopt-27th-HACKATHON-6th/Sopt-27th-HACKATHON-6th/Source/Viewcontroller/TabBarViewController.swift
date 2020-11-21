@@ -22,7 +22,7 @@ class TabBarViewController: UIViewController {
     
     var VClist : [UIViewController] = []
     
-    var selectIndex : Int = 0
+    var selectIndex : Int = 1
     
     
     

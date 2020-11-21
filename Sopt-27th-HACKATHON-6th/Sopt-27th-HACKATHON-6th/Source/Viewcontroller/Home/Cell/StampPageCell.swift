@@ -1,0 +1,125 @@
+//
+//  StampPageCell.swift
+//  Sopt-27th-HACKATHON-6th
+//
+//  Created by 송지훈 on 2020/11/21.
+//
+
+import UIKit
+
+class StampPageCell: UICollectionViewCell {
+    
+
+    
+    //MARK:- IBOutlet Part
+    /// Label, ColelctionView, TextField, ImageView 등 @IBOutlet 변수들을 선언합니다.  // 변수명 lowerCamelCase 사용
+    /// ex)  @IBOutlet weak var qnaTextBoxBackgroundImage: UIImageView!
+    
+    
+    @IBOutlet weak var stampPageCollectionView: UICollectionView!
+    
+    
+
+    
+    func setStampCollectionView()
+    {
+        self.stampPageCollectionView.delegate = self
+        self.stampPageCollectionView.dataSource = self
+        
+    }
+
+    //MARK:- Variable Part
+    /// 뷰컨에 필요한 변수들을 선언합니다  // 변수명 lowerCamelCase 사용
+    /// ex)  var imageViewList : [UIImageView] = []
+    
+    
+
+    //MARK:- Constraint Part
+    /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
+    /// ex) @IBOutlet weak var lastImageBottomConstraint: NSLayoutConstraint!
+    
+    
+
+    //MARK:- Life Cycle Part
+    /// 앱의 Life Cycle 부분을 선언합니다
+    /// ex) override func viewWillAppear() { }
+
+    //MARK:- IBAction Part
+    /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
+    /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
+    
+    
+    
+    //MARK:- default Setting Function Part
+    /// 기본적인 세팅을 위한 함수 부분입니다 // 함수명 lowerCamelCase 사용
+    /// ex) func tableViewSetting() {
+    ///         myTableView.delegate = self
+    ///         myTableView.datasource = self
+    ///    }
+
+
+    //MARK:- Function Part
+    /// 로직을 구현 하는 함수 부분입니다. // 함수명 lowerCamelCase 사용
+    /// ex) func tableViewSetting() {
+    ///         myTableView.delegate = self
+    ///         myTableView.datasource = self
+    ///    }
+
+
+    
+
+    
+}
+
+
+
+//MARK:- extension 부분
+/// UICollectionViewDelegate 부분 처럼 외부 프로토콜을 채택하는 경우나, 외부 클래스 확장 할 때,  extension을 작성하는 부분입니다
+/// ex) extension ViewController : UICollectionViewDelegate {  code .... }
+
+extension StampPageCell : UICollectionViewDelegate
+{
+    
+}
+
+extension StampPageCell : UICollectionViewDataSource
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let stampCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampCell", for: indexPath) as? StampCell else {return UICollectionViewCell() }
+        
+        stampCell.layer.borderWidth = 1
+        stampCell.layer.borderColor = .init(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
+        
+        return stampCell
+    }
+    
+    
+    
+}
+
+extension StampPageCell : UICollectionViewDelegateFlowLayout
+{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: self.frame.width/3, height: self.frame.height/4)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
