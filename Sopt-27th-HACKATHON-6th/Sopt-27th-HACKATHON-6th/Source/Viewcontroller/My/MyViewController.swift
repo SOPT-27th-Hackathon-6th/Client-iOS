@@ -22,15 +22,14 @@ class MyViewController: UIViewController {
     //MARK:- Variable Part
     /// 뷰컨에 필요한 변수들을 선언합니다  // 변수명 lowerCamelCase 사용
     /// ex)  var imageViewList : [UIImageView] = []
-    let topInset: CGFloat = 23
-    let bottomInset: CGFloat = 21
-    let itemSpacing: CGFloat = 8
+    let topInset: CGFloat = 0
+    let bottomInset: CGFloat = 0
     
-    let horizonInset: CGFloat = 20
+    let horizonInset: CGFloat = 28
     
-    let rightSpacing: CGFloat = 10
+    let rightSpacing: CGFloat = 28
     
-    let lineSpacing: CGFloat = 30
+    let lineSpacing: CGFloat = 16
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -92,14 +91,30 @@ extension MyViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionCell.identifier, for: indexPath) as? MyCollectionCell else {
-            return UICollectionViewCell()
-        }
+        switch indexPath.row {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionCell.identifier, for: indexPath) as? MyCollectionCell else {
+                return UICollectionViewCell()
+            }
+            cell.setShadow()
+            cell.setCell(food: "Mala")
+            
+            return cell
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionCell.identifier, for: indexPath) as? MyCollectionCell else {
+                return UICollectionViewCell()
+            }
 
-        cell.setShadow()
-        cell.setCell()
+            cell.setShadow()
+            cell.setCell(food: "Gukbap")
+            
+            return cell
+        default:
+            return UICollectionViewCell()
+//            break
+        }
         
-        return cell
+        
     }
     
     
@@ -107,7 +122,7 @@ extension MyViewController: UICollectionViewDataSource {
 extension MyViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = (collectionView.frame.height - topInset - bottomInset)
+        let cellHeight = collectionView.frame.height //UIScreen.main.bounds.height * (567/812)
         let cellWidth = (collectionView.frame.width - lineSpacing - rightSpacing)
         return CGSize(width: cellWidth, height: cellHeight)
     }
