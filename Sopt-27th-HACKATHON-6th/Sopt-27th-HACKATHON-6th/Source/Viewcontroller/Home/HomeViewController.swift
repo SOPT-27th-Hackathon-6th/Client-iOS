@@ -106,58 +106,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     
     
-    @IBAction func shareActionClicked(_ sender: Any) {
-        
-
-        
-        let feedTemplateJsonStringData =
-            """
-                    {
-                        "object_type": "feed",
-                        "content": {
-                            "title": "나 오늘 마라혈중농도 100이다...",
-                            "image_url": "https://user-images.githubusercontent.com/60260284/99888080-23595500-2c8d-11eb-9cbc-417580997d60.png",
-                            "link" : {
-                                    "mobile_web_url": "https://developers.kakao.com",
-                                    "web_url": "https://developers.kakao.com"
-                            }
-
-                        },
-                    
-                        "buttons": [
-                    
-                            {
-                                "title": "나의 마라 혈중농도 확인하러 가기",
-                                "link": {
-                                    "android_execution_params": "key1=value1&key2=value2",
-                                    "ios_execution_params": "key1=qna&key2=1"
-                                }
-                            }
-                        ]
-                    }
-                    """.data(using: .utf8)!
-        
-        
-        // templatable은 메시지 만들기 항목 참고
-        
-        if let templatable = try?
-            SdkJSONDecoder.custom.decode(FeedTemplate.self, from: feedTemplateJsonStringData) {
-            LinkApi.shared.defaultLink(templatable: templatable) {(linkResult, error) in
-                if let error = error {
-                    print("error")
-                }
-                else {
-                    print("defaultLink() success.")
-                    
-                    if let linkResult = linkResult {
-                        UIApplication.shared.open(linkResult.url, options: [:], completionHandler: nil)
-                    }
-                }
-            }
-        }
-            
-        
-    }
+  
     
     @IBAction func addPhotoButotnClicked(_ sender: Any) {
         
