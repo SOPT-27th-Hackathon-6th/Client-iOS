@@ -14,19 +14,30 @@ class RankingViewController: UIViewController {
     /// Label, ColelctionView, TextField, ImageView 등 @IBOutlet 변수들을 선언합니다.  // 변수명 lowerCamelCase 사용
     /// ex)  @IBOutlet weak var qnaTextBoxBackgroundImage: UIImageView!
     
+    @IBOutlet weak var maraAreaView: UIView!
+    @IBOutlet weak var gukbabAreaView: UIView!
+    
+    
+    @IBOutlet weak var maraImageView: UIImageView!
+    @IBOutlet weak var gukbabImageView: UIImageView!
+    @IBOutlet weak var maraLabel: UILabel!
+    @IBOutlet weak var gukbabLabel: UILabel!
+    
+    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var selectView: UIView!
     
     @IBOutlet weak var myRankLabel: UILabel!
     @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var myLevelLabel: UILabel!
     @IBOutlet weak var myCountLabel: UILabel!
     
+    @IBOutlet weak var bottomView: UIView!
+    
     //MARK:- Variable Part
     /// 뷰컨에 필요한 변수들을 선언합니다  // 변수명 lowerCamelCase 사용
     /// ex)  var imageViewList : [UIImageView] = []
     
-    let indexNumber: Int = 0
+    var indexNumber: Int = 0
     
     
     //MARK:- Constraint Part
@@ -55,30 +66,22 @@ class RankingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        maraLabel.text = "마라"
+        gukbabLabel.text = "국밥"
+        
+        
+        maraSelect()
+        
         
         //그림자
-        selectView.layer.shadowColor = UIColor.black.cgColor // 검정색 사용
-        selectView.layer.masksToBounds = false
-        selectView.layer.shadowOffset = CGSize(width: 0, height: 4) // 반경에 대해서 너무 적용이 되어서 4point 정도 ㅐ림.
-        selectView.layer.shadowRadius = 4 // 반경?
-        selectView.layer.shadowOpacity = 0.1 // alpha값입니다.
+        //        selectView.layer.shadowColor = UIColor.black.cgColor // 검정색 사용
+        //        selectView.layer.masksToBounds = false
+        //        selectView.layer.shadowOffset = CGSize(width: 0, height: 4) // 반경에 대해서 너무 적용이 되어서 4point 정도 ㅐ림.
+        //        selectView.layer.shadowRadius = 4 // 반경?
+        //        selectView.layer.shadowOpacity = 0.1 // alpha값입니다.
         
         
         
-        // bottomView
-        if indexNumber == 0 {
-            myRankLabel.text = "165"
-            myNameLabel.text = "국밥마라 님"
-            myLevelLabel.text = "마라고 1학년"
-            myCountLabel.text = "28 회"
-            
-        }
-        else {
-            myRankLabel.text = "160"
-            myNameLabel.text = "국밥마라 님"
-            myLevelLabel.text = "국밥초 4학년"
-            myCountLabel.text = "11 회"
-        }
         
     }
     
@@ -86,6 +89,19 @@ class RankingViewController: UIViewController {
     /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
     
+    
+    @IBAction func maraButtonClicked(_ sender: Any) {
+        
+        maraSelect()
+        tableView.reloadData()
+        
+    }
+    
+    @IBAction func gukbabButtonClicked(_ sender: Any) {
+        
+        gukbabSelect()
+        tableView.reloadData()
+    }
     
     
     //MARK:- default Setting Function Part
@@ -102,6 +118,51 @@ class RankingViewController: UIViewController {
     ///         myTableView.delegate = self
     ///         myTableView.datasource = self
     ///    }
+    
+    func maraSelect()
+    {
+        
+        indexNumber = 0
+        
+        maraImageView.image = UIImage(named: "malaIconSeleceted")
+        gukbabImageView.image = UIImage(named: "gukbapIconUnseleceted")
+        maraLabel.textColor = .init(red: 208/255, green: 56/255, blue: 56/255, alpha: 1)
+        maraLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
+        
+        
+        gukbabLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
+        gukbabLabel.font = UIFont.systemFont(ofSize: 16)
+        
+        myRankLabel.text = "165"
+        myNameLabel.text = "국밥마라 님"
+        myLevelLabel.text = "마라고 1학년"
+        myCountLabel.text = "28 회"
+        
+        bottomView.backgroundColor = UIColor(red:203/255, green: 65/255, blue: 30/255, alpha: 1)
+    }
+    
+    func gukbabSelect()
+    {
+        
+        indexNumber = 1
+        
+        maraImageView.image = UIImage(named: "malaIconUnseleceted")
+        gukbabImageView.image = UIImage(named: "gukbapIconSeleceted")
+        
+        
+        maraLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
+        maraLabel.font = UIFont.systemFont(ofSize: 16)
+        
+        gukbabLabel.textColor = .init(red: 111/255, green: 79/255, blue: 40/255, alpha: 1)
+        gukbabLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
+        
+        myRankLabel.text = "160"
+        myNameLabel.text = "국밥마라 님"
+        myLevelLabel.text = "국밥초 4학년"
+        myCountLabel.text = "11 회"
+        
+        bottomView.backgroundColor = UIColor(red:0/255, green: 0/255, blue: 0/255, alpha: 1)
+    }
     
     
 }
@@ -131,6 +192,8 @@ extension RankingViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RankingTableViewCell", for: indexPath) as! RankingTableViewCell
         
         let row = indexPath.row
+        
+        // 마라
         if indexNumber == 0 {
             cell.rankLabel.text = maraDummy[indexPath.row].maraRank
             cell.rankNameLabel.text = maraDummy[indexPath.row].maraName! + " 님"
@@ -146,6 +209,7 @@ extension RankingViewController: UITableViewDataSource {
                 cell.innerView.layer.borderColor = .init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.15)
             }
         }
+        // 국밥
         else {
             cell.rankLabel.text = gukbabDummy[indexPath.row].gukbabRank
             cell.rankNameLabel.text = gukbabDummy[indexPath.row].gukbabName! + " 님"
@@ -167,5 +231,20 @@ extension RankingViewController: UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.transform = CGAffineTransform(translationX: 0, y: 74 * 1.4)
+        cell.alpha = 0
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.15 * Double(indexPath.row),
+            options: [.curveEaseInOut],
+            animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                cell.alpha = 1
+            
+            }
+        )
+        
+    }
 }

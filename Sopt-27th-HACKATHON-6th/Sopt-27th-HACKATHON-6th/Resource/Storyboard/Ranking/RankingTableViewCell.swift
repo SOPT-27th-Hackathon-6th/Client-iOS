@@ -21,7 +21,7 @@ class RankingTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.innerView.layer.borderWidth = 3
+        self.innerView.layer.borderWidth = 1
         self.innerView.layer.cornerRadius = 5
         self.innerView.backgroundColor = .white
         
