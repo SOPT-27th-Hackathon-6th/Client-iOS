@@ -1,18 +1,18 @@
 {
   "images" : [
     {
+      "filename" : "background.png",
       "idiom" : "universal",
-      "filename" : "malaIconSeleceted.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "malaIconSeleceted@2x.png",
+      "filename" : "background@2x.png",
       "scale" : "2x"
     },
     {
+      "filename" : "background@3x.png",
       "scale" : "3x",
-      "filename" : "malaIconSeleceted@3x.png",
       "idiom" : "universal"
     }
   ],
