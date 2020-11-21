@@ -52,7 +52,7 @@ class StampCell: UICollectionViewCell {
     ///    }
     func settingCell(isMara : Bool, count : Int, isLevelUP : Bool,isFilled : Bool)
     {
-        if isMara == true
+        if isMara == true // 마라에서
         {
             if isLevelUP == false // 일반 그릇
             {
@@ -60,10 +60,12 @@ class StampCell: UICollectionViewCell {
                 if isFilled == true
                 {
                     plateImageView.image = UIImage(named: "malaStampSelected")
+                    plateCountLabel.isHidden = true
                 }
                 else
                 {
                     plateImageView.image = UIImage(named: "malaStampUnselected")
+                    plateCountLabel.isHidden = false
                 }
 
                 plateCountLabel.text = "\(count)마라"
@@ -84,8 +86,20 @@ class StampCell: UICollectionViewCell {
             }
             else //레벨업
             {
-                plateImageView.image = UIImage(named: "malaStampLevelup")
-                plateCountLabel.text = "level up!"
+                if isFilled == true
+                {
+                    plateImageView.image = UIImage(named: "malaStampSelected")
+                    plateCountLabel.isHidden = true
+                }
+                else
+                {
+                    plateImageView.image = UIImage(named: "malaStampLevelup")
+                    plateCountLabel.isHidden = false
+                    plateCountLabel.text = "level up!"
+                }
+           
+                
+                
                 labelLeftConstraint.constant = 35
             }
         }
@@ -98,10 +112,12 @@ class StampCell: UICollectionViewCell {
                 if isFilled == true
                 {
                     plateImageView.image = UIImage(named: "gukbapStampSelected")
+                    plateCountLabel.isHidden = true
                 }
                 else
                 {
                     plateImageView.image = UIImage(named: "gukbapStampUnselected")
+                    plateCountLabel.isHidden = false
                 }
 
                 plateCountLabel.text = "\(count)국밥"
@@ -118,9 +134,26 @@ class StampCell: UICollectionViewCell {
             }
             else //레벨업
             {
-                plateImageView.image = UIImage(named: "gukbapStampLevelup")
-                plateCountLabel.text = "level up!"
+                
+                if isFilled == true
+                {
+                    plateImageView.image = UIImage(named: "gukbapStampSelected")
+                    plateCountLabel.isHidden = true
+                }
+                else
+                {
+                    plateImageView.image = UIImage(named: "gukbapStampLevelup")
+                    plateCountLabel.isHidden = false
+                    plateCountLabel.text = "level up!"
+                }
+           
+                
+                
                 labelLeftConstraint.constant = 35
+                
+                
+
+
             }
         }
         

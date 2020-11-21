@@ -43,8 +43,14 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     
     let imagePicker = UIImagePickerController()
-    
+
     var selectIndex : Int = 0
+    
+    
+    var maraCount : Int = 0
+    var gukbabCount : Int = 0
+    
+    
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -60,6 +66,14 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         defaultSetting()
         
 
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        getGukbabCount()
+        getMaraCount()
+        
     }
     
     //MARK:- IBAction Part
@@ -70,7 +84,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     @IBAction func maraButtonClicked(_ sender: Any) {
 
         maraSelect()
-        
+
         
     }
     
@@ -186,9 +200,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         gukbabLabel.text = "국밥"
         
         maraSelect()
-        
-        
-        
+            
     }
     
 
@@ -209,9 +221,31 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "AddPhotoViewController") as? AddPhotoViewController else {return}
         
+        confirmVC.modalPresentationStyle = .fullScreen
+        
         
         dismiss(animated: true) {
-            self.present(confirmVC, animated: true, completion: nil)
+            
+            var isMara = false
+            if self.selectIndex == 0
+            {
+                isMara = true
+            }
+            
+            AddStampService.shared.addStamp(isMara: isMara) { (result) in
+                switch(result)
+                {
+                case .success(_):
+                    
+                    self.present(confirmVC, animated: true, completion: nil)
+
+                default :
+                    makeAlert(title: "오류", message: "등록에 실패하였습니다", vc: self)
+                }
+            }
+            
+            
+            
         }
         
     
@@ -219,8 +253,47 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
     }
     
+    func getMaraCount()
+    {
+        getStampCountService.shared.getStamp(isMara: true) { (result) in
+            switch(result)
+            {
+            case .success(let count):
+                self.maraCount = count as? Int ?? 0
+                print("마라 개수 갱신",self.maraCount)
+                NotificationCenter.default.post(name: NSNotification.Name("showMaraCount"), object: self.gukbabCount)
+                self.stampCollectionView.reloadData()
+                
+                
+            default:
+                makeAlert(title: "알림", message: "개수 정보를 가져오는데 실패하였습니다", vc: self)
+            }
+        }
+
+    }
+    
+    func getGukbabCount()
+    {
+        getStampCountService.shared.getStamp(isMara: false) { (result) in
+            switch(result)
+            {
+            case .success(let count):
+                self.gukbabCount = count as? Int ?? 0
+            
+                NotificationCenter.default.post(name: NSNotification.Name("showGukbabCount"), object: self.gukbabCount)
+                
+                
+                
+            default:
+                makeAlert(title: "알림", message: "개수 정보를 가져오는데 실패하였습니다", vc: self)
+            }
+        }
+    }
+    
     func maraSelect()
     {
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "maraClicked"), object: nil)
         
         selectIndex = 0
         
@@ -240,6 +313,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     func gukbabSelect()
     {
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gukbabClicked"), object: nil)
+
         selectIndex = 1
         
         maraImageView.image = UIImage(named: "malaIconUnseleceted")
@@ -285,6 +360,9 @@ extension HomeViewController : UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let stampPageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampPageCell", for: indexPath) as? StampPageCell else  { return UICollectionViewCell ()}
+        
+        stampPageCell.gukbabCount = self.gukbabCount
+        stampPageCell.maraCount = self.maraCount
         
         stampPageCell.setStampCollectionView()
         stampPageCell.pageNum(num: indexPath.row)
