@@ -32,6 +32,10 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     @IBOutlet weak var titleTopLabel: UILabel!
     @IBOutlet weak var titleBottomLabel: UILabel!
+    @IBOutlet weak var subtitleBottomLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var stampCollectionView: UICollectionView! // 스탬프가 들어가는 전체 콜렉션 뷰
     @IBOutlet weak var currentPageController: UIPageControl!
     // 현재 페이지가 어딘지 나타내는 pageControl
@@ -51,6 +55,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     var gukbabCount : Int = 0
     
     
+    
+    
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -64,6 +70,11 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultSetting()
+        
+        
+        titleTopLabel.text = "이번달 마라 먹은지"
+        titleBottomLabel.text = "벌써 4일"
+        subtitleBottomLabel.text = "이나 됐다"
         
 
 
@@ -95,59 +106,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     
     
-    @IBAction func shareActionClicked(_ sender: Any) {
-        
-
-        
-        let feedTemplateJsonStringData =
-            """
-                    {
-                        "object_type": "feed",
-                        "content": {
-                            "title": "국밥마라",
-                            "description": "내가 이런 사람이야~~~~",
-                            "image_url": "http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
-                            "link" : {
-                                    "mobile_web_url": "https://developers.kakao.com",
-                                    "web_url": "https://developers.kakao.com"
-                            }
-
-                        },
-                    
-                        "buttons": [
-                    
-                            {
-                                "title": "앱으로 이동하기",
-                                "link": {
-                                    "android_execution_params": "key1=value1&key2=value2",
-                                    "ios_execution_params": "key1=qna&key2=1"
-                                }
-                            }
-                        ]
-                    }
-                    """.data(using: .utf8)!
-        
-        
-        // templatable은 메시지 만들기 항목 참고
-        
-        if let templatable = try?
-            SdkJSONDecoder.custom.decode(FeedTemplate.self, from: feedTemplateJsonStringData) {
-            LinkApi.shared.defaultLink(templatable: templatable) {(linkResult, error) in
-                if let error = error {
-                    print("error")
-                }
-                else {
-                    print("defaultLink() success.")
-                    
-                    if let linkResult = linkResult {
-                        UIApplication.shared.open(linkResult.url, options: [:], completionHandler: nil)
-                    }
-                }
-            }
-        }
-            
-        
-    }
+  
     
     @IBAction func addPhotoButotnClicked(_ sender: Any) {
         
@@ -221,6 +180,15 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "AddPhotoViewController") as? AddPhotoViewController else {return}
         
+        if self.selectIndex == 0
+        {
+            confirmVC.isMara = true
+        }
+        else
+        {
+            confirmVC.isMara = false
+        }
+        
         confirmVC.modalPresentationStyle = .fullScreen
         
         
@@ -232,10 +200,26 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 isMara = true
             }
             
+            //할까말까 했을때는
+            //마라
             AddStampService.shared.addStamp(isMara: isMara) { (result) in
                 switch(result)
                 {
                 case .success(_):
+                    
+                    if isMara == true
+                    {
+                        self.titleTopLabel.text = "오늘... 마라에 빠져버리고"
+                        self.titleBottomLabel.text = "마라탕"
+                        self.subtitleBottomLabel.text = ""
+                    }
+                    else
+                    {
+                        self.titleTopLabel.text = "뜨끈하고 든든한"
+                        self.titleBottomLabel.text = "국밥"
+                        self.subtitleBottomLabel.text = "을 먹어버렸다.."
+                    }
+
                     
                     self.present(confirmVC, animated: true, completion: nil)
 
