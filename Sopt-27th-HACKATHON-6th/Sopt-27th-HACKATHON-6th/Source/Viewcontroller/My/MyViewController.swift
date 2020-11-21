@@ -24,11 +24,8 @@ class MyViewController: UIViewController {
     /// ex)  var imageViewList : [UIImageView] = []
     let topInset: CGFloat = 0
     let bottomInset: CGFloat = 0
-    
     let horizonInset: CGFloat = 28
-    
     let rightSpacing: CGFloat = 28
-    
     let lineSpacing: CGFloat = 16
 
     //MARK:- Constraint Part
@@ -122,7 +119,7 @@ extension MyViewController: UICollectionViewDataSource {
 extension MyViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = collectionView.frame.height //UIScreen.main.bounds.height * (567/812)
+        let cellHeight = UIScreen.main.bounds.height * (567/812) //collectionView.frame.height
         let cellWidth = (collectionView.frame.width - lineSpacing - rightSpacing)
         return CGSize(width: cellWidth, height: cellHeight)
     }

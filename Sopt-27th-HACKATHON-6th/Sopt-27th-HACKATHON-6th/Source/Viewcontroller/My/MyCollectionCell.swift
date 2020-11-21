@@ -28,9 +28,6 @@ class MyCollectionCell: UICollectionViewCell {
     
     @IBOutlet var levelProgressView: UIProgressView!
     
-//    func setCell() {
-//        userNameLabel.text = "마라탕ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"
-//    }
     
     func setShadow() {
         contentView.layer.cornerRadius = 12
@@ -38,32 +35,58 @@ class MyCollectionCell: UICollectionViewCell {
         contentView.layer.borderColor = UIColor.clear.cgColor
         contentView.layer.masksToBounds = true
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 4.0)
-        layer.shadowRadius = 2.0
+        layer.shadowOffset = CGSize(width: 0, height: 5.0)
+        layer.shadowRadius = 5.0
         layer.shadowOpacity = 0.15
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds,
                                         cornerRadius: contentView.layer.cornerRadius).cgPath
     }
+    let type: Int = 1
+    let foodArr: [String] = ["Mala", "Gukbap"]
+    let foodLabelArr: [String] = ["마라", "국밥"]
+    
     func setCell(food: String) {
-        
-        profileImageView.image = UIImage(named: "img\(food)Profile")
-        userNameLabel.text = "국밥마라"
+        getLevelService.shared.getLevel(foodType: type) { (result) in
+            switch(result) {
+//            id, levelNum: Int
+//            let description: String
+//            let foodType: Int
+//            let levelName: String
+            case .success(let data):
+                if let levelDataModel = data as? levelDataModel {
+                    self.profileImageView.image = UIImage(named: "img\(self.foodArr[levelDataModel.foodType])Profile")
+                    self.fooldLabel.text = "\(self.foodLabelArr[levelDataModel.foodType])혈중농도"
+                    self.subDialogLabel.text = levelDataModel.description
+                    self.levelLabel.text = levelDataModel.levelName
+                }
+            case .requestErr(_):
+                print("error")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+//        profileImageView.image = UIImage(named: "img\(food)Profile")
+//        userNameLabel.text = "국밥마라"
         
         if (food == "Mala") {
-            levelLabel.text = "마라초 6학년"
-            fooldLabel.text = "마라혈중농도"
-            subDialogLabel.text = "내가 마라초 짱이다 ㅋ\n최고학년에 오르고 자신감에 가득찬 국밥마라..\n하지만 너에겐 중학교가 기다리고 있어"
+//            levelLabel.text = "마라초 6학년"
+//            fooldLabel.text = "마라혈중농도"
+//            subDialogLabel.text = "내가 마라초 짱이다 ㅋ\n최고학년에 오르고 자신감에 가득찬 국밥마라..\n하지만 너에겐 중학교가 기다리고 있어"
             progressBar(percentage: 0.8, r: 203, g: 65, b: 30)
-            countLabel.text = "17회"
+//            countLabel.text = "17회"
             boldNormal(food: "마라탕")
         }
         else {
-            levelLabel.text = "국밥초 4학년"
-            fooldLabel.text = "국밥혈중농도"
-            subDialogLabel.text = "국밥초 4학년 2반 국밥마라...\n요즘은 6학년 형들이 무섭다.\n겁먹지마 국밥마라! 너도 이젠 고학년이야!!"
+//            levelLabel.text = "국밥초 4학년"
+//            fooldLabel.text = "국밥혈중농도"
+//            subDialogLabel.text = "국밥초 4학년 2반 국밥마라...\n요즘은 6학년 형들이 무섭다.\n겁먹지마 국밥마라! 너도 이젠 고학년이야!!"
             progressBar(percentage: 0.4, r: 0, g: 0, b: 0)
-            countLabel.text = "11회"
+//            countLabel.text = "11회"
             boldNormal(food: "국밥")
         }
         
