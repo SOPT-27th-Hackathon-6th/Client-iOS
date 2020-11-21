@@ -9,30 +9,27 @@ import UIKit
 
 class MyViewController: UIViewController {
 
+    @IBOutlet var myCollectionView: UICollectionView!
     
     //MARK:- IBOutlet Part
     /// Label, ColelctionView, TextField, ImageView 등 @IBOutlet 변수들을 선언합니다.  // 변수명 lowerCamelCase 사용
     /// ex)  @IBOutlet weak var qnaTextBoxBackgroundImage: UIImageView!
     
-    @IBOutlet var topUIView: UIView!
-    @IBOutlet var profileBackgroundLabel: UILabel!
-    @IBOutlet var profileImageView: UIImageView!
     
-    @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var levelLabel: UILabel!
-    @IBOutlet var fooldLabel: UILabel!
-    @IBOutlet var percentageLabel: UILabel!
-    @IBOutlet var countLabel: UILabel!
-    
-    @IBOutlet var levelProgressView: UIProgressView!
     
 
 
     //MARK:- Variable Part
     /// 뷰컨에 필요한 변수들을 선언합니다  // 변수명 lowerCamelCase 사용
     /// ex)  var imageViewList : [UIImageView] = []
+    let topInset: CGFloat = 0
+    let bottomInset: CGFloat = 0
     
+    let horizonInset: CGFloat = 28
     
+    let rightSpacing: CGFloat = 28
+    
+    let lineSpacing: CGFloat = 16
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -45,27 +42,7 @@ class MyViewController: UIViewController {
     /// ex) override func viewWillAppear() { }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 임시로 여기에
-        topUIView.backgroundColor  = UIColor(displayP3Red: 196/255, green: 196/255, blue: 196/255, alpha: 1)
-        
-        //progress bar
-        levelProgressView.progress = 0.8
-        
-        levelProgressView.progressTintColor = UIColor(displayP3Red: 196/255, green: 196/255, blue: 196/255, alpha: 1)
-        levelProgressView.trackTintColor = UIColor(displayP3Red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
-        levelProgressView.transform = levelProgressView.transform.scaledBy(x: 1, y: 1.5)
-        
-        // Set the rounded edge for the outer bar
-//        levelProgressView.layer.cornerRadius = 0
-//        levelProgressView.clipsToBounds = true
-
-        // Set the rounded edge for the inner bar
-//        levelProgressView.layer.sublayers![1].cornerRadius = 0
-//        levelProgressView.subviews[1].clipsToBounds = true
-        
-        profileBackgroundLabel.layer.masksToBounds = true
-        profileBackgroundLabel.layer.cornerRadius = 60
+        collectionViewSetting()
 
     }
     
@@ -85,7 +62,11 @@ class MyViewController: UIViewController {
     ///         myTableView.delegate = self
     ///         myTableView.datasource = self
     ///    }
-
+    
+    func collectionViewSetting() {
+        myCollectionView.dataSource = self
+        myCollectionView.delegate = self
+    }
 
     //MARK:- Function Part
     /// 로직을 구현 하는 함수 부분입니다. // 함수명 lowerCamelCase 사용
@@ -94,6 +75,8 @@ class MyViewController: UIViewController {
     ///         myTableView.datasource = self
     ///    }
 
+    
+    
 
 }
 
@@ -102,3 +85,52 @@ class MyViewController: UIViewController {
 //MARK:- extension 부분
 /// UICollectionViewDelegate 부분 처럼 외부 프로토콜을 채택하는 경우나, 외부 클래스 확장 할 때,  extension을 작성하는 부분입니다
 /// ex) extension ViewController : UICollectionViewDelegate {  code .... }
+extension MyViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.row {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionCell.identifier, for: indexPath) as? MyCollectionCell else {
+                return UICollectionViewCell()
+            }
+            cell.setShadow()
+            cell.setCell(food: "Mala")
+            
+            return cell
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionCell.identifier, for: indexPath) as? MyCollectionCell else {
+                return UICollectionViewCell()
+            }
+
+            cell.setShadow()
+            cell.setCell(food: "Gukbap")
+            
+            return cell
+        default:
+            return UICollectionViewCell()
+//            break
+        }
+        
+        
+    }
+    
+    
+}
+extension MyViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellHeight = collectionView.frame.height //UIScreen.main.bounds.height * (567/812)
+        let cellWidth = (collectionView.frame.width - lineSpacing - rightSpacing)
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return lineSpacing }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: topInset, left: horizonInset, bottom: bottomInset, right: horizonInset) }
+}
