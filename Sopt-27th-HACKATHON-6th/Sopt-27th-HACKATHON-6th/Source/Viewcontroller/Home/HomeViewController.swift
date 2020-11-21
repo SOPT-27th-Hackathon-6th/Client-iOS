@@ -72,9 +72,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         defaultSetting()
         
         
-        titleTopLabel.text = "이번달 마라 먹은지"
-        titleBottomLabel.text = "벌써 4일"
-        subtitleBottomLabel.text = "이나 됐다"
+
         
 
 
@@ -252,9 +250,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 if self.maraCount % 3 == 0
                 {
                     
-                    if (UserDefaults.standard.bool(forKey: "showLEVELUP")) == false
-                    {
-                        UserDefaults.standard.set(true, forKey:"showLEVELUP")
+
+                        
                         let alert = UIAlertController(title: "Level up!", message: "마라 레벨이 올랐습니다. 마이페이지에서 확인해보세요", preferredStyle: .alert)
                         let ok = UIAlertAction(title: "확인하러 가기", style: .default) { (_) in
                             
@@ -264,13 +261,11 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                         self.present(alert, animated: true, completion: nil)
                         
                        
-                    }
-                    
+            
 
                 }
                 else
                 {
-                    UserDefaults.standard.set(false, forKey:"showLEVELUP")
                 }
                 
                 
@@ -306,7 +301,9 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         selectIndex = 0
         
-        
+        self.titleTopLabel.text = "이번달 마라 먹은지"
+        self.titleBottomLabel.text = "벌써 4일"
+        self.subtitleBottomLabel.text = "이나 됐다"
         
         maraImageView.image = UIImage(named: "malaIconSeleceted")
         gukbabImageView.image = UIImage(named: "gukbapIconUnseleceted")
@@ -325,6 +322,11 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gukbabClicked"), object: nil)
 
         selectIndex = 1
+        
+        
+        self.titleTopLabel.text = "이번달 국밥 먹은지"
+        self.titleBottomLabel.text = "벌써 4일"
+        self.subtitleBottomLabel.text = "이나 됐다"
         
         maraImageView.image = UIImage(named: "malaIconUnseleceted")
         gukbabImageView.image = UIImage(named: "gukbapIconSeleceted")
