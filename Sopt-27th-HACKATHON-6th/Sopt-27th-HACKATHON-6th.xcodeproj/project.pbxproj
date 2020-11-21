@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E8D9BA661F9C0A67416829D /* Pods_Sopt_27th_HACKATHON_6th.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4F2B165C97A5EC1421C093 /* Pods_Sopt_27th_HACKATHON_6th.framework */; };
+		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
+		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0B6256937D300931E12 /* AppDelegate.swift */; };
 		FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0B8256937D300931E12 /* SceneDelegate.swift */; };
 		FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0BA256937D300931E12 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
+		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
 		ED4F2B165C97A5EC1421C093 /* Pods_Sopt_27th_HACKATHON_6th.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sopt_27th_HACKATHON_6th.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40F46BB6E61ECABF9FFE5EE /* Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.debug.xcconfig"; sourceTree = "<group>"; };
 		FDB4D0B3256937D300931E12 /* Sopt-27th-HACKATHON-6th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sopt-27th-HACKATHON-6th.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				FDB4D0D92569393C00931E12 /* Ranking.storyboard */,
+				D16B30BB2569428200C8207E /* RankingTableViewCell.swift */,
+				D16B30BC2569428200C8207E /* RankingTableViewCell.xib */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 				FDB4D0C0256937D500931E12 /* Assets.xcassets in Resources */,
 				FDB4D0BE256937D300931E12 /* Main.storyboard in Resources */,
 				FDB4D0E02569394C00931E12 /* Home.storyboard in Resources */,
+				D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */,
 				FDB4D0DD2569394100931E12 /* My.storyboard in Resources */,
 				FDB4D0DA2569393C00931E12 /* Ranking.storyboard in Resources */,
 			);
@@ -366,6 +373,7 @@
 				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
 				FDB4D0E32569395D00931E12 /* APIConstants.swift in Sources */,
 				FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */,
+				D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */,
 				FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */,
 				FDB4D0F925693BBD00931E12 /* calculateTime.swift in Sources */,
 				FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */,
