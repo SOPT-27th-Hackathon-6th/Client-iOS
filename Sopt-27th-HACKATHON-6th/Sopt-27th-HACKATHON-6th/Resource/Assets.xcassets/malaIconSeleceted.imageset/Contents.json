@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "scale" : "1x",
+      "idiom" : "universal",
       "filename" : "malaIconSeleceted.png",
-      "idiom" : "universal"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "malaIconSeleceted@2x.png"
+      "filename" : "malaIconSeleceted@2x.png",
+      "scale" : "2x"
     },
     {
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "malaIconSeleceted@3x.png"
+      "filename" : "malaIconSeleceted@3x.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

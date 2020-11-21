@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "homeHomeAltOutline.png",
       "scale" : "1x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "homeHomeAltOutline.png"
     },
     {
       "scale" : "2x",
-      "filename" : "homeHomeAltOutline@2x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "homeHomeAltOutline@2x.png"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "homeHomeAltOutline@3x.png"
+      "filename" : "homeHomeAltOutline@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
