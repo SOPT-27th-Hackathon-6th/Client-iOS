@@ -209,11 +209,12 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "AddPhotoViewController") as? AddPhotoViewController else {return}
         
-        confirmVC.imageData = image
         
         dismiss(animated: true) {
             self.present(confirmVC, animated: true, completion: nil)
         }
+        
+    
 
         
     }
@@ -222,8 +223,14 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     {
         
         selectIndex = 0
+        
+        
+        
+        maraImageView.image = UIImage(named: "malaIconSeleceted")
+        gukbabImageView.image = UIImage(named: "gukbapIconUnseleceted")
            maraLabel.textColor = .init(red: 208/255, green: 56/255, blue: 56/255, alpha: 1)
-           maraLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        maraLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
+
            
            gukbabLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
            gukbabLabel.font = UIFont.systemFont(ofSize: 16)
@@ -235,12 +242,18 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         selectIndex = 1
         
+        maraImageView.image = UIImage(named: "malaIconUnseleceted")
+        gukbabImageView.image = UIImage(named: "gukbapIconSeleceted")
+        
+        
         maraLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
         maraLabel.font = UIFont.systemFont(ofSize: 16)
+        
              
       
         gukbabLabel.textColor = .init(red: 111/255, green: 79/255, blue: 40/255, alpha: 1)
-        gukbabLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        gukbabLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
     }
 
 
@@ -274,6 +287,7 @@ extension HomeViewController : UICollectionViewDataSource
         guard let stampPageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampPageCell", for: indexPath) as? StampPageCell else  { return UICollectionViewCell ()}
         
         stampPageCell.setStampCollectionView()
+        stampPageCell.pageNum(num: indexPath.row)
         
         
         return stampPageCell
@@ -287,7 +301,7 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.stampCollectionView.frame.width,  height: self.stampCollectionView.frame.height)
+        return CGSize(width: self.stampCollectionView.frame.width ,  height: self.stampCollectionView.frame.height )
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
