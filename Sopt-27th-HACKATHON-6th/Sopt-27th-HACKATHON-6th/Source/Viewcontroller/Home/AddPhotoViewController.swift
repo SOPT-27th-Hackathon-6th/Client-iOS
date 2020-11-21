@@ -12,14 +12,16 @@ class AddPhotoViewController: UIViewController {
     
     //MARK:- IBOutlet Part
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var subtitleImageView: UIImageView!
+    @IBOutlet weak var foodImageView: UIImageView!
     
     
-        
     
     
     //MARK:- Variable Part
 
-
+    var isMara : Bool = true
     //MARK:- Constraint Part
     
     
@@ -28,6 +30,21 @@ class AddPhotoViewController: UIViewController {
     //MARK:- Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if isMara == true
+        {
+            backgroundImageView.image = UIImage(named: "imgBackgroundMala")
+            subtitleImageView.image = UIImage(named:"mara1" )
+            foodImageView.image = UIImage(named: "imgMalaStamp")
+        }
+        else
+        {
+            backgroundImageView.image = UIImage(named: "imgBackgroundGukbab")
+            subtitleImageView.image = UIImage(named:"gukbab1" )
+            foodImageView.image = UIImage(named: "imgGukbabStamp")
+        }
+        
         
         
 
