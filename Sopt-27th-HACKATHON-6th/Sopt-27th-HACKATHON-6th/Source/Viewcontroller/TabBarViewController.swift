@@ -48,9 +48,14 @@ class TabBarViewController: UIViewController {
         makeVC()
         setVCList()
         moveVC()
+        
 
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addObserver()
     }
     
     
@@ -73,6 +78,17 @@ class TabBarViewController: UIViewController {
         moveVC()
     }
     
+    
+    func addObserver()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(goLEVELUP), name: NSNotification.Name("levelUP"), object: nil)
+    }
+    
+    @objc func goLEVELUP()
+    {
+        selectIndex = 2
+        moveVC()
+    }
     
     func setVCList()
     {
