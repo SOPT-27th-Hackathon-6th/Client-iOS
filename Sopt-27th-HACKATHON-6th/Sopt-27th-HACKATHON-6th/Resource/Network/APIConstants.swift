@@ -28,7 +28,8 @@ struct APIConstants
     
     
     // 혈중 농도 뷰
-    
+    static let levelURL = APIConstants.baseURL + "/level"
+    static let percentURL = APIConstants.baseURL + "/percent"
     
     
     // 랭킹뷰

@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import KakaoSDKLink
+import KakaoSDKCommon
+import KakaoSDKTemplate
+
+
+
+
 
 class MyViewController: UIViewController {
 
@@ -24,12 +31,11 @@ class MyViewController: UIViewController {
     /// ex)  var imageViewList : [UIImageView] = []
     let topInset: CGFloat = 0
     let bottomInset: CGFloat = 0
-    
     let horizonInset: CGFloat = 28
-    
     let rightSpacing: CGFloat = 28
-    
     let lineSpacing: CGFloat = 16
+    
+    let ad = UIApplication.shared.delegate as? AppDelegate
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -44,6 +50,12 @@ class MyViewController: UIViewController {
         super.viewDidLoad()
         collectionViewSetting()
 
+        
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.ad!.showLEVELCOUNT =  self.ad!.showLEVELCOUNT + 1
     }
     
     //MARK:- IBAction Part
@@ -51,6 +63,56 @@ class MyViewController: UIViewController {
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
     
     @IBAction func touchUpShare(_ sender: Any) {
+        
+        
+
+        
+        let feedTemplateJsonStringData =
+            """
+                    {
+                        "object_type": "feed",
+                        "content": {
+                            "title": "나 오늘 마라혈중농도 100이다...",
+                            "image_url": "https://user-images.githubusercontent.com/60260284/99888080-23595500-2c8d-11eb-9cbc-417580997d60.png",
+                            "link" : {
+                                    "mobile_web_url": "https://developers.kakao.com",
+                                    "web_url": "https://developers.kakao.com"
+                            }
+
+                        },
+                    
+                        "buttons": [
+                    
+                            {
+                                "title": "나의 마라 혈중농도 확인하러 가기",
+                                "link": {
+                                    "android_execution_params": "key1=value1&key2=value2",
+                                    "ios_execution_params": "key1=qna&key2=1"
+                                }
+                            }
+                        ]
+                    }
+                    """.data(using: .utf8)!
+        
+        
+        // templatable은 메시지 만들기 항목 참고
+        
+        if let templatable = try?
+            SdkJSONDecoder.custom.decode(FeedTemplate.self, from: feedTemplateJsonStringData) {
+            LinkApi.shared.defaultLink(templatable: templatable) {(linkResult, error) in
+                if let error = error {
+                    print("error")
+                }
+                else {
+                    print("defaultLink() success.")
+                    
+                    if let linkResult = linkResult {
+                        UIApplication.shared.open(linkResult.url, options: [:], completionHandler: nil)
+                    }
+                }
+            }
+        }
+            
         
     }
     
@@ -122,7 +184,7 @@ extension MyViewController: UICollectionViewDataSource {
 extension MyViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = collectionView.frame.height //UIScreen.main.bounds.height * (567/812)
+        let cellHeight = UIScreen.main.bounds.height * (567/812) //collectionView.frame.height
         let cellWidth = (collectionView.frame.width - lineSpacing - rightSpacing)
         return CGSize(width: cellWidth, height: cellHeight)
     }

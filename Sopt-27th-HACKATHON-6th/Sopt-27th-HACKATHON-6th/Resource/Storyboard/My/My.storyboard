@@ -40,6 +40,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="377" height="621"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qge-gg-fHu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="621"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgGukbab" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-Yk-aSi">
                                                     <rect key="frame" x="0.0" y="0.0" width="377" height="172.5"/>
                                                     <constraints>
@@ -53,7 +57,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-U9-LZf">
-                                                    <rect key="frame" x="29" y="423.5" width="319" height="29"/>
+                                                    <rect key="frame" x="38" y="423.5" width="310" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -113,10 +117,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imgMalaProfile" translatesAutoresizingMaskIntoConstraints="NO" id="DoG-QO-HX9">
                                                     <rect key="frame" x="139" y="121.5" width="99" height="87"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qge-gg-fHu">
-                                                    <rect key="frame" x="1" y="0.0" width="377" height="621"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="oWd-DB-yt1" secondAttribute="trailing" constant="30" id="52k-aj-B2z"/>
@@ -154,7 +154,7 @@
                                                 <constraint firstItem="eN6-Hd-WZZ" firstAttribute="top" secondItem="Ngb-Yk-aSi" secondAttribute="bottom" constant="-70" id="oqi-la-DyZ"/>
                                                 <constraint firstItem="MlF-Ve-2Ma" firstAttribute="leading" secondItem="2eG-ro-t6X" secondAttribute="leading" constant="109" id="qrB-Em-aYi"/>
                                                 <constraint firstAttribute="trailing" secondItem="qge-gg-fHu" secondAttribute="trailing" id="rDz-cg-3MG"/>
-                                                <constraint firstItem="LlG-U9-LZf" firstAttribute="leading" secondItem="2eG-ro-t6X" secondAttribute="leading" constant="29" id="rjg-wE-jcL"/>
+                                                <constraint firstItem="LlG-U9-LZf" firstAttribute="leading" secondItem="2eG-ro-t6X" secondAttribute="leading" constant="38" id="rjg-wE-jcL"/>
                                                 <constraint firstItem="ioL-L8-Uhi" firstAttribute="top" secondItem="LlG-U9-LZf" secondAttribute="bottom" constant="24" id="uM5-Ka-Y3U"/>
                                                 <constraint firstAttribute="trailing" secondItem="LlG-U9-LZf" secondAttribute="trailing" constant="29" id="vzB-if-64E"/>
                                             </constraints>
