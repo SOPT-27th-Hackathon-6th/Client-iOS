@@ -14,6 +14,18 @@ class MyViewController: UIViewController {
     /// Label, ColelctionView, TextField, ImageView 등 @IBOutlet 변수들을 선언합니다.  // 변수명 lowerCamelCase 사용
     /// ex)  @IBOutlet weak var qnaTextBoxBackgroundImage: UIImageView!
     
+    @IBOutlet var topUIView: UIView!
+    @IBOutlet var profileBackgroundLabel: UILabel!
+    @IBOutlet var profileImageView: UIImageView!
+    
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var levelLabel: UILabel!
+    @IBOutlet var fooldLabel: UILabel!
+    @IBOutlet var percentageLabel: UILabel!
+    @IBOutlet var countLabel: UILabel!
+    
+    @IBOutlet var levelProgressView: UIProgressView!
+    
 
 
     //MARK:- Variable Part
@@ -34,12 +46,25 @@ class MyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 임시로 여기에
+        topUIView.backgroundColor  = UIColor(displayP3Red: 196/255, green: 196/255, blue: 196/255, alpha: 1)
+        
+        levelProgressView.progressTintColor = UIColor(displayP3Red: 196/255, green: 196/255, blue: 196/255, alpha: 1)
+        levelProgressView.trackTintColor = UIColor(displayP3Red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
+        levelProgressView.transform = levelProgressView.transform.scaledBy(x: 1, y: 2)
+        
+        profileBackgroundLabel.layer.masksToBounds = true
+        profileBackgroundLabel.layer.cornerRadius = 60
 
     }
     
     //MARK:- IBAction Part
     /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
+    
+    @IBAction func touchUpShare(_ sender: Any) {
+        
+    }
     
     
     
