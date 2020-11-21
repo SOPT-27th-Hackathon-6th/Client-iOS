@@ -278,12 +278,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOz-Cu-fh7">
-                                <rect key="frame" x="188" y="757" width="39" height="39"/>
+                                <rect key="frame" x="138" y="757" width="139" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="닫기"/>
+                                <state key="normal" title="홈으로 이동하기"/>
                                 <connections>
-                                    <action selector="closeButtonClicked:" destination="SRz-y7-L0j" eventType="touchUpInside" id="csb-l5-hTj"/>
+                                    <action selector="goHomeButtonClicked:" destination="SRz-y7-L0j" eventType="touchUpInside" id="zrz-n9-QGb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvq-bT-8TC">

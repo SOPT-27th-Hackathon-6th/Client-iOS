@@ -27,6 +27,12 @@ class StampPageCell: UICollectionViewCell {
     /// ex)  var imageViewList : [UIImageView] = []
     
     var pageNum : Int = 0
+    var isMara : Bool = true
+    
+    
+    var maraCount : Int = 0
+    var gukbabCount : Int = 0
+    
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -55,11 +61,45 @@ class StampPageCell: UICollectionViewCell {
     
     func setStampCollectionView()
     {
+        
         self.stampPageCollectionView.delegate = self
         self.stampPageCollectionView.dataSource = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(maraClicked), name: NSNotification.Name("maraClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gukbabClicked), name: NSNotification.Name("gukbabClicked"), object: nil)
+        
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showMaraCount), name: NSNotification.Name("showMaraCount"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showGukbabCount), name: NSNotification.Name("showGukbabCount"), object: nil)
+        
     }
     
+    @objc func maraClicked()
+    {
+        isMara = true
+        stampPageCollectionView.reloadData()
+    }
+    
+    
+    @objc func gukbabClicked()
+    {
+        isMara = false
+        stampPageCollectionView.reloadData()
+    }
+    
+    @objc func showMaraCount(noti : NSNotification)
+    {
+        maraCount = noti.object as? Int ?? 0
+        stampPageCollectionView.reloadData()
+        
+    }
+    
+    @objc func showGukbabCount(noti : NSNotification)
+    {
+        gukbabCount = noti.object as? Int ?? 0
+        stampPageCollectionView.reloadData()
+    }
     func pageNum(num : Int)
     {
         self.pageNum = num
@@ -100,15 +140,74 @@ extension StampPageCell : UICollectionViewDataSource
         
         guard let stampCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampCell", for: indexPath) as? StampCell else {return UICollectionViewCell() }
 
-        let index = (pageNum * 12) + indexPath.row
+        let index = (pageNum * 12) + indexPath.row + 1
         
-        if ( indexPath.row + 1 ) % 3 == 0
+
+        if index % 3 != 0
         {
-            stampCell.settingCell(isMara: true, count: index, isLevelUP: true,isFilled: false)
+            if isMara == true
+            {
+                
+                if index <= maraCount
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: true)
+
+                }
+                else
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: false)
+                }
+            }
+            else
+            {
+                if index <= gukbabCount
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: true)
+
+                }
+                else
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: false)
+
+                    
+                }
+            }
         }
         else
         {
-            stampCell.settingCell(isMara: true, count: index, isLevelUP: false,isFilled: false) // 무조건 isFilled false
+            
+            if isMara == true
+            {
+                
+                if index <= maraCount
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: true)
+
+                }
+                else
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: false)
+                }
+            }
+            else
+            {
+                if index <= gukbabCount
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: true)
+
+                }
+                else
+                {
+                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: false)
+
+                    
+                }
+            }
+            
+
+            
+            
+            
 
         }
     

@@ -30,6 +30,9 @@
 		FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D104256951F700931E12 /* AddPhotoViewController.swift */; };
 		FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D11225695B8300931E12 /* AddStampService.swift */; };
 		FDB4D11725695F1C00931E12 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D11625695F1C00931E12 /* NetworkResult.swift */; };
+		FDB4D11B2569929100931E12 /* makeAlert + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D11A2569929100931E12 /* makeAlert + UIView.swift */; };
+		FDB4D11E2569930F00931E12 /* getStampCountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D11D2569930F00931E12 /* getStampCountService.swift */; };
+		FDB4D121256996AA00931E12 /* stampCountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D120256996AA00931E12 /* stampCountDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		FDB4D104256951F700931E12 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		FDB4D11225695B8300931E12 /* AddStampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStampService.swift; sourceTree = "<group>"; };
 		FDB4D11625695F1C00931E12 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		FDB4D11A2569929100931E12 /* makeAlert + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "makeAlert + UIView.swift"; sourceTree = "<group>"; };
+		FDB4D11D2569930F00931E12 /* getStampCountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStampCountService.swift; sourceTree = "<group>"; };
+		FDB4D120256996AA00931E12 /* stampCountDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stampCountDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 				FDB4D0BF256937D500931E12 /* Assets.xcassets */,
 				FDB4D0D02569382900931E12 /* Storyboard */,
 				FDB4D0CF2569382300931E12 /* Network */,
+				FDB4D120256996AA00931E12 /* stampCountDataModel.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB4D0F825693BBD00931E12 /* calculateTime.swift */,
+				FDB4D11A2569929100931E12 /* makeAlert + UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB4D11225695B8300931E12 /* AddStampService.swift */,
+				FDB4D11D2569930F00931E12 /* getStampCountService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -370,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB4D102256945B100931E12 /* StampCell.swift in Sources */,
+				FDB4D121256996AA00931E12 /* stampCountDataModel.swift in Sources */,
 				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
 				FDB4D0E32569395D00931E12 /* APIConstants.swift in Sources */,
 				FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */,
@@ -382,6 +392,8 @@
 				FDB4D0E6256939A400931E12 /* TabBarViewController.swift in Sources */,
 				FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */,
 				FDB4D0EF256939B800931E12 /* MyViewController.swift in Sources */,
+				FDB4D11B2569929100931E12 /* makeAlert + UIView.swift in Sources */,
+				FDB4D11E2569930F00931E12 /* getStampCountService.swift in Sources */,
 				FDB4D0E9256939AD00931E12 /* HomeViewController.swift in Sources */,
 				FDB4D11725695F1C00931E12 /* NetworkResult.swift in Sources */,
 			);
