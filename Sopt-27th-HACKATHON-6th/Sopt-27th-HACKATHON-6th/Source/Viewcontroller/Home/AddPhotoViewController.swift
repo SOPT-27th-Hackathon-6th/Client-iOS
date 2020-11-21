@@ -14,13 +14,11 @@ class AddPhotoViewController: UIViewController {
     
     
     
-    @IBOutlet weak var photoImageView: UIImageView!
         
     
     
     //MARK:- Variable Part
 
-    var imageData = UIImage()
 
     //MARK:- Constraint Part
     
@@ -31,7 +29,6 @@ class AddPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.photoImageView.image = imageData
     }
     //MARK:- IBAction Part
     

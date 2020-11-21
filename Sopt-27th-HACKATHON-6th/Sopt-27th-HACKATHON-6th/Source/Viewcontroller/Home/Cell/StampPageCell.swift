@@ -20,19 +20,13 @@ class StampPageCell: UICollectionViewCell {
     
     
 
-    
-    func setStampCollectionView()
-    {
-        self.stampPageCollectionView.delegate = self
-        self.stampPageCollectionView.dataSource = self
-        
-    }
+
 
     //MARK:- Variable Part
     /// 뷰컨에 필요한 변수들을 선언합니다  // 변수명 lowerCamelCase 사용
     /// ex)  var imageViewList : [UIImageView] = []
     
-    
+    var pageNum : Int = 0
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -56,6 +50,20 @@ class StampPageCell: UICollectionViewCell {
     ///         myTableView.delegate = self
     ///         myTableView.datasource = self
     ///    }
+    
+    
+    
+    func setStampCollectionView()
+    {
+        self.stampPageCollectionView.delegate = self
+        self.stampPageCollectionView.dataSource = self
+        
+    }
+    
+    func pageNum(num : Int)
+    {
+        self.pageNum = num
+    }
 
 
     //MARK:- Function Part
@@ -91,10 +99,19 @@ extension StampPageCell : UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let stampCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampCell", for: indexPath) as? StampCell else {return UICollectionViewCell() }
+
+        let index = (pageNum * 12) + indexPath.row
         
-        stampCell.layer.borderWidth = 1
-        stampCell.layer.borderColor = .init(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
-        
+        if ( indexPath.row + 1 ) % 3 == 0
+        {
+            stampCell.settingCell(isMara: true, count: index, isLevelUP: true,isFilled: false)
+        }
+        else
+        {
+            stampCell.settingCell(isMara: true, count: index, isLevelUP: false,isFilled: false) // 무조건 isFilled false
+
+        }
+    
         return stampCell
     }
     
@@ -107,7 +124,7 @@ extension StampPageCell : UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: self.frame.width/3, height: self.frame.height/4)
+        return CGSize(width: (self.frame.width - 34 )/3, height: (self.frame.height-40)/4 )
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
