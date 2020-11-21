@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E8D9BA661F9C0A67416829D /* Pods_Sopt_27th_HACKATHON_6th.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4F2B165C97A5EC1421C093 /* Pods_Sopt_27th_HACKATHON_6th.framework */; };
+		6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4D0B6256937D300931E12 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionCell.swift; sourceTree = "<group>"; };
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB4D0EE256939B800931E12 /* MyViewController.swift */,
+				6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				FDB4D102256945B100931E12 /* StampCell.swift in Sources */,
 				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
 				FDB4D0E32569395D00931E12 /* APIConstants.swift in Sources */,
+				6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */,
 				FDB4D0BB256937D300931E12 /* ViewController.swift in Sources */,
 				D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */,
 				FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */,
