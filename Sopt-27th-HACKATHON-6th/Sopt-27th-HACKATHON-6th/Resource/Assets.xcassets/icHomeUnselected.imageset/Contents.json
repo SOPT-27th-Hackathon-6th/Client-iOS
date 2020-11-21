@@ -1,9 +1,9 @@
 {
   "images" : [
     {
+      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "icHomeUnselected.png",
-      "scale" : "1x"
+      "filename" : "icHomeUnselected.png"
     },
     {
       "filename" : "icHomeUnselected@2x.png",
@@ -11,8 +11,8 @@
       "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
       "filename" : "icHomeUnselected@3x.png",
+      "idiom" : "universal",
       "scale" : "3x"
     }
   ],
