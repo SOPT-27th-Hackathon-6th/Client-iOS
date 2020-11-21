@@ -28,15 +28,19 @@ class AddPhotoViewController: UIViewController {
     //MARK:- Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
     }
     //MARK:- IBAction Part
     
-    @IBAction func closeButtonClicked(_ sender: Any) {
+
+    
+    @IBAction func goHomeButtonClicked(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
+
     }
-    
     
     //MARK:- default Setting Function Part
     
