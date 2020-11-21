@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B08E7538E84B186ADDC2DB4 /* Pods_SOPT_27th_HACKATHON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABA87C3B4DAF6D2DE13AC16 /* Pods_SOPT_27th_HACKATHON.framework */; };
 		FDDA677D2568E4170047D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA677C2568E4170047D3D4 /* AppDelegate.swift */; };
 		FDDA677F2568E4170047D3D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */; };
 		FDDA67812568E4170047D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA67802568E4170047D3D4 /* ViewController.swift */; };
 		FDDA67842568E4170047D3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDA67822568E4170047D3D4 /* Main.storyboard */; };
 		FDDA67862568E4180047D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDA67852568E4180047D3D4 /* Assets.xcassets */; };
 		FDDA67892568E4180047D3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDA67872568E4180047D3D4 /* LaunchScreen.storyboard */; };
+		FDDA679E2568EBC20047D3D4 /* makeAlert + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA679D2568EBC20047D3D4 /* makeAlert + UIView.swift */; };
+		FDDA67A32568EC360047D3D4 /* scrollToTop + scrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA67A22568EC360047D3D4 /* scrollToTop + scrollView.swift */; };
+		FDDA67A62568F8B30047D3D4 /* setImge + UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDA67A52568F8B30047D3D4 /* setImge + UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D578E137B5DBCA23906B16D /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-27th-HACKATHON.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON.debug.xcconfig"; sourceTree = "<group>"; };
+		339D1F20DF72FC7D138915B3 /* Pods-SOPT-27th-HACKATHON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-27th-HACKATHON.release.xcconfig"; path = "Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON.release.xcconfig"; sourceTree = "<group>"; };
+		DABA87C3B4DAF6D2DE13AC16 /* Pods_SOPT_27th_HACKATHON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_27th_HACKATHON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDA67792568E4170047D3D4 /* SOPT-27th-HACKATHON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-27th-HACKATHON.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDA677C2568E4170047D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		FDDA67852568E4180047D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDA67882568E4180047D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDDA678A2568E4180047D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDA679D2568EBC20047D3D4 /* makeAlert + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "makeAlert + UIView.swift"; sourceTree = "<group>"; };
+		FDDA67A22568EC360047D3D4 /* scrollToTop + scrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "scrollToTop + scrollView.swift"; sourceTree = "<group>"; };
+		FDDA67A52568F8B30047D3D4 /* setImge + UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "setImge + UIImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B08E7538E84B186ADDC2DB4 /* Pods_SOPT_27th_HACKATHON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE25BCCCF2839F396B56FB8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D578E137B5DBCA23906B16D /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */,
+				339D1F20DF72FC7D138915B3 /* Pods-SOPT-27th-HACKATHON.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9AED9FF7320CF023595EFB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DABA87C3B4DAF6D2DE13AC16 /* Pods_SOPT_27th_HACKATHON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDDA67702568E4170047D3D4 = {
 			isa = PBXGroup;
 			children = (
 				FDDA677B2568E4170047D3D4 /* SOPT-27th-HACKATHON */,
 				FDDA677A2568E4170047D3D4 /* Products */,
+				AE25BCCCF2839F396B56FB8B /* Pods */,
+				B9AED9FF7320CF023595EFB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,58 @@
 		FDDA677B2568E4170047D3D4 /* SOPT-27th-HACKATHON */ = {
 			isa = PBXGroup;
 			children = (
-				FDDA677C2568E4170047D3D4 /* AppDelegate.swift */,
-				FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */,
-				FDDA67802568E4170047D3D4 /* ViewController.swift */,
-				FDDA67822568E4170047D3D4 /* Main.storyboard */,
-				FDDA67852568E4180047D3D4 /* Assets.xcassets */,
-				FDDA67872568E4180047D3D4 /* LaunchScreen.storyboard */,
+				FDDA679C2568EADE0047D3D4 /* Extension */,
+				FDDA67992568EA180047D3D4 /* Resource */,
+				FDDA67982568EA130047D3D4 /* Source */,
 				FDDA678A2568E4180047D3D4 /* Info.plist */,
 			);
 			path = "SOPT-27th-HACKATHON";
+			sourceTree = "<group>";
+		};
+		FDDA67982568EA130047D3D4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FDDA677C2568E4170047D3D4 /* AppDelegate.swift */,
+				FDDA677E2568E4170047D3D4 /* SceneDelegate.swift */,
+				FDDA679A2568EA6E0047D3D4 /* ViewController */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FDDA67992568EA180047D3D4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FDDA679B2568EA890047D3D4 /* Storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FDDA679A2568EA6E0047D3D4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FDDA67802568E4170047D3D4 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FDDA679B2568EA890047D3D4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FDDA67852568E4180047D3D4 /* Assets.xcassets */,
+				FDDA67822568E4170047D3D4 /* Main.storyboard */,
+				FDDA67872568E4180047D3D4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FDDA679C2568EADE0047D3D4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FDDA679D2568EBC20047D3D4 /* makeAlert + UIView.swift */,
+				FDDA67A22568EC360047D3D4 /* scrollToTop + scrollView.swift */,
+				FDDA67A52568F8B30047D3D4 /* setImge + UIImageView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDDA678D2568E4180047D3D4 /* Build configuration list for PBXNativeTarget "SOPT-27th-HACKATHON" */;
 			buildPhases = (
+				96383D681A0201F530BA7D52 /* [CP] Check Pods Manifest.lock */,
 				FDDA67752568E4170047D3D4 /* Sources */,
 				FDDA67762568E4170047D3D4 /* Frameworks */,
 				FDDA67772568E4170047D3D4 /* Resources */,
+				6F6C9B464C494BC5C6D4A0E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +207,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F6C9B464C494BC5C6D4A0E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOPT-27th-HACKATHON/Pods-SOPT-27th-HACKATHON-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96383D681A0201F530BA7D52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOPT-27th-HACKATHON-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDDA67752568E4170047D3D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FDDA67812568E4170047D3D4 /* ViewController.swift in Sources */,
+				FDDA67A62568F8B30047D3D4 /* setImge + UIImageView.swift in Sources */,
+				FDDA679E2568EBC20047D3D4 /* makeAlert + UIView.swift in Sources */,
 				FDDA677D2568E4170047D3D4 /* AppDelegate.swift in Sources */,
 				FDDA677F2568E4170047D3D4 /* SceneDelegate.swift in Sources */,
+				FDDA67A32568EC360047D3D4 /* scrollToTop + scrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +403,7 @@
 		};
 		FDDA678E2568E4180047D3D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D578E137B5DBCA23906B16D /* Pods-SOPT-27th-HACKATHON.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +423,7 @@
 		};
 		FDDA678F2568E4180047D3D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 339D1F20DF72FC7D138915B3 /* Pods-SOPT-27th-HACKATHON.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,5 +6,10 @@ target 'SOPT-27th-HACKATHON' do
   use_frameworks!
 
   # Pods for SOPT-27th-HACKATHON
+  pod 'Kingfisher', '~> 5.0' 
+  pod 'SwiftyJSON','~>4.0'  
+  pod 'Alamofire', '~> 5.1'
+  pod 'lottie-ios' 
+
 
 end
