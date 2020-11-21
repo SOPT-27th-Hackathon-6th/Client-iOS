@@ -12,6 +12,23 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var tabBarView: UIView!
     
     
+    
+    @IBOutlet weak var rankingTabBarIconImageView: UIImageView!
+    @IBOutlet weak var homeTabBarIconImageView: UIImageView!
+    @IBOutlet weak var userIconImageView: UIImageView!
+    
+    
+    @IBOutlet weak var rankingLabel: UILabel!
+    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var MyLabel: UILabel!
+    
+    
+    
+    
+    
+    
+    
+    
     let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
     let MyStoryboard = UIStoryboard(name: "My", bundle: nil)
     let RankingStoryboard = UIStoryboard(name: "Ranking", bundle: nil)
@@ -22,7 +39,7 @@ class TabBarViewController: UIViewController {
     
     var VClist : [UIViewController] = []
     
-    var selectIndex : Int = 0
+    var selectIndex : Int = 1
     
     
     
@@ -75,8 +92,41 @@ class TabBarViewController: UIViewController {
         
     }
     
+    func tabBarDefaultSetting()
+    {
+        rankingTabBarIconImageView.image = UIImage(named: "icRankingUnselected")
+        homeTabBarIconImageView.image = UIImage(named: "icHomeUnselected")
+        userIconImageView.image = UIImage(named: "icUserUnselected")
+        
+        
+        rankingLabel.textColor = .init(red: 0, green: 0, blue: 0, alpha: 1)
+        homeLabel.textColor = .init(red: 0, green: 0, blue: 0, alpha: 1)
+        MyLabel.textColor = .init(red: 0, green: 0, blue: 0, alpha: 1)
+    }
+    
     func moveVC()
     {
+        tabBarDefaultSetting()
+        if selectIndex == 0
+        {
+            rankingTabBarIconImageView.image = UIImage(named: "icRankingSelected")
+            
+            rankingLabel.textColor = .init(red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
+
+        }
+        else if selectIndex == 1
+        {
+            homeTabBarIconImageView.image = UIImage(named: "icHomeSelected")
+            
+            homeLabel.textColor = .init(red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
+        }
+        else
+        {
+            userIconImageView.image = UIImage(named: "icUserSelected")
+            
+            MyLabel.textColor = .init(red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
+        }
+        
         addChild(VClist[selectIndex])
         VClist[selectIndex].view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 100)
         VClist[selectIndex].didMove(toParent: self)
@@ -98,43 +148,7 @@ class TabBarViewController: UIViewController {
 
     }
     
-    func setFirstTab()
-    {
 
-        addChild(RankingVC)
-        RankingVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 100)
-        RankingVC.didMove(toParent: self)
-        
-        self.addChild(RankingVC)
-        self.containerView.addSubview(RankingVC.view)
-        self.containerView.bringSubviewToFront(tabBarView)
-        
-        
-    }
-    
-    func setSecondTab()
-    {
-        addChild(homeVC)
-        homeVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 100)
-        homeVC.didMove(toParent: self)
-        
-        self.addChild(homeVC)
-        self.containerView.addSubview(homeVC.view)
-        self.containerView.bringSubviewToFront(tabBarView)
-        
-    }
-    
-    func setThridTab()
-    {
-        addChild(myVC)
-        myVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 100)
-        myVC.didMove(toParent: self)
-        
-        self.addChild(myVC)
-        self.containerView.addSubview(myVC.view)
-        self.containerView.bringSubviewToFront(tabBarView)
-        
-    }
    
 
 }

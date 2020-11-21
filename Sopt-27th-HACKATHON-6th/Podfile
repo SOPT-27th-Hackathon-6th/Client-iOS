@@ -10,5 +10,8 @@ target 'Sopt-27th-HACKATHON-6th' do
   pod 'SwiftyJSON','~>4.0'  
   pod 'Alamofire', '~> 5.1'
   pod 'lottie-ios' 
+  pod 'KakaoSDKLink' # 메시지(카카오링크)
+  pod 'KakaoSDKTemplate' # 메시지 템플릿 
+  pod 'KakaoSDKCommon'  
 
 end
