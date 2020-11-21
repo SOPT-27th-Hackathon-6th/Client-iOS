@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nh-r5-q8M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nh-r5-q8M">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -278,30 +278,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOz-Cu-fh7">
-                                <rect key="frame" x="138" y="757" width="139" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBackgroundMala" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-La-N8x">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOz-Cu-fh7">
+                                <rect key="frame" x="20" y="776" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="do3-d7-WAf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="홈으로 이동하기"/>
+                                <state key="normal" backgroundImage="btnHome"/>
                                 <connections>
                                     <action selector="goHomeButtonClicked:" destination="SRz-y7-L0j" eventType="touchUpInside" id="zrz-n9-QGb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvq-bT-8TC">
-                                <rect key="frame" x="164" y="207" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도장찍기 완료!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ui0-2X-pYF">
+                                <rect key="frame" x="138" y="138" width="138" height="29"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-La-N8x">
-                                <rect key="frame" x="87" y="398" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mara1" translatesAutoresizingMaskIntoConstraints="NO" id="aej-ox-p2Z">
+                                <rect key="frame" x="127.5" y="187" width="159.5" height="40.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgMalaStamp" translatesAutoresizingMaskIntoConstraints="NO" id="ng0-gH-1jP">
+                                <rect key="frame" x="82" y="325.5" width="230" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="zkp-U1-oB2"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CI1-QN-AkK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ng0-gH-1jP" firstAttribute="top" secondItem="aej-ox-p2Z" secondAttribute="bottom" constant="98" id="3bi-uS-c1B"/>
+                            <constraint firstItem="aej-ox-p2Z" firstAttribute="top" secondItem="ui0-2X-pYF" secondAttribute="bottom" constant="20" id="6NI-fp-LHm"/>
+                            <constraint firstItem="5CT-La-N8x" firstAttribute="leading" secondItem="CI1-QN-AkK" secondAttribute="leading" id="6Xf-Ds-oCS"/>
+                            <constraint firstItem="ui0-2X-pYF" firstAttribute="top" secondItem="iVV-r5-w5j" secondAttribute="top" constant="138" id="CBF-4s-yP6"/>
+                            <constraint firstItem="5CT-La-N8x" firstAttribute="bottom" secondItem="iVV-r5-w5j" secondAttribute="bottom" id="EnY-oS-fxt"/>
+                            <constraint firstItem="aej-ox-p2Z" firstAttribute="centerX" secondItem="iVV-r5-w5j" secondAttribute="centerX" id="FJm-sE-54X"/>
+                            <constraint firstItem="ui0-2X-pYF" firstAttribute="centerX" secondItem="iVV-r5-w5j" secondAttribute="centerX" id="HRK-Bc-Btp"/>
+                            <constraint firstItem="CI1-QN-AkK" firstAttribute="trailing" secondItem="ng0-gH-1jP" secondAttribute="trailing" constant="102" id="LzO-Qb-kmz"/>
+                            <constraint firstItem="5CT-La-N8x" firstAttribute="top" secondItem="iVV-r5-w5j" secondAttribute="top" id="T6U-Op-JpD"/>
+                            <constraint firstItem="ng0-gH-1jP" firstAttribute="leading" secondItem="CI1-QN-AkK" secondAttribute="leading" constant="82" id="ZFB-DL-W6v"/>
+                            <constraint firstAttribute="bottom" secondItem="UOz-Cu-fh7" secondAttribute="bottom" constant="60" id="d38-dv-VzW"/>
+                            <constraint firstItem="5CT-La-N8x" firstAttribute="trailing" secondItem="iVV-r5-w5j" secondAttribute="trailing" id="ieQ-qb-5Wr"/>
+                            <constraint firstItem="UOz-Cu-fh7" firstAttribute="leading" secondItem="CI1-QN-AkK" secondAttribute="leading" constant="20" id="oJd-AW-Fbd"/>
+                            <constraint firstItem="CI1-QN-AkK" firstAttribute="trailing" secondItem="UOz-Cu-fh7" secondAttribute="trailing" constant="20" id="x9l-sF-5Of"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="5CT-La-N8x" id="GFQ-P9-904"/>
+                        <outlet property="foodImageView" destination="ng0-gH-1jP" id="fNl-Js-a0x"/>
+                        <outlet property="subtitleImageView" destination="aej-ox-p2Z" id="jYd-6s-SQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vd6-rg-4lz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,11 +339,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btnHome" width="335" height="60"/>
         <image name="btnStamp" width="108" height="44"/>
         <image name="categorySelectbackground" width="216" height="115"/>
         <image name="gukbapIconSeleceted" width="50" height="44"/>
+        <image name="imgBackgroundMala" width="375" height="812"/>
+        <image name="imgMalaStamp" width="192" height="168"/>
         <image name="malaIconSeleceted" width="66" height="60"/>
         <image name="malaStampUnselected" width="98" height="86"/>
+        <image name="mara1" width="159.5" height="40.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
