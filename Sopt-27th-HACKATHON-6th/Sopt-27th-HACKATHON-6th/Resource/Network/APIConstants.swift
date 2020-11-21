@@ -10,7 +10,7 @@ import Foundation
 struct APIConstants
 {
     
-    static let baseURL = "http://52.79.155.156:3000"
+    static let baseURL = "http://52.79.150.197:3000"
     
     // 추가할거면 여기에
     
@@ -20,6 +20,10 @@ struct APIConstants
     
     
     // 홈 뷰
+    
+    static let maraStampURL = APIConstants.baseURL + "/mala"
+    static let gukbabStampURL = APIConstants.baseURL + "/rice"
+    
     
     
     

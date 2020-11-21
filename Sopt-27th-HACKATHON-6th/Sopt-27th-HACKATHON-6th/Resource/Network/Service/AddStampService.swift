@@ -14,40 +14,37 @@ import Foundation
 struct AddStampService {
     static let shared = AddStampService()
     
-    private func makeParameter(_ index : Int) -> Parameters {
+    private func makeParameter() -> Parameters {
         return [
-                "boardIdx": index
+                "isStamp": 1
                 ]
     }
     
-    func addStamp(cateogry : Int, completion: @escaping (NetworkResult<Any>) -> Void) {
-        
-        
-    }
-    
 
-    func like(cate : Int, idx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
-            
-            guard let userToken = UserDefaults.standard.string(forKey: "token") else {return}
-            
-            
-            
-            let header: HTTPHeaders = ["content-Type": "application/json","token" : userToken]
+
+    func addStamp(isMara : Bool, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-            var addStampURL : String = ""
-            // cate : 0번 유링크, 1번 학교 , 2번 과목
-            addStampURL = APIConstants.baseURL + "필요한 URL"
-        
-        
+        var stampURL = ""
+        if isMara == true
+        {
+            stampURL = APIConstants.maraStampURL
+        }
+        else
+        {
+            stampURL = APIConstants.gukbabStampURL
+        }
+            
+            
+
 
             
             
             
-            let dataRequest = AF.request(addStampURL, method  : .post,
-                parameters: makeParameter(idx),
+            let dataRequest = AF.request(stampURL, method  : .post,
+                parameters: makeParameter(),
                 
                  encoding:
-                JSONEncoding.default, headers: header)
+                JSONEncoding.default)
             
             
             
