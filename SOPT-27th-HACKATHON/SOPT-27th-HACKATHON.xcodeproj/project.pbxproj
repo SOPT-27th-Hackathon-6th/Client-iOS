@@ -107,6 +107,7 @@
 		FDDA67992568EA180047D3D4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				FDDA67852568E4180047D3D4 /* Assets.xcassets */,
 				FDDA679B2568EA890047D3D4 /* Storyboard */,
 			);
 			path = Resource;
@@ -123,7 +124,6 @@
 		FDDA679B2568EA890047D3D4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				FDDA67852568E4180047D3D4 /* Assets.xcassets */,
 				FDDA67822568E4170047D3D4 /* Main.storyboard */,
 				FDDA67872568E4180047D3D4 /* LaunchScreen.storyboard */,
 			);
