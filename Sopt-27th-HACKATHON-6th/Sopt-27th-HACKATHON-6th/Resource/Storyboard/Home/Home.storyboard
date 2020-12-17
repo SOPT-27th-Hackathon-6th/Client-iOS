@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nh-r5-q8M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nh-r5-q8M">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -220,11 +220,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id5-IH-9Oe">
+                                <rect key="frame" x="356" y="50" width="30" height="30"/>
+                                <state key="normal" title="MY"/>
+                                <connections>
+                                    <action selector="myPageButtonClicked:" destination="7Nh-r5-q8M" eventType="touchUpInside" id="VHT-vr-y79"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dW7-Rg-nFn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jwa-X3-az7" firstAttribute="top" secondItem="ma4-P0-U2B" secondAttribute="bottom" constant="22" id="2nF-HG-Ktb"/>
+                            <constraint firstItem="dW7-Rg-nFn" firstAttribute="trailing" secondItem="id5-IH-9Oe" secondAttribute="trailing" constant="28" id="43w-X6-Exv"/>
                             <constraint firstItem="jwa-X3-az7" firstAttribute="top" secondItem="D7e-hO-Q6h" secondAttribute="bottom" constant="100" id="9qQ-YT-JOq"/>
                             <constraint firstItem="dW7-Rg-nFn" firstAttribute="trailing" secondItem="D7e-hO-Q6h" secondAttribute="trailing" constant="80" id="A2e-8s-cbH"/>
                             <constraint firstItem="jwa-X3-az7" firstAttribute="leading" secondItem="dW7-Rg-nFn" secondAttribute="leading" id="Bsl-p9-lmE"/>
@@ -235,6 +243,7 @@
                             <constraint firstItem="YmY-r9-Gle" firstAttribute="leading" secondItem="dW7-Rg-nFn" secondAttribute="leading" constant="20" id="VRo-pH-wZY"/>
                             <constraint firstItem="5gj-OK-WhU" firstAttribute="centerX" secondItem="31q-lK-7Yi" secondAttribute="centerX" id="ewc-Sw-Ksc"/>
                             <constraint firstItem="D7e-hO-Q6h" firstAttribute="top" secondItem="31q-lK-7Yi" secondAttribute="top" constant="80" id="fyh-r7-288"/>
+                            <constraint firstItem="id5-IH-9Oe" firstAttribute="top" secondItem="31q-lK-7Yi" secondAttribute="top" constant="50" id="gkh-9p-CCH"/>
                             <constraint firstItem="5f3-33-hoC" firstAttribute="top" secondItem="D7e-hO-Q6h" secondAttribute="bottom" constant="24" id="j79-qT-9nt"/>
                             <constraint firstItem="dW7-Rg-nFn" firstAttribute="trailing" secondItem="ma4-P0-U2B" secondAttribute="trailing" constant="20" id="jVv-au-Ots"/>
                             <constraint firstItem="dW7-Rg-nFn" firstAttribute="bottom" secondItem="5gj-OK-WhU" secondAttribute="bottom" constant="18" id="kzW-Wn-2yP"/>
