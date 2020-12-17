@@ -82,12 +82,25 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         getGukbabCount()
         getMaraCount()
+        self.navigationController?.navigationBar.isHidden = true
         
     }
     
     //MARK:- IBAction Part
     /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
+    
+    
+    @IBAction func myPageButtonClicked(_ sender: Any) {
+        
+        
+        let myPageStoryboard = UIStoryboard(name: "My", bundle: nil)
+        
+        guard let mypageVC = myPageStoryboard.instantiateViewController(withIdentifier: "MyProfileViewController") as? MyProfileViewController else {return}
+        
+        self.navigationController?.pushViewController(mypageVC, animated: true)
+    }
+    
     
     
     @IBAction func maraButtonClicked(_ sender: Any) {
