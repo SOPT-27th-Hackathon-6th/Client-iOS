@@ -34,6 +34,8 @@ class MyViewController: UIViewController {
     let horizonInset: CGFloat = 28
     let rightSpacing: CGFloat = 28
     let lineSpacing: CGFloat = 16
+    
+    let ad = UIApplication.shared.delegate as? AppDelegate
 
     //MARK:- Constraint Part
     /// 스토리보드에 있는 layout 에 대한 @IBOutlet 을 선언합니다. (Height, Leading, Trailing 등등..)  // 변수명 lowerCamelCase 사용
@@ -48,6 +50,12 @@ class MyViewController: UIViewController {
         super.viewDidLoad()
         collectionViewSetting()
 
+        
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.ad!.showLEVELCOUNT =  self.ad!.showLEVELCOUNT + 1
     }
     
     //MARK:- IBAction Part
