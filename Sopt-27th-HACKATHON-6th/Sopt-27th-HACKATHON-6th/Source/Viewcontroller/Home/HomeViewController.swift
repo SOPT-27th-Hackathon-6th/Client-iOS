@@ -318,8 +318,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         self.titleBottomLabel.text = "벌써 4일"
         self.subtitleBottomLabel.text = "이나 됐다"
         
-        maraImageView.image = UIImage(named: "malaIconSeleceted")
-        gukbabImageView.image = UIImage(named: "gukbapIconUnseleceted")
+        maraImageView.image = UIImage(named: "malaSelected")
+        gukbabImageView.image = UIImage(named: "gukbapUnselected")
            maraLabel.textColor = .init(red: 208/255, green: 56/255, blue: 56/255, alpha: 1)
         maraLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
 
@@ -341,8 +341,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         self.titleBottomLabel.text = "벌써 4일"
         self.subtitleBottomLabel.text = "이나 됐다"
         
-        maraImageView.image = UIImage(named: "malaIconUnseleceted")
-        gukbabImageView.image = UIImage(named: "gukbapIconSeleceted")
+        maraImageView.image = UIImage(named: "maleUnseleceted")
+        gukbabImageView.image = UIImage(named: "gukbapSelected")
         
         
         maraLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
