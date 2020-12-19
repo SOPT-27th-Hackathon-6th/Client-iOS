@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E8D9BA661F9C0A67416829D /* Pods_Sopt_27th_HACKATHON_6th.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4F2B165C97A5EC1421C093 /* Pods_Sopt_27th_HACKATHON_6th.framework */; };
+		6B6146FF258DA1F600CD8E65 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6146FE258DA1F600CD8E65 /* CardViewController.swift */; };
+		6B614702258DCA8400CD8E65 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B614701258DCA8400CD8E65 /* Card.storyboard */; };
 		6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */; };
 		6B9DBA842569B95A00987D3C /* levelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA832569B95A00987D3C /* levelDataModel.swift */; };
 		6B9DBA882569B9F200987D3C /* getLevelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA872569B9F200987D3C /* getLevelService.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B6146FE258DA1F600CD8E65 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		6B614701258DCA8400CD8E65 /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
 		6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionCell.swift; sourceTree = "<group>"; };
 		6B9DBA832569B95A00987D3C /* levelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelDataModel.swift; sourceTree = "<group>"; };
 		6B9DBA872569B9F200987D3C /* getLevelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getLevelService.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				FDB4D0FC2569458900931E12 /* Cell */,
 				FDB4D0E8256939AD00931E12 /* HomeViewController.swift */,
 				FDB4D104256951F700931E12 /* AddPhotoViewController.swift */,
+				6B6146FE258DA1F600CD8E65 /* CardViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB4D0DF2569394B00931E12 /* Home.storyboard */,
+				6B614701258DCA8400CD8E65 /* Card.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B614702258DCA8400CD8E65 /* Card.storyboard in Resources */,
 				FDB4D0C3256937D500931E12 /* LaunchScreen.storyboard in Resources */,
 				FDB4D0C0256937D500931E12 /* Assets.xcassets in Resources */,
 				FDB4D0BE256937D300931E12 /* Main.storyboard in Resources */,
@@ -431,6 +438,7 @@
 				FDB4D121256996AA00931E12 /* stampCountDataModel.swift in Sources */,
 				6B9DBA842569B95A00987D3C /* levelDataModel.swift in Sources */,
 				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
+				6B6146FF258DA1F600CD8E65 /* CardViewController.swift in Sources */,
 				D16B30E02569769600C8207E /* RankingDummyData.swift in Sources */,
 				FDB4D0E32569395D00931E12 /* APIConstants.swift in Sources */,
 				6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */,
