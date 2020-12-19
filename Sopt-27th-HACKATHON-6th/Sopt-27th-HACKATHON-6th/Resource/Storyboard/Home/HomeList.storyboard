@@ -89,6 +89,8 @@
                     </view>
                     <connections>
                         <outlet property="countUIView" destination="had-v5-x4P" id="U9R-yy-RdF"/>
+                        <outlet property="foodLabel" destination="l52-cp-fPg" id="bA9-fe-DDu"/>
+                        <outlet property="rootView" destination="JFE-rY-t8D" id="7bb-4u-120"/>
                         <outlet property="tableView" destination="ANS-A4-6sz" id="ZV6-sI-KmL"/>
                         <outlet property="topUIView" destination="qIe-O8-U2H" id="Thp-ez-sGE"/>
                     </connections>

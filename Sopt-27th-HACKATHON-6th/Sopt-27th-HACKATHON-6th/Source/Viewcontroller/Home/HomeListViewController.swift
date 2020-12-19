@@ -9,10 +9,13 @@ import UIKit
 
 class HomeListViewController: UIViewController {
 
+    @IBOutlet var rootView: UIView!
     @IBOutlet var topUIView: UIView!
     @IBOutlet var countUIView: UIView!
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var foodLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +25,8 @@ class HomeListViewController: UIViewController {
         tableView.register(ListTableCellNib, forCellReuseIdentifier: "HomeListTableViewCell")
     }
     
+    
     func listSet() {
-        
-        
         countUIView.layer.cornerRadius = countUIView.frame.height * 0.1
         
     }
@@ -45,30 +47,14 @@ extension HomeListViewController: UITableViewDataSource {
     
 }
 extension HomeListViewController: UIScrollViewDelegate {
-//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-//        self.topUIView.layer.shadowOpacity = 0.1
-//        self.topUIView.layer.shadowOffset = CGSize(width: 0, height: 4)
-//        self.topUIView.layer.shadowRadius = 10
-//    }
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        self.topUIView.layer.shadowOpacity = 0.1
-        self.topUIView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        self.topUIView.layer.shadowRadius = 10
-        self.topUIView.layoutIfNeeded()
+        if (scrollView.contentOffset.y > 0) {
+          
+            self.topUIView.layer.shadowOpacity = 0.1
+            self.topUIView.layer.shadowOffset = CGSize(width: 0, height: 4)
+            self.topUIView.layer.shadowRadius = 10
+            self.rootView.layoutIfNeeded()
+        }
     }
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        UIView.animate(withDuration: 0.5, animations: {
-//            self.topViewHeightConstraint.constant = 88
-//            self.rootView.layoutIfNeeded()
-//        })
-//    }
-//
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        if (decelerate) {
-//            UIView.animate(withDuration: 0.5, animations: {
-//                self.topViewHeightConstraint.constant = 0
-//                self.rootView.layoutIfNeeded()
-//            })
-//        }
-//    }
 }
