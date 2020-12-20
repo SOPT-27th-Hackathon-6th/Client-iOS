@@ -6,24 +6,44 @@
 //
 
 import UIKit
+import MessageUI
 
-class MyProfileViewController: UIViewController {
-
+class MyProfileViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    
+    
+    @IBOutlet weak var nickNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(settingLabel(_:)), name: NSNotification.Name("dataReceived"), object: nil)
+    }
+  
+    // 보내고 나면 mail화면 dismiss
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    @IBAction func emailBtnClicked(_ sender: Any) {
+        let mc = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setToRecipients(["gukbabmala@gmail.com"])
+        if MFMailComposeViewController.canSendMail() { self.present(mc, animated: true, completion: nil) }
+        else { let alertController: UIAlertController = UIAlertController(title:"메일 보내기", message:"\n현재 디바이스에서 이메일을 보낼수가 없습니다. 설정에서 이메일 관련 설정을 확인해주세요", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "확인", style: .default, handler: { (alert: UIAlertAction!) in })
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil) }
+        
+    }
+    
+    
+    
+    @objc func settingLabel(_ noti: NSNotification) {
+        nickNameLabel.text = noti.object as? String ?? ""
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
