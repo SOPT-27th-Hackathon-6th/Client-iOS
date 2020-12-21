@@ -331,6 +331,12 @@
                                     <action selector="backBtnClicked:" destination="IwX-7E-jwe" eventType="touchUpInside" id="qpo-Xm-FHw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsi-Up-qi2">
+                                <rect key="frame" x="30" y="492" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZUA-P1-FBx"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70197452910958902" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -346,14 +352,17 @@
                             <constraint firstItem="lRa-Mn-c19" firstAttribute="leading" secondItem="ZUA-P1-FBx" secondAttribute="leading" id="8vS-m8-wc8"/>
                             <constraint firstItem="cK9-ey-W5I" firstAttribute="centerY" secondItem="Uj1-vX-Bny" secondAttribute="centerY" id="B2g-a2-iYd"/>
                             <constraint firstItem="ZUA-P1-FBx" firstAttribute="trailing" secondItem="mU9-zV-kYk" secondAttribute="trailing" constant="40" id="Fuc-nU-fVQ"/>
+                            <constraint firstItem="Fsi-Up-qi2" firstAttribute="leading" secondItem="ZUA-P1-FBx" secondAttribute="leading" constant="30" id="Mec-Nt-Ju6"/>
                             <constraint firstItem="cK9-ey-W5I" firstAttribute="leading" secondItem="ZUA-P1-FBx" secondAttribute="leading" constant="20" id="N3g-Wm-KAE"/>
                             <constraint firstItem="dUo-3d-sjr" firstAttribute="centerY" secondItem="GPO-2P-TD4" secondAttribute="centerY" id="NMS-hY-tXP"/>
                             <constraint firstItem="GPO-2P-TD4" firstAttribute="top" secondItem="ZUA-P1-FBx" secondAttribute="top" constant="41" id="Sjz-C7-UAJ"/>
+                            <constraint firstItem="ZUA-P1-FBx" firstAttribute="trailing" secondItem="Fsi-Up-qi2" secondAttribute="trailing" constant="30" id="Ucg-dv-70K"/>
                             <constraint firstItem="tAe-gj-uTJ" firstAttribute="top" secondItem="ZUA-P1-FBx" secondAttribute="top" id="VX3-Uy-Aes"/>
                             <constraint firstAttribute="bottom" secondItem="tAe-gj-uTJ" secondAttribute="bottom" id="YfD-EI-wzH"/>
                             <constraint firstItem="ZUA-P1-FBx" firstAttribute="trailing" secondItem="cK9-ey-W5I" secondAttribute="trailing" constant="20" id="ZRy-je-82N"/>
                             <constraint firstItem="ZUA-P1-FBx" firstAttribute="trailing" secondItem="tAe-gj-uTJ" secondAttribute="trailing" id="ab3-rP-qkj"/>
                             <constraint firstItem="tAe-gj-uTJ" firstAttribute="leading" secondItem="ZUA-P1-FBx" secondAttribute="leading" id="b56-jZ-57J"/>
+                            <constraint firstItem="Fsi-Up-qi2" firstAttribute="top" secondItem="DYJ-7X-pFL" secondAttribute="bottom" constant="4" id="bEI-1v-ZOd"/>
                             <constraint firstItem="DYJ-7X-pFL" firstAttribute="top" secondItem="mU9-zV-kYk" secondAttribute="bottom" constant="3" id="bp0-HL-t1V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DYJ-7X-pFL" secondAttribute="trailing" constant="20" id="bx6-94-A2w"/>
                             <constraint firstItem="DYJ-7X-pFL" firstAttribute="leading" secondItem="Uj1-vX-Bny" secondAttribute="leadingMargin" constant="20" id="d3C-cY-AOO"/>
@@ -371,6 +380,7 @@
                         <outlet property="lineImage" destination="DYJ-7X-pFL" id="AFZ-FW-SIQ"/>
                         <outlet property="modalBtn" destination="3H0-Kd-Ze5" id="Nfd-bD-AMB"/>
                         <outlet property="nicknameTF" destination="mU9-zV-kYk" id="Jhj-BD-S8X"/>
+                        <outlet property="warningLabel" destination="Fsi-Up-qi2" id="NB5-J8-cOJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGs-Ra-Han" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -646,6 +656,9 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
