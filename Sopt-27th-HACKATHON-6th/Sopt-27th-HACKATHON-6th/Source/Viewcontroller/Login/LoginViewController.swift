@@ -39,6 +39,12 @@ class LoginViewController: UIViewController {
     
     }
     
+    @IBAction func touchUpNickname(_ sender: Any) {
+        
+        guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+        
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
     
     //MARK:- default Setting Function Part
     
@@ -88,7 +94,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
      
             self.saveUserInKeychain(userIdentifier)
-//            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
+            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
             
         case let passwordCredential as ASPasswordCredential:
         
@@ -112,12 +118,12 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         }
     }
     
-//    private func showResultViewController(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
-//        guard let setUpVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-//
-//        self.navigationController?.pushViewController(setUpVC, animated: true)
-//
-//        DispatchQueue.main.async {
+    private func showResultViewController(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
+        guard let setUpVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+
+        self.navigationController?.pushViewController(setUpVC, animated: true)
+
+        DispatchQueue.main.async {
 //            viewController.userIdentifierLabel.text = userIdentifier
 //            if let givenName = fullName?.givenName {
 //                viewController.givenNameLabel.text = givenName
@@ -128,9 +134,9 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
 //            if let email = email {
 //                viewController.emailLabel.text = email
 //            }
-//            self.dismiss(animated: true, completion: nil)
-//        }
-//    }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     private func showPasswordCredentialAlert(username: String, password: String) {
         let message = "The app has received your selected credential from the keychain. \n\n Username: \(username)\n Password: \(password)"
