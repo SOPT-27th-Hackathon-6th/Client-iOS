@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XSu-Ho-u7h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gdq-pZ-rco">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -305,11 +305,19 @@
                                     <action selector="TouchUpHome:" destination="gdq-pZ-rco" eventType="touchUpInside" id="AmI-Yw-JyK"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTQ-Di-YJe">
+                                <rect key="frame" x="20" y="421" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnY-MS-7Hi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xTQ-Di-YJe" firstAttribute="top" secondItem="4Hr-pB-6u7" secondAttribute="bottom" constant="131" id="8bN-8d-Tw1"/>
                             <constraint firstItem="4Hr-pB-6u7" firstAttribute="leading" secondItem="rnY-MS-7Hi" secondAttribute="leading" constant="20" id="Hdv-B4-yYL"/>
+                            <constraint firstItem="xTQ-Di-YJe" firstAttribute="leading" secondItem="rnY-MS-7Hi" secondAttribute="leading" constant="20" id="IGk-ox-ZgD"/>
+                            <constraint firstItem="rnY-MS-7Hi" firstAttribute="trailing" secondItem="xTQ-Di-YJe" secondAttribute="trailing" constant="20" id="dVN-7K-zWU"/>
                             <constraint firstItem="feL-QB-1Hp" firstAttribute="top" secondItem="rnY-MS-7Hi" secondAttribute="top" constant="153" id="hCe-J4-CJQ"/>
                             <constraint firstItem="feL-QB-1Hp" firstAttribute="leading" secondItem="rnY-MS-7Hi" secondAttribute="leading" constant="20" id="p8j-zj-49u"/>
                             <constraint firstItem="4Hr-pB-6u7" firstAttribute="top" secondItem="feL-QB-1Hp" secondAttribute="bottom" constant="40" id="xtB-WV-sxS"/>
@@ -317,11 +325,12 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="4Hr-pB-6u7" id="7Fq-B7-iGK"/>
+                        <outlet property="nicknameTF" destination="xTQ-Di-YJe" id="yMt-33-gEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6Y-Eg-c4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-856"/>
+            <point key="canvasLocation" x="1013.0434782608696" y="-856.47321428571422"/>
         </scene>
     </scenes>
     <resources>
