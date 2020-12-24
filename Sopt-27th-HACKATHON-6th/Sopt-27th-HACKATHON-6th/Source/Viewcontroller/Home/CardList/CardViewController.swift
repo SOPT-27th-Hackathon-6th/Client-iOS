@@ -24,7 +24,10 @@ class CardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.dismiss(animated: true, completion: nil)
+    }
+    
     func cardSet() {
         cardView.layer.cornerRadius = 15
         dateLabel.textColor = UIColor(displayP3Red: 97/255, green: 97/255, blue: 97/255, alpha: 1)

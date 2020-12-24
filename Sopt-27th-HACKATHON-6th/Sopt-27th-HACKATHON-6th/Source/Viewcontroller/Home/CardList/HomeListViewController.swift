@@ -17,6 +17,7 @@ class HomeListViewController: UIViewController {
     @IBOutlet var foodLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -25,7 +26,7 @@ class HomeListViewController: UIViewController {
     
     
     @IBAction func touchUpDismiss(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     func defaultListSet() {
         topUIView.backgroundColor = .white
