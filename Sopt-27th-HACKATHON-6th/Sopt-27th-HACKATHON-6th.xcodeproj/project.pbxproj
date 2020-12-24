@@ -260,10 +260,10 @@
 		FDB4D0D22569385E00931E12 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				FD3C3658258BDFCF00D1664B /* MyProfileViewController.swift */,
 				D1CBAB17258FAA740018E524 /* MyEditViewController.swift */,
 				FDB4D0EE256939B800931E12 /* MyViewController.swift */,
 				6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */,
-				FD3C3658258BDFCF00D1664B /* MyProfileViewController.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
