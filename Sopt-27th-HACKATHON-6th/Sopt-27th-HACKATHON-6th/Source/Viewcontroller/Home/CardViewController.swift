@@ -17,10 +17,10 @@ class CardViewController: UIViewController {
     @IBOutlet var reviewLabel: UILabel!
     @IBOutlet var divideBarLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         cardSet()
+        
         // Do any additional setup after loading the view.
     }
     
