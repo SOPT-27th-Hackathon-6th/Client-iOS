@@ -20,15 +20,19 @@ class HomeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        listSet()
-        let ListTableCellNib = UINib(nibName: "HomeListTableViewCell", bundle: nil)
-        tableView.register(ListTableCellNib, forCellReuseIdentifier: "HomeListTableViewCell")
+        defaultListSet()
     }
     
     
-    func listSet() {
+    @IBAction func touchUpDismiss(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    func defaultListSet() {
+        topUIView.backgroundColor = .white
         countUIView.layer.cornerRadius = countUIView.frame.height * 0.1
         
+        let ListTableCellNib = UINib(nibName: "HomeListTableViewCell", bundle: nil)
+        tableView.register(ListTableCellNib, forCellReuseIdentifier: "HomeListTableViewCell")
     }
 
 }
