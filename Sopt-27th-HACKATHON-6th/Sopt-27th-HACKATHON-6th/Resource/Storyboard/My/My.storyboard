@@ -339,7 +339,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZUA-P1-FBx"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70197452910958902" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.89790239726027399" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Y6F-G1-tiw" firstAttribute="top" secondItem="ZUA-P1-FBx" secondAttribute="top" constant="20" id="19v-U8-vGi"/>
                             <constraint firstItem="ZUA-P1-FBx" firstAttribute="trailing" secondItem="GPO-2P-TD4" secondAttribute="trailing" constant="9" id="2Aj-mk-zPk"/>

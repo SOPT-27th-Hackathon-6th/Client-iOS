@@ -105,11 +105,8 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else {return false}
-    
-       
         
-        
-        // 중간에 추가되는 텍스트 막기
+        // 최대 글자수 이상을 입력한 이후에는 중간에 다른 글자를 추가할 수 없게끔 작동
         if text.count >= maxLength && range.length == 0 && range.location < maxLength {
             return false
         }
@@ -120,36 +117,31 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     @objc private func textDidChange(_ notification: Notification) {
         if let textField = notification.object as? UITextField {
             if let text = textField.text {
+                
+                if text.count > maxLength {
+                    // 8글자 넘어가면 자동으로 키보드 내려감
+                    textField.resignFirstResponder()
+                }
+                
                 // 초과되는 텍스트 제거
                 if text.count >= maxLength {
                     let index = text.index(text.startIndex, offsetBy: maxLength)
                     let newString = text[text.startIndex..<index]
                     textField.text = String(newString)
+                    fitName()
                     
-                    // 8글자 넘어가면 자동으로 키보드 내려감
-                    textField.resignFirstResponder()
                 }
-
-                if text.count < 2 || text.count > 8 {
-                    warningLabel.text = "2글자 이상 8글자 이하로 입력해주세요"
-                    warningLabel.textColor = .red
-                    
-                    //완료버튼 비활성화
-                    doneBtn.isEnabled = false
-                    doneBtnImage.isHidden = true
+                else if text.count < 2 {
+                    needToChagneName()
                 }
+                
                 else {
-                    warningLabel.text = "사용 가능한 닉네임입니다."
-                    warningLabel.textColor = .green
-                    
-                    //완료버튼 활성화
-                    doneBtn.isEnabled = true
-                    doneBtnImage.isHidden = false
+                    fitName()
                 }
             }
         }
+        
     }
-    
     
     func startViewSetting() {
         doneView.isHidden = true
@@ -171,11 +163,31 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func needToChagneName() {
+        warningLabel.text = "2글자 이상 8글자 이하로 입력해주세요"
+        warningLabel.textColor = UIColor(named: "maraColor")
+        
+        //완료버튼 비활성화
+        doneBtn.isEnabled = false
+        doneBtnImage.isHidden = true
+    }
+    
+    func fitName(){
+        warningLabel.text = "사용 가능한 닉네임입니다."
+        warningLabel.textColor = .white
+        
+        //완료버튼 활성화
+        doneBtn.isEnabled = true
+        doneBtnImage.isHidden = false
+    }
+    
+    
     
     
     
     //MARK:- extension 부분
     /// UICollectionViewDelegate 부분 처럼 외부 프로토콜을 채택하는 경우나, 외부 클래스 확장 할 때,  extension을 작성하는 부분입니다
     /// ex) extension ViewController : UICollectionViewDelegate {  code .... }
+    
     
 }
