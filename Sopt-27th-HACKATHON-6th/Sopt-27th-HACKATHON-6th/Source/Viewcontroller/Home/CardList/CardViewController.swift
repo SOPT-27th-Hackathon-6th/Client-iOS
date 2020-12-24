@@ -9,7 +9,7 @@ import UIKit
 
 class CardViewController: UIViewController {
 
-    
+    @IBOutlet var rootView: UIView!
     @IBOutlet var cardView: UIView!
     @IBOutlet var storeNameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
@@ -20,16 +20,14 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardSet()
+        defaultCardSet()
         // Do any additional setup after loading the view.
     }
     
-
-    func cardSet() {
-        cardView.layer.cornerRadius = 15
-        dateLabel.textColor = UIColor(displayP3Red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
-        divideBarLabel.backgroundColor = UIColor(displayP3Red: 214/255, green: 214/255, blue: 214/255, alpha: 1)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func touchUpList(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "HomeList", bundle: nil)
@@ -40,5 +38,12 @@ class CardViewController: UIViewController {
         
     }
     
+    func defaultCardSet() {
+        rootView.backgroundColor = UIColor(displayP3Red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+        
+        cardView.layer.cornerRadius = 15
+        dateLabel.textColor = UIColor(displayP3Red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
+        divideBarLabel.backgroundColor = UIColor(displayP3Red: 214/255, green: 214/255, blue: 214/255, alpha: 1)
+    }
 
 }

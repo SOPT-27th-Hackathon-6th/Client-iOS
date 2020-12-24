@@ -17,18 +17,24 @@ class HomeListViewController: UIViewController {
     @IBOutlet var foodLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        listSet()
-        let ListTableCellNib = UINib(nibName: "HomeListTableViewCell", bundle: nil)
-        tableView.register(ListTableCellNib, forCellReuseIdentifier: "HomeListTableViewCell")
+        defaultListSet()
     }
     
     
-    func listSet() {
+    @IBAction func touchUpDismiss(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func defaultListSet() {
+        topUIView.backgroundColor = .white
         countUIView.layer.cornerRadius = countUIView.frame.height * 0.1
         
+        let ListTableCellNib = UINib(nibName: "HomeListTableViewCell", bundle: nil)
+        tableView.register(ListTableCellNib, forCellReuseIdentifier: "HomeListTableViewCell")
     }
 
 }

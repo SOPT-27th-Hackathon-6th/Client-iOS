@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NTY-oc-hTW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pMI-qZ-9ro">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Card Test View Controller-->
         <scene sceneID="Bes-n4-JWf">
             <objects>
-                <viewController id="jVJ-8p-i2f" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jVJ-8p-i2f" customClass="CardTestViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rWb-JX-xa1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,9 @@
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchUpCard:" destination="jVJ-8p-i2f" eventType="touchUpInside" id="uO9-4h-w0P"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconSeleceted" translatesAutoresizingMaskIntoConstraints="NO" id="ykm-Zh-a81">
                                 <rect key="frame" x="87" y="129" width="240" height="128"/>
@@ -29,10 +32,11 @@
                         <viewLayoutGuide key="safeArea" id="hdp-ML-JF5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="QNQ-td-xor"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJz-Lf-Rrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3210" y="-122"/>
+            <point key="canvasLocation" x="-2300" y="-122.54464285714285"/>
         </scene>
         <!--Card View Controller-->
         <scene sceneID="wCU-Mc-2sW">
@@ -127,7 +131,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XJo-X5-o9U"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="XJo-X5-o9U" firstAttribute="trailing" secondItem="OgW-wP-3y1" secondAttribute="trailing" constant="31" id="1d2-Tz-00i"/>
                             <constraint firstItem="XJo-X5-o9U" firstAttribute="bottom" secondItem="OgW-wP-3y1" secondAttribute="bottom" constant="169" id="87B-Sx-PU7"/>
@@ -142,12 +145,30 @@
                         <outlet property="divideBarLabel" destination="w3k-3h-nqf" id="0b8-j0-2E3"/>
                         <outlet property="foodImageView" destination="6Ur-6h-gxB" id="gMq-hB-V5K"/>
                         <outlet property="reviewLabel" destination="39y-Jz-4XB" id="76g-58-ISL"/>
+                        <outlet property="rootView" destination="VZh-Jn-lxx" id="TH4-1k-tL0"/>
                         <outlet property="storeNameLabel" destination="FcO-ek-HJ8" id="GUB-1k-IW2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1v-Mz-IGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2330.434782608696" y="-123.21428571428571"/>
+            <point key="canvasLocation" x="-1420.289855072464" y="-123.21428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bs1-kW-1QW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pMI-qZ-9ro" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pw4-CE-oGH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jVJ-8p-i2f" kind="relationship" relationship="rootViewController" id="7Wl-k1-SAF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4z-Dl-gut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3210.144927536232" y="-122.54464285714285"/>
         </scene>
     </scenes>
     <resources>
