@@ -28,6 +28,7 @@ class HomeListViewController: UIViewController {
     @IBAction func touchUpDismiss(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     func defaultListSet() {
         topUIView.backgroundColor = .white
         countUIView.layer.cornerRadius = countUIView.frame.height * 0.1

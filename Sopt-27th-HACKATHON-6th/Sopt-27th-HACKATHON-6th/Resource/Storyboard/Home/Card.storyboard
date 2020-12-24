@@ -131,7 +131,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XJo-X5-o9U"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70318333632281038" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="XJo-X5-o9U" firstAttribute="trailing" secondItem="OgW-wP-3y1" secondAttribute="trailing" constant="31" id="1d2-Tz-00i"/>
                             <constraint firstItem="XJo-X5-o9U" firstAttribute="bottom" secondItem="OgW-wP-3y1" secondAttribute="bottom" constant="169" id="87B-Sx-PU7"/>
@@ -146,6 +145,7 @@
                         <outlet property="divideBarLabel" destination="w3k-3h-nqf" id="0b8-j0-2E3"/>
                         <outlet property="foodImageView" destination="6Ur-6h-gxB" id="gMq-hB-V5K"/>
                         <outlet property="reviewLabel" destination="39y-Jz-4XB" id="76g-58-ISL"/>
+                        <outlet property="rootView" destination="VZh-Jn-lxx" id="TH4-1k-tL0"/>
                         <outlet property="storeNameLabel" destination="FcO-ek-HJ8" id="GUB-1k-IW2"/>
                     </connections>
                 </viewController>
