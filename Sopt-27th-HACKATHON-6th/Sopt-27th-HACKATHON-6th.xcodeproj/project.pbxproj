@@ -17,8 +17,6 @@
 		6B9DBA7C25697C8B00987D3C /* MyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */; };
 		6B9DBA842569B95A00987D3C /* levelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA832569B95A00987D3C /* levelDataModel.swift */; };
 		6B9DBA882569B9F200987D3C /* getLevelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA872569B9F200987D3C /* getLevelService.swift */; };
-		6BB3B5C12590D00300FF0A12 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3B5C02590D00300FF0A12 /* KeychainItem.swift */; };
-		6BB3B5C42590D35000FF0A12 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DC2569744A00C8207E /* GradeDataModel.swift */; };
@@ -62,9 +60,6 @@
 		6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionCell.swift; sourceTree = "<group>"; };
 		6B9DBA832569B95A00987D3C /* levelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelDataModel.swift; sourceTree = "<group>"; };
 		6B9DBA872569B9F200987D3C /* getLevelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getLevelService.swift; sourceTree = "<group>"; };
-		6BB3B5B42590B3A200FF0A12 /* Sopt-27th-HACKATHON-6th.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sopt-27th-HACKATHON-6th.entitlements"; sourceTree = "<group>"; };
-		6BB3B5C02590D00300FF0A12 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
-		6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
@@ -153,8 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				FD3C3650258BDDF700D1664B /* LoginViewController.swift */,
-				6BB3B5C02590D00300FF0A12 /* KeychainItem.swift */,
-				6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -180,7 +173,6 @@
 		FDB4D0B5256937D300931E12 /* Sopt-27th-HACKATHON-6th */ = {
 			isa = PBXGroup;
 			children = (
-				6BB3B5B42590B3A200FF0A12 /* Sopt-27th-HACKATHON-6th.entitlements */,
 				FDB4D0CD256937FF00931E12 /* Extension */,
 				FDB4D0CC256937E400931E12 /* Resource */,
 				FDB4D0CB256937E200931E12 /* Source */,
@@ -260,10 +252,10 @@
 		FDB4D0D22569385E00931E12 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				FD3C3658258BDFCF00D1664B /* MyProfileViewController.swift */,
 				D1CBAB17258FAA740018E524 /* MyEditViewController.swift */,
 				FDB4D0EE256939B800931E12 /* MyViewController.swift */,
 				6B9DBA7B25697C8B00987D3C /* MyCollectionCell.swift */,
-				FD3C3658258BDFCF00D1664B /* MyProfileViewController.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -462,7 +454,6 @@
 				FD3C3659258BDFCF00D1664B /* MyProfileViewController.swift in Sources */,
 				FDB4D102256945B100931E12 /* StampCell.swift in Sources */,
 				FDB4D121256996AA00931E12 /* stampCountDataModel.swift in Sources */,
-				6BB3B5C42590D35000FF0A12 /* SetUpViewController.swift in Sources */,
 				D1CBAB18258FAA740018E524 /* MyEditViewController.swift in Sources */,
 				6B9DBA842569B95A00987D3C /* levelDataModel.swift in Sources */,
 				FDB4D105256951F700931E12 /* AddPhotoViewController.swift in Sources */,
@@ -477,7 +468,6 @@
 				FDB4D0F925693BBD00931E12 /* calculateTime.swift in Sources */,
 				FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */,
 				FD3C3651258BDDF700D1664B /* LoginViewController.swift in Sources */,
-				6BB3B5C12590D00300FF0A12 /* KeychainItem.swift in Sources */,
 				FDB4D0FE256945A100931E12 /* StampPageCell.swift in Sources */,
 				FDB4D0EC256939B200931E12 /* RankingViewController.swift in Sources */,
 				D16B30E325699A2800C8207E /* calculateLevel.swift in Sources */,
@@ -637,9 +627,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Sopt-27th-HACKATHON-6th/Sopt-27th-HACKATHON-6th.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QPUG3J4E4B;
+				DEVELOPMENT_TEAM = L9D5M5DM3Y;
 				INFOPLIST_FILE = "Sopt-27th-HACKATHON-6th/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,9 +647,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Sopt-27th-HACKATHON-6th/Sopt-27th-HACKATHON-6th.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QPUG3J4E4B;
+				DEVELOPMENT_TEAM = L9D5M5DM3Y;
 				INFOPLIST_FILE = "Sopt-27th-HACKATHON-6th/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
