@@ -13,5 +13,6 @@ target 'Sopt-27th-HACKATHON-6th' do
   pod 'KakaoSDKLink' # 메시지(카카오링크)
   pod 'KakaoSDKTemplate' # 메시지 템플릿 
   pod 'KakaoSDKCommon'  
-
+  pod 'KakaoSDKAuth'  # 카카오 로그인
+  pod 'KakaoSDKUser'  # 사용자 관리
 end

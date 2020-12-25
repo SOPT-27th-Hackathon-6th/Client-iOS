@@ -1,11 +1,16 @@
 PODS:
   - Alamofire (5.4.0)
+  - KakaoSDKAuth (2.0.4):
+    - KakaoSDKCommon (= 2.0.4)
   - KakaoSDKCommon (2.0.4):
     - Alamofire (~> 5.1)
   - KakaoSDKLink (2.0.4):
     - KakaoSDKCommon (= 2.0.4)
     - KakaoSDKTemplate (= 2.0.4)
   - KakaoSDKTemplate (2.0.4):
+    - KakaoSDKCommon (= 2.0.4)
+  - KakaoSDKUser (2.0.4):
+    - KakaoSDKAuth (= 2.0.4)
     - KakaoSDKCommon (= 2.0.4)
   - Kingfisher (5.15.7):
     - Kingfisher/Core (= 5.15.7)
@@ -15,9 +20,11 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
+  - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKLink
   - KakaoSDKTemplate
+  - KakaoSDKUser
   - Kingfisher (~> 5.0)
   - lottie-ios
   - SwiftyJSON (~> 4.0)
@@ -25,22 +32,26 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKLink
     - KakaoSDKTemplate
+    - KakaoSDKUser
     - Kingfisher
     - lottie-ios
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  KakaoSDKAuth: 3a88e4a110243f8c6b9948c5ec85670c7acaebf6
   KakaoSDKCommon: 070472d0638ea6b28684a23c195e47015349e51b
   KakaoSDKLink: a90a919c4b00dc85bbf21d91842961c105317317
   KakaoSDKTemplate: 330007aea0b46de1ed93e4cbddc7b4c3b59bdc25
+  KakaoSDKUser: 7951e09f9e6de3908ae2d7f8486290c8607c217a
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 557f26b2a51539d997905c269c457fc5bcee5431
+PODFILE CHECKSUM: 095d5d5f96e2b38d8baa4b2d64f38fce59fe888e
 
 COCOAPODS: 1.10.0
