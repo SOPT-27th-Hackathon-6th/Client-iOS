@@ -57,12 +57,26 @@ class LoginViewController: UIViewController {
             AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
+                    AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                            if let error = error {
+                                print(error)
+                            }
+                            else {
+                                print("loginWithKakaoAccount() success.")
+
+                                //do something
+                                _ = oauthToken
+                            }
+                        }
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
 
                     //do something
-                    _ = oauthToken
+                     _ = oauthToken
+                    guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+
+                    self.navigationController?.pushViewController(setUpVC, animated: true)
                 }
             }
         }
@@ -87,13 +101,16 @@ class LoginViewController: UIViewController {
         kakaoBtn.backgroundColor = UIColor(displayP3Red: 254/255, green: 229/255, blue: 0/255, alpha: 1)
         kakaoBtn.layer.cornerRadius = kakaoBtn.frame.height / 2
         
-        appleSignInButton.layer.cornerRadius = appleSignInButton.frame.height / 2
+
         
     }
 
     //MARK:- Function Part
     func setAppleSignInButton() {
-        let authorizationButton = ASAuthorizationAppleIDButton(type: .signIn, style: .whiteOutline)
+        
+        let authorizationButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
+        
+        authorizationButton.cornerRadius = 20 //authorizationButton.frame.height / 2
         authorizationButton.addTarget(self, action: #selector(appleSignInButtonPress), for: .touchUpInside)
         self.appleSignInButton.addArrangedSubview(authorizationButton)
     }

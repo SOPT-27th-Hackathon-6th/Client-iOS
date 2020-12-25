@@ -25,7 +25,10 @@ class CardViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-          self.dismiss(animated: true, completion: nil)
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first , touch.view == self.view {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     

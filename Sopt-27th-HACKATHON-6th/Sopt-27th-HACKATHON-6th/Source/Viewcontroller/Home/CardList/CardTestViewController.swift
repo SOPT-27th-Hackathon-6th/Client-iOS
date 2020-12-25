@@ -16,11 +16,13 @@ class CardTestViewController: UIViewController {
     
 
     @IBAction func touchUpCard(_ sender: Any) {
-        guard let nextVC = storyboard?.instantiateViewController (identifier: "CardViewController") as? CardViewController else {return}
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: true, completion: nil)
+        if let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "CardViewController") {
+            cardVC.providesPresentationContextTransitionStyle = true
+            cardVC.definesPresentationContext = true
+            cardVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext;
+            cardVC.view.backgroundColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+            self.present(cardVC, animated: true, completion: nil)
+        }
     }
     
-    
-
 }
