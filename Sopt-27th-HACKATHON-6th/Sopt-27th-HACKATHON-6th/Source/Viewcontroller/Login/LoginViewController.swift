@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     //MARK:- IBOutlet Part
     @IBOutlet var appleSignInButton: UIStackView!
+    @IBOutlet var introLabel: UILabel!
     
 
     //MARK:- Variable Part
@@ -23,6 +24,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        defualtSetting()
         setAppleSignInButton()
 
     }
@@ -47,7 +49,9 @@ class LoginViewController: UIViewController {
     }
     
     //MARK:- default Setting Function Part
-    
+    func defualtSetting() {
+        introLabel.text = "국밥과 마라에 진심인 당신.\n당신의 진심을 기록하고 공유하세요."
+    }
 
     //MARK:- Function Part
     func setAppleSignInButton() {
