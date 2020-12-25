@@ -74,6 +74,9 @@ class LoginViewController: UIViewController {
 
                     //do something
                      _ = oauthToken
+                    guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+
+                    self.navigationController?.pushViewController(setUpVC, animated: true)
                 }
             }
         }
