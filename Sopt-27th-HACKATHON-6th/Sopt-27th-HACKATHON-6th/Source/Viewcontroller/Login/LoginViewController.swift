@@ -57,12 +57,23 @@ class LoginViewController: UIViewController {
             AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
+                    AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                            if let error = error {
+                                print(error)
+                            }
+                            else {
+                                print("loginWithKakaoAccount() success.")
+
+                                //do something
+                                _ = oauthToken
+                            }
+                        }
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
 
                     //do something
-                    _ = oauthToken
+                     _ = oauthToken
                 }
             }
         }
@@ -95,6 +106,7 @@ class LoginViewController: UIViewController {
     func setAppleSignInButton() {
         
         let authorizationButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
+        
         authorizationButton.cornerRadius = 20 //authorizationButton.frame.height / 2
         authorizationButton.addTarget(self, action: #selector(appleSignInButtonPress), for: .touchUpInside)
         self.appleSignInButton.addArrangedSubview(authorizationButton)
