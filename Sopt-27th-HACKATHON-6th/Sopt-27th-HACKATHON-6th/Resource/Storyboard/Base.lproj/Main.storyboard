@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,26 +47,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-UO-749">
-                                <rect key="frame" x="41" y="761" width="331" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-UO-749">
+                                <rect key="frame" x="41" y="762" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Z0j-AZ-lQK"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IP-wn-3mz">
-                                <rect key="frame" x="145" y="204" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="닉네임으로 가는 버튼"/>
-                                <connections>
-                                    <action selector="touchUpNickname:" destination="o8U-YV-tnV" eventType="touchUpInside" id="bv1-wM-vQo"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7oO-fU-odW">
-                                <rect key="frame" x="111" y="326" width="191" height="131"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH9-8T-CZt">
-                                <rect key="frame" x="47" y="523" width="320" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-BP-1TY">
                                 <rect key="frame" x="71" y="242" width="272" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,6 +62,37 @@
                                     <action selector="loginButtonClicked:" destination="o8U-YV-tnV" eventType="touchUpInside" id="cQY-hh-YZ7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IP-wn-3mz">
+                                <rect key="frame" x="145" y="204" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닉네임으로 가는 버튼"/>
+                                <connections>
+                                    <action selector="touchUpNickname:" destination="o8U-YV-tnV" eventType="touchUpInside" id="bv1-wM-vQo"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7oO-fU-odW">
+                                <rect key="frame" x="111" y="326" width="191" height="131"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH9-8T-CZt">
+                                <rect key="frame" x="47" y="523" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-gf-qQD">
+                                <rect key="frame" x="41" y="697" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eBr-0z-Yav"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="카카오톡으로 로그인">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <imageReference key="image" image="message.fill" catalog="system" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpKakaoLogin:" destination="o8U-YV-tnV" eventType="touchUpInside" id="SOF-rK-kTz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="utf-RF-G9I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,8 +100,12 @@
                             <constraint firstItem="gH9-8T-CZt" firstAttribute="leading" secondItem="utf-RF-G9I" secondAttribute="leading" constant="47" id="0kB-MZ-q0D"/>
                             <constraint firstItem="utf-RF-G9I" firstAttribute="trailing" secondItem="gH9-8T-CZt" secondAttribute="trailing" constant="47" id="7nB-YZ-tIB"/>
                             <constraint firstItem="utf-RF-G9I" firstAttribute="trailing" secondItem="7oO-fU-odW" secondAttribute="trailing" constant="112" id="BMG-Rw-pRg"/>
+                            <constraint firstItem="gJ1-gf-qQD" firstAttribute="leading" secondItem="utf-RF-G9I" secondAttribute="leading" constant="41" id="Dj5-t9-To0"/>
+                            <constraint firstItem="8hL-UO-749" firstAttribute="top" secondItem="gJ1-gf-qQD" secondAttribute="bottom" constant="17" id="GUf-wN-85b"/>
                             <constraint firstItem="utf-RF-G9I" firstAttribute="trailing" secondItem="8hL-UO-749" secondAttribute="trailing" constant="42" id="GVn-bC-yOz"/>
                             <constraint firstItem="7oO-fU-odW" firstAttribute="leading" secondItem="utf-RF-G9I" secondAttribute="leading" constant="111" id="HgK-hP-lxa"/>
+                            <constraint firstItem="gJ1-gf-qQD" firstAttribute="top" secondItem="gH9-8T-CZt" secondAttribute="bottom" constant="143" id="KNE-iR-06n"/>
+                            <constraint firstItem="utf-RF-G9I" firstAttribute="trailing" secondItem="gJ1-gf-qQD" secondAttribute="trailing" constant="42" id="Len-hB-VJn"/>
                             <constraint firstItem="gH9-8T-CZt" firstAttribute="top" secondItem="7oO-fU-odW" secondAttribute="bottom" constant="66" id="bZV-g6-1bG"/>
                             <constraint firstItem="8hL-UO-749" firstAttribute="leading" secondItem="utf-RF-G9I" secondAttribute="leading" constant="41" id="ord-B1-OYz"/>
                             <constraint firstItem="7oO-fU-odW" firstAttribute="top" secondItem="utf-RF-G9I" secondAttribute="top" constant="238" id="sVA-kh-Huy"/>
@@ -94,6 +116,7 @@
                     <connections>
                         <outlet property="appleSignInButton" destination="8hL-UO-749" id="zy3-s9-BbK"/>
                         <outlet property="introLabel" destination="gH9-8T-CZt" id="mV0-5y-hv2"/>
+                        <outlet property="kakaoBtn" destination="gJ1-gf-qQD" id="X6t-SC-wg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfu-Sd-R4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -365,7 +388,11 @@
         <image name="chartBarChartAlt" width="24" height="24"/>
         <image name="homeHomeAltOutline" width="24" height="24"/>
         <image name="logo" width="134" height="131"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="userUser" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

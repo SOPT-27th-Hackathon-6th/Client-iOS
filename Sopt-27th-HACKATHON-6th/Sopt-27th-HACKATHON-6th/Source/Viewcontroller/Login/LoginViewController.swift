@@ -7,12 +7,15 @@
 
 import UIKit
 import AuthenticationServices
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class LoginViewController: UIViewController {
 
     //MARK:- IBOutlet Part
     @IBOutlet var appleSignInButton: UIStackView!
     @IBOutlet var introLabel: UILabel!
+    @IBOutlet var kakaoBtn: UIButton!
     
 
     //MARK:- Variable Part
@@ -48,9 +51,44 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
+    @IBAction func touchUpKakaoLogin(_ sender: Any) {
+        // 카카오톡 설치 여부 확인
+        if (AuthApi.isKakaoTalkLoginAvailable()) {
+            AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        }
+        
+        AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoAccount() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
+            }
+    }
+    
     //MARK:- default Setting Function Part
     func defualtSetting() {
         introLabel.text = "국밥과 마라에 진심인 당신.\n당신의 진심을 기록하고 공유하세요."
+        
+        kakaoBtn.backgroundColor = UIColor(displayP3Red: 254/255, green: 229/255, blue: 0/255, alpha: 1)
+        kakaoBtn.layer.cornerRadius = kakaoBtn.frame.height / 2
+        
+        appleSignInButton.layer.cornerRadius = appleSignInButton.frame.height / 2
+        
     }
 
     //MARK:- Function Part
@@ -59,6 +97,7 @@ class LoginViewController: UIViewController {
         authorizationButton.addTarget(self, action: #selector(appleSignInButtonPress), for: .touchUpInside)
         self.appleSignInButton.addArrangedSubview(authorizationButton)
     }
+    
     
     //MARK:- @objc function Part
     @objc func appleSignInButtonPress() {
