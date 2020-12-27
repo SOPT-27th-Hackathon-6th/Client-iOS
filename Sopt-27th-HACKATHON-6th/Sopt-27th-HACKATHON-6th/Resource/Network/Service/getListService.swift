@@ -15,9 +15,13 @@ struct getListService {
     func getMalaList(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let url = APIConstants.maraStampURL
+        let headers: HTTPHeaders = [
+            "token" : "accessToken"
+//            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE2MDgzNTk1OTEsImV4cCI6MTYwODM2MzE5MSwiaXNzIjoiZ3VrYmFiTWFsYSJ9.5B1sCqiLHrx6VYfFEoT-EB86DNNhNb4wgTszWG2TflQ"
+        ]
         let dataRequest = AF.request(url,
                                      method : .get,
-                                     encoding: JSONEncoding.default)
+                                     encoding: JSONEncoding.default, headers: headers)
         
         dataRequest.responseData { dataResponse in
             switch dataResponse.result {

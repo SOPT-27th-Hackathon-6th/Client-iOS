@@ -47,6 +47,28 @@ extension HomeListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeListTableViewCell.identifier) as? HomeListTableViewCell else {
             return UITableViewCell()
         }
+        getListService.shared.getMalaList() { (result) in
+            switch(result) {
+            case .success(let data):
+                if let ListModel = data as? ListModel {
+                    let url = URL(string: ListModel.imageLink)
+                    let data = try? Data(contentsOf: url!)
+                    cell.foodImageView.image = UIImage(data: data!)
+                    cell.storeNameLabel.text = ListModel.resName
+                    cell.dateLabel.text = ListModel.updatedAt
+                    cell.reviewLabel.text = ListModel.review
+                }
+            case .requestErr(_):
+                print("error")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+        
         return cell
     }
     

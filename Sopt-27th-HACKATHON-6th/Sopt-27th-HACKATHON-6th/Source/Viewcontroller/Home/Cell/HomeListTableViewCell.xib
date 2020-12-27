@@ -81,6 +81,7 @@
                 <outlet property="dateLabel" destination="hE9-mZ-8QD" id="30x-ia-4x6"/>
                 <outlet property="divideBarLabel" destination="Qmz-jc-VZp" id="rlw-4K-qOU"/>
                 <outlet property="foodImageView" destination="0Po-O9-ajR" id="S42-8Q-q5V"/>
+                <outlet property="reviewLabel" destination="eS4-GS-FQA" id="jFw-6B-fHv"/>
                 <outlet property="storeNameLabel" destination="jfy-eb-6S9" id="rGc-4V-Srz"/>
             </connections>
             <point key="canvasLocation" x="318.84057971014494" y="126.89732142857142"/>
