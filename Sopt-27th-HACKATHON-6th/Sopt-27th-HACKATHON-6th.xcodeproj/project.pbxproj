@@ -20,6 +20,8 @@
 		6B9DBA882569B9F200987D3C /* getLevelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DBA872569B9F200987D3C /* getLevelService.swift */; };
 		6BB3B5C12590D00300FF0A12 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3B5C02590D00300FF0A12 /* KeychainItem.swift */; };
 		6BB3B5C42590D35000FF0A12 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */; };
+		6BE1512B259769E100BBD3F1 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512A259769E100BBD3F1 /* ListModel.swift */; };
+		6BE1512E25983DC800BBD3F1 /* getListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512D25983DC800BBD3F1 /* getListService.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DC2569744A00C8207E /* GradeDataModel.swift */; };
@@ -67,6 +69,8 @@
 		6BB3B5B42590B3A200FF0A12 /* Sopt-27th-HACKATHON-6th.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sopt-27th-HACKATHON-6th.entitlements"; sourceTree = "<group>"; };
 		6BB3B5C02590D00300FF0A12 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		6BE1512A259769E100BBD3F1 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		6BE1512D25983DC800BBD3F1 /* getListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getListService.swift; sourceTree = "<group>"; };
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				D16B30DB2569743F00C8207E /* Grade */,
+				6BE1512A259769E100BBD3F1 /* ListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				FDB4D11225695B8300931E12 /* AddStampService.swift */,
 				FDB4D11D2569930F00931E12 /* getStampCountService.swift */,
 				6B9DBA872569B9F200987D3C /* getLevelService.swift */,
+				6BE1512D25983DC800BBD3F1 /* getListService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				6B9DBA882569B9F200987D3C /* getLevelService.swift in Sources */,
 				D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */,
 				FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */,
+				6BE1512E25983DC800BBD3F1 /* getListService.swift in Sources */,
 				FDB4D0F925693BBD00931E12 /* calculateTime.swift in Sources */,
 				FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */,
 				FD3C3651258BDDF700D1664B /* LoginViewController.swift in Sources */,
@@ -496,6 +503,7 @@
 				FDB4D0E6256939A400931E12 /* TabBarViewController.swift in Sources */,
 				FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */,
 				FDB4D0EF256939B800931E12 /* MyViewController.swift in Sources */,
+				6BE1512B259769E100BBD3F1 /* ListModel.swift in Sources */,
 				D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */,
 				6B614708258DD6DA00CD8E65 /* HomeListViewController.swift in Sources */,
 				FDB4D11B2569929100931E12 /* makeAlert + UIView.swift in Sources */,
