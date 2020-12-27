@@ -8,6 +8,7 @@
 import Foundation
 
 struct ListModel {
-    var imageLink, resName, review, updatedAt: String
-    var userIdx: Int
+    let stampIdx: Int
+    let imageLink, resName, review, updatedAt: String
+    let userIdx: Int
 }
