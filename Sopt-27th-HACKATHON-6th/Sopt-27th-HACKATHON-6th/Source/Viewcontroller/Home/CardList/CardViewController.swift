@@ -35,8 +35,9 @@ class CardViewController: UIViewController {
     @IBAction func touchUpList(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "HomeList", bundle: nil)
         if let nextVC = storyboard.instantiateViewController (identifier: "HomeListViewController") as? HomeListViewController {
+//            self.modalPresentationStyle = .overCurrentContext
             self.present(nextVC, animated: true, completion: nil)
-            
+
         }
         
     }

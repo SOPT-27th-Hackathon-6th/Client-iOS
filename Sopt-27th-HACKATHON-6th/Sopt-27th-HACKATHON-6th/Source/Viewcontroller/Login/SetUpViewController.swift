@@ -15,12 +15,9 @@ class SetUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.text = "국밥마라 닉네임을\n입력해주세요"
+        delegateSetting()
         defaultSetting()
     }
-    
-    
-    
     
     //MARK:- IBAction Part
     /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
@@ -41,9 +38,13 @@ class SetUpViewController: UIViewController {
     ///         myTableView.delegate = self
     ///         myTableView.datasource = self
     ///    }
-    
+    func delegateSetting(){
+        nicknameTF.delegate = self
+    }
     func defaultSetting() {
-        //textfield
+        // label
+        descriptionLabel.text = "국밥마라 닉네임을\n입력해주세요"
+        // textfield
         nicknameTF.borderStyle = .none
         let border = CALayer()
         border.frame = CGRect(x: 0, y: nicknameTF.frame.size.height-1, width: nicknameTF.frame.width, height: 1)
@@ -53,9 +54,15 @@ class SetUpViewController: UIViewController {
         nicknameTF.textAlignment = .left
         nicknameTF.textColor = UIColor.black
         
-        //enter button
+        // enter button
         enterBtn.backgroundColor = UIColor(displayP3Red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
         enterBtn.layer.cornerRadius = enterBtn.frame.height / 2
         enterBtn.tintColor = UIColor.white
+    }
+}
+extension SetUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

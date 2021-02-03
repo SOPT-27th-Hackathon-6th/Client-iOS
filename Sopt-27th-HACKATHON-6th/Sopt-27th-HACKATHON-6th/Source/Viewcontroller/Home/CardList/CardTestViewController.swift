@@ -8,7 +8,7 @@
 import UIKit
 
 class CardTestViewController: UIViewController {
-
+    // navi는 테스트용
     override func viewDidLoad() {
         super.viewDidLoad()        
         // Do any additional setup after loading the view.
@@ -17,9 +17,9 @@ class CardTestViewController: UIViewController {
 
     @IBAction func touchUpCard(_ sender: Any) {
         if let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "CardViewController") {
-            cardVC.providesPresentationContextTransitionStyle = true
-            cardVC.definesPresentationContext = true
-            cardVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext;
+            cardVC.modalPresentationStyle = .overCurrentContext
+//            cardVC.modalPresentationStyle = .overFullScreen
+            cardVC.modalTransitionStyle = .crossDissolve
             cardVC.view.backgroundColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
             self.present(cardVC, animated: true, completion: nil)
         }
