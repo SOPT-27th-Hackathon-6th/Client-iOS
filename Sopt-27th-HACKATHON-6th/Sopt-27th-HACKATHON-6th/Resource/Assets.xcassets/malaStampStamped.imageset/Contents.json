@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "gukbabStampStamped.png",
+      "filename" : "malaStampStamped.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "gukbabStampStamped@2x.png"
+      "filename" : "malaStampStamped@2x.png"
     },
     {
+      "filename" : "malaStampStamped@3x.png",
       "scale" : "3x",
-      "idiom" : "universal",
-      "filename" : "gukbabStampStamped@3x.png"
+      "idiom" : "universal"
     }
   ],
   "info" : {

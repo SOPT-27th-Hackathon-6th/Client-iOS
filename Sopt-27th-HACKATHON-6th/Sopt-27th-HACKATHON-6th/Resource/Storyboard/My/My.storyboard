@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0s-az-mDn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0s-az-mDn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -194,6 +194,22 @@
                                     <constraint firstAttribute="width" constant="48" id="fgB-TL-kFJ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닫기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpb-GW-NZS">
+                                <rect key="frame" x="20" y="56.5" width="25" height="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYw-gg-LQ5">
+                                <rect key="frame" x="0.0" y="44" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7Rp-hK-3iI"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vas-DB-zxs"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="Y0s-az-mDn" eventType="touchUpInside" id="hxZ-BN-hss"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cr1-wW-jiz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -201,6 +217,7 @@
                             <constraint firstItem="RjR-L0-WDK" firstAttribute="leading" secondItem="Cr1-wW-jiz" secondAttribute="leading" constant="20" id="0TE-UQ-M9h"/>
                             <constraint firstItem="AuR-e2-606" firstAttribute="top" secondItem="bJN-E6-Amv" secondAttribute="bottom" id="2cm-IF-sF9"/>
                             <constraint firstItem="42L-FF-E3M" firstAttribute="top" secondItem="RjR-L0-WDK" secondAttribute="top" id="467-g3-Poh"/>
+                            <constraint firstItem="tpb-GW-NZS" firstAttribute="leading" secondItem="Cr1-wW-jiz" secondAttribute="leading" constant="20" id="4Gg-ve-cO3"/>
                             <constraint firstItem="Vhu-HK-qYv" firstAttribute="trailing" secondItem="Cr1-wW-jiz" secondAttribute="trailing" id="8aO-Wf-my6"/>
                             <constraint firstItem="EZL-6z-En5" firstAttribute="leading" secondItem="rvX-Yw-NVo" secondAttribute="leading" id="CdC-aF-blP"/>
                             <constraint firstItem="3cJ-zA-Nq9" firstAttribute="centerY" secondItem="EZL-6z-En5" secondAttribute="centerY" id="MT9-EK-Pun"/>
@@ -210,6 +227,7 @@
                             <constraint firstItem="Vud-Up-4HQ" firstAttribute="top" secondItem="Cr1-wW-jiz" secondAttribute="top" constant="71" id="QTt-Sh-ukx"/>
                             <constraint firstItem="Cr1-wW-jiz" firstAttribute="trailing" secondItem="z0o-bn-li6" secondAttribute="trailing" constant="8" id="S2r-1c-Mwc"/>
                             <constraint firstItem="qn6-WZ-TeV" firstAttribute="centerY" secondItem="rvX-Yw-NVo" secondAttribute="centerY" id="TcT-Bv-b6W"/>
+                            <constraint firstItem="tpb-GW-NZS" firstAttribute="centerY" secondItem="PnD-Za-qb2" secondAttribute="centerY" id="TlD-df-Jem"/>
                             <constraint firstItem="Vud-Up-4HQ" firstAttribute="leading" secondItem="Cr1-wW-jiz" secondAttribute="leading" constant="20" id="UE1-xh-L0D"/>
                             <constraint firstItem="rvX-Yw-NVo" firstAttribute="top" secondItem="Gja-eo-8IU" secondAttribute="bottom" constant="28" id="YRy-QD-V8E"/>
                             <constraint firstAttribute="trailing" secondItem="4As-nr-kw3" secondAttribute="trailing" id="cVS-xJ-W7h"/>
@@ -218,6 +236,7 @@
                             <constraint firstItem="v9v-3L-A8H" firstAttribute="leading" secondItem="It9-gz-LtZ" secondAttribute="trailing" constant="1" id="dqE-dw-h37"/>
                             <constraint firstItem="bJN-E6-Amv" firstAttribute="top" secondItem="8S1-ZS-qsW" secondAttribute="bottom" constant="22" id="efl-Fj-oVR"/>
                             <constraint firstItem="It9-gz-LtZ" firstAttribute="centerY" secondItem="Vud-Up-4HQ" secondAttribute="centerY" id="eqm-aR-OsX"/>
+                            <constraint firstItem="jYw-gg-LQ5" firstAttribute="top" secondItem="Cr1-wW-jiz" secondAttribute="top" id="fgr-t1-lQC"/>
                             <constraint firstItem="Gja-eo-8IU" firstAttribute="leading" secondItem="Cr1-wW-jiz" secondAttribute="leading" constant="20" id="gkN-aN-Qub"/>
                             <constraint firstItem="Vhu-HK-qYv" firstAttribute="centerY" secondItem="EZL-6z-En5" secondAttribute="centerY" id="jFn-lf-ONm"/>
                             <constraint firstItem="v9v-3L-A8H" firstAttribute="centerY" secondItem="It9-gz-LtZ" secondAttribute="centerY" id="jHM-9y-dm6"/>
@@ -228,6 +247,7 @@
                             <constraint firstItem="bJN-E6-Amv" firstAttribute="centerX" secondItem="lJ6-aR-X7z" secondAttribute="centerX" id="s9S-1q-7jh"/>
                             <constraint firstItem="rvX-Yw-NVo" firstAttribute="leading" secondItem="Gja-eo-8IU" secondAttribute="leading" id="sm5-iN-yxK"/>
                             <constraint firstItem="3cJ-zA-Nq9" firstAttribute="trailing" secondItem="Cr1-wW-jiz" secondAttribute="trailing" id="wuI-Gi-9FW"/>
+                            <constraint firstItem="jYw-gg-LQ5" firstAttribute="leading" secondItem="Cr1-wW-jiz" secondAttribute="leading" id="xUE-60-fiD"/>
                             <constraint firstItem="z0o-bn-li6" firstAttribute="top" secondItem="Cr1-wW-jiz" secondAttribute="top" constant="67" id="yMF-13-SFb"/>
                             <constraint firstItem="PnD-Za-qb2" firstAttribute="centerX" secondItem="lJ6-aR-X7z" secondAttribute="centerX" id="zO2-YH-2bt"/>
                             <constraint firstItem="3cJ-zA-Nq9" firstAttribute="leading" secondItem="8S1-ZS-qsW" secondAttribute="trailing" id="zPV-jQ-DCE"/>
@@ -240,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8D-JG-B5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="-666"/>
+            <point key="canvasLocation" x="457.97101449275368" y="-666.29464285714278"/>
         </scene>
         <!--My Edit View Controller-->
         <scene sceneID="vda-vY-DLB">
