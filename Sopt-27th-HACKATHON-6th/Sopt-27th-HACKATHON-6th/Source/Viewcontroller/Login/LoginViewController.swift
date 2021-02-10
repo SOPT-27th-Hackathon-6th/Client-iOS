@@ -34,23 +34,6 @@ class LoginViewController: UIViewController {
     
     //MARK:- IBAction Part
     
-    @IBAction func loginButtonClicked(_ sender: Any) {
-        
-        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        
-        guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
-        
-        self.navigationController?.pushViewController(homeVC, animated: true)
-    
-    }
-    
-    @IBAction func touchUpNickname(_ sender: Any) {
-        
-        guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-        
-        self.navigationController?.pushViewController(homeVC, animated: true)
-    }
-    
     @IBAction func touchUpKakaoLogin(_ sender: Any) {
         // 카카오톡 설치 여부 확인
         if (AuthApi.isKakaoTalkLoginAvailable()) {
@@ -100,12 +83,12 @@ class LoginViewController: UIViewController {
     }
 
     //MARK:- Function Part
-    
+    func showLoginViewController() {
+        guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+        self.navigationController?.pushViewController(setUpVC, animated: true)
+    }
     func moveToNickView() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         guard let nickVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-//        homeVC.nickName = nicknameTF.text
         self.navigationController?.pushViewController(nickVC, animated: true)
     }
     func setAppleSignInButton() {
@@ -132,8 +115,6 @@ class LoginViewController: UIViewController {
 }
 
     //MARK:- extension 부분
-
-
 extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
@@ -212,13 +193,5 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     // Apple ID 연동 실패 시
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-    }
-}
-extension UIViewController {
-
-    func showLoginViewController() {
-//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-        self.navigationController?.pushViewController(setUpVC, animated: true)
     }
 }
