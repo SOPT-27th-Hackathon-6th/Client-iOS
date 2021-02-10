@@ -16,14 +16,11 @@ class SetUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionLabel.text = "국밥마라 닉네임을\n입력해주세요"
+        delegateSetting()
         defaultSetting()
         disableSignupButton()
         
     }
-    
-    
-    
     
     //MARK:- IBAction Part
     /// 버튼과 같은 동작을 선언하는 @IBAction 을 선언합니다 , IBAction 함수 명은 동사 형태로!!  // 함수명 lowerCamelCase 사용
@@ -73,10 +70,14 @@ class SetUpViewController: UIViewController {
         enterBtn.backgroundColor = UIColor(displayP3Red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
     }
     
-    func defaultSetting() {
-        
+
+    func delegateSetting(){
         nicknameTF.delegate = self
-        //textfield
+    }
+    func defaultSetting() {
+        // label
+        descriptionLabel.text = "국밥마라 닉네임을\n입력해주세요"
+        // textfield
         nicknameTF.borderStyle = .none
         nicknameTF.addTarget(self, action: #selector(checkNickname), for: .allEditingEvents)
 
@@ -93,6 +94,8 @@ class SetUpViewController: UIViewController {
         
         nicknameTF.inputAccessoryView = toolBarKeyboard
 
+        // enter button
+        enterBtn.backgroundColor = UIColor(displayP3Red: 203/255, green: 65/255, blue: 30/255, alpha: 1)
         enterBtn.layer.cornerRadius = enterBtn.frame.height / 2
         enterBtn.tintColor = UIColor.white
     }
@@ -125,8 +128,9 @@ class SetUpViewController: UIViewController {
 }
 
 
-extension SetUpViewController : UITextFieldDelegate
-{
-
-    
+extension SetUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

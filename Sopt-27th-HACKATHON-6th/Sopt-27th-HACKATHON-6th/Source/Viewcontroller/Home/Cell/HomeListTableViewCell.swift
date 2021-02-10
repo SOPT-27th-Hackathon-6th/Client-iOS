@@ -13,6 +13,7 @@ class HomeListTableViewCell: UITableViewCell {
     @IBOutlet var foodImageView: UIImageView!
     @IBOutlet var storeNameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var reviewLabel: UILabel!
     @IBOutlet var divideBarLabel: UILabel!
     
     override func awakeFromNib() {

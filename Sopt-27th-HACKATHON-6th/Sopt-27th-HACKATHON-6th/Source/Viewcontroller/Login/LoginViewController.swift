@@ -34,54 +34,29 @@ class LoginViewController: UIViewController {
     
     //MARK:- IBAction Part
     
-    @IBAction func loginButtonClicked(_ sender: Any) {
-        
-        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        
-        guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
-        
-        self.navigationController?.pushViewController(homeVC, animated: true)
-    
-    }
-    
-    @IBAction func touchUpNickname(_ sender: Any) {
-        
-        guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-        
-        self.navigationController?.pushViewController(homeVC, animated: true)
-    }
-    
     @IBAction func touchUpKakaoLogin(_ sender: Any) {
         // 카카오톡 설치 여부 확인
         if (AuthApi.isKakaoTalkLoginAvailable()) {
+            // 카카오톡 로그인. api 호출 결과를 클로저로 전달.
             AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
+                    // 예외 처리 (로그인 취소 등)
                     print(error)
-                    AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                            if let error = error {
-                                print(error)
-                            }
-                            else {
-                                print("loginWithKakaoAccount() success.")
-
-                                //do something
-                                _ = oauthToken
-                            }
-                        }
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
-
-                    //do something
-                     _ = oauthToken
-                    guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-
-                    self.navigationController?.pushViewController(setUpVC, animated: true)
+                    // do something
+                    _ = oauthToken
+                    // 어세스토큰
+                    let accessToken = oauthToken?.accessToken
+                    
+                    //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 닉네임 설정 뷰로 이동
+                    self.moveToNickView()
                 }
             }
         }
-        
-        AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+        else { // 카카오 계정으로 로그인
+            AuthApi.shared.loginWithKakaoAccount {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 }
@@ -90,8 +65,13 @@ class LoginViewController: UIViewController {
 
                     //do something
                     _ = oauthToken
+                    // 어세스토큰
+                    let accessToken = oauthToken?.accessToken
+                    
+                    self.moveToNickView()
                 }
             }
+        }
     }
     
     //MARK:- default Setting Function Part
@@ -100,12 +80,17 @@ class LoginViewController: UIViewController {
         
         kakaoBtn.backgroundColor = UIColor(displayP3Red: 254/255, green: 229/255, blue: 0/255, alpha: 1)
         kakaoBtn.layer.cornerRadius = kakaoBtn.frame.height / 2
-        
-
-        
     }
 
     //MARK:- Function Part
+    func showLoginViewController() {
+        guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+        self.navigationController?.pushViewController(setUpVC, animated: true)
+    }
+    func moveToNickView() {
+        guard let nickVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
+        self.navigationController?.pushViewController(nickVC, animated: true)
+    }
     func setAppleSignInButton() {
         
         let authorizationButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
@@ -130,8 +115,6 @@ class LoginViewController: UIViewController {
 }
 
     //MARK:- extension 부분
-
-
 extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
@@ -210,13 +193,5 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     // Apple ID 연동 실패 시
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-    }
-}
-extension UIViewController {
-
-    func showLoginViewController() {
-//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-        self.navigationController?.pushViewController(setUpVC, animated: true)
     }
 }

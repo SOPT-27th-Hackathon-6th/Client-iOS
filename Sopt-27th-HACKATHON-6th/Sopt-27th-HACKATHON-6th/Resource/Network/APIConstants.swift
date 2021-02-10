@@ -10,7 +10,7 @@ import Foundation
 struct APIConstants
 {
     
-    static let baseURL = "http://52.79.217.77:3000"
+    static let baseURL = "http://52.79.217.77:3000" //"http://52.79.150.197:3000"
     
     // 추가할거면 여기에
     
