@@ -98,7 +98,9 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         
         guard let mypageVC = myPageStoryboard.instantiateViewController(withIdentifier: "MyProfileViewController") as? MyProfileViewController else {return}
         
-        self.navigationController?.pushViewController(mypageVC, animated: true)
+        mypageVC.modalPresentationStyle = .fullScreen
+        self.present(mypageVC, animated: true, completion: nil)
+        
     }
     
     
@@ -260,27 +262,27 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 self.stampCollectionView.reloadData()
                 
                 
-                if self.maraCount % 3 == 0
-                {
-                    
-
-                        
-                        let alert = UIAlertController(title: "Level up!", message: "마라 레벨이 올랐습니다. 마이페이지에서 확인해보세요", preferredStyle: .alert)
-                        let ok = UIAlertAction(title: "확인하러 가기", style: .default) { (_) in
-                            
-                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "levelUP"), object: nil)
-                        }
-                        alert.addAction(ok)
-                        self.present(alert, animated: true, completion: nil)
-                        
-                       
-            
-
-                }
-                else
-                {
-                }
-                
+//                if self.maraCount % 3 == 0
+//                {
+//
+//
+//
+//                        let alert = UIAlertController(title: "Level up!", message: "마라 레벨이 올랐습니다. 마이페이지에서 확인해보세요", preferredStyle: .alert)
+//                        let ok = UIAlertAction(title: "확인하러 가기", style: .default) { (_) in
+//
+//                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "levelUP"), object: nil)
+//                        }
+//                        alert.addAction(ok)
+//                        self.present(alert, animated: true, completion: nil)
+//
+//
+//
+//
+//                }
+//                else
+//                {
+//                }
+//
                 
             default:
                 makeAlert(title: "알림", message: "개수 정보를 가져오는데 실패하였습니다", vc: self)
@@ -318,8 +320,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         self.titleBottomLabel.text = "벌써 4일"
         self.subtitleBottomLabel.text = "이나 됐다"
         
-        maraImageView.image = UIImage(named: "malaIconSeleceted")
-        gukbabImageView.image = UIImage(named: "gukbapIconUnseleceted")
+        maraImageView.image = UIImage(named: "malaSelected")
+        gukbabImageView.image = UIImage(named: "gukbapUnselected")
            maraLabel.textColor = .init(red: 208/255, green: 56/255, blue: 56/255, alpha: 1)
         maraLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
 
@@ -341,8 +343,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         self.titleBottomLabel.text = "벌써 4일"
         self.subtitleBottomLabel.text = "이나 됐다"
         
-        maraImageView.image = UIImage(named: "malaIconUnseleceted")
-        gukbabImageView.image = UIImage(named: "gukbapIconSeleceted")
+        maraImageView.image = UIImage(named: "maleUnseleceted")
+        gukbabImageView.image = UIImage(named: "gukbapSelected")
         
         
         maraLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)

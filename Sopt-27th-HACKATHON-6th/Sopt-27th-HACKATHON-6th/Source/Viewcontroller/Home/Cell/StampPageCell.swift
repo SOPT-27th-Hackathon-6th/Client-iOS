@@ -143,73 +143,31 @@ extension StampPageCell : UICollectionViewDataSource
         let index = (pageNum * 12) + indexPath.row + 1
         
 
-        if index % 3 != 0
+        if isMara == true
         {
-            if isMara == true
+            
+            if index <= maraCount
             {
+                stampCell.settingCell(isMara: isMara, count: index,isFilled: true)
                 
-                if index <= maraCount
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: true)
-
-                }
-                else
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: false)
-                }
             }
             else
             {
-                if index <= gukbabCount
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: true)
-
-                }
-                else
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: false,isFilled: false)
-
-                    
-                }
+                stampCell.settingCell(isMara: isMara, count: index,isFilled: false)
             }
         }
         else
         {
-            
-            if isMara == true
+            if index <= gukbabCount
             {
-                
-                if index <= maraCount
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: true)
-
-                }
-                else
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: false)
-                }
+                stampCell.settingCell(isMara: isMara, count: index,isFilled: true)
             }
             else
             {
-                if index <= gukbabCount
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: true)
-
-                }
-                else
-                {
-                    stampCell.settingCell(isMara: isMara, count: index, isLevelUP: true,isFilled: false)
-
-                    
-                }
+                stampCell.settingCell(isMara: isMara, count: index,isFilled: false)
             }
-            
-
-            
-            
-            
-
         }
+
     
         return stampCell
     }

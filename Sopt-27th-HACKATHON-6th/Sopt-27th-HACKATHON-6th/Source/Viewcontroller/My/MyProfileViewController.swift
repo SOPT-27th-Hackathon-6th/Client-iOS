@@ -45,5 +45,8 @@ class MyProfileViewController: UIViewController, MFMailComposeViewControllerDele
     }
     
 
+    @IBAction func closeButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }

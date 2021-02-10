@@ -15,9 +15,12 @@ struct getStampCountService {
     
 
 
-
     func getStamp(isMara : Bool, completion: @escaping (NetworkResult<Any>) -> Void) {
         
+        let header : HTTPHeaders = ["token": "accessToken2"]
+        // 여기 수정되어야 하는 부분 -> 나중에 실제 유저 토큰값으로
+
+
         var stampURL = ""
         if isMara == true
         {
@@ -27,18 +30,11 @@ struct getStampCountService {
         {
             stampURL = APIConstants.gukbabStampURL
         }
-            
-            
 
-
-            
-            
             
             let dataRequest = AF.request(stampURL, method  : .get,
-            
-                
-                 encoding:
-                JSONEncoding.default)
+                                         encoding:
+                                            JSONEncoding.default, headers: header)
             
             
             

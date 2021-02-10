@@ -14,6 +14,7 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     /// Label, ColelctionView, TextField, ImageView 등 @IBOutlet 변수들을 선언합니다.  // 변수명 lowerCamelCase 사용
     /// ex)  @IBOutlet weak var qnaTextBoxBackgroundImage: UIImageView!
     
+    
     @IBOutlet weak var doneView: UIImageView!
     @IBOutlet weak var doneBtnImage: UIImageView!
     @IBOutlet weak var doneBtn: UIButton!
