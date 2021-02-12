@@ -25,8 +25,6 @@ struct APIConstants
     static let gukbabStampURL = APIConstants.baseURL + "/rice"
     
     
-    
-    
     // 혈중 농도 뷰
     static let levelURL = APIConstants.baseURL + "/level"
     static let percentURL = APIConstants.baseURL + "/percent"

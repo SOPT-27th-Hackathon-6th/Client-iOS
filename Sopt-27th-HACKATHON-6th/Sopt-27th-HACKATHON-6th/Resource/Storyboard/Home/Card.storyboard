@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pMI-qZ-9ro">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,13 +13,13 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="jVJ-8p-i2f" customClass="CardTestViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rWb-JX-xa1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-un-a5U">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <rect key="frame" x="191" y="433" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="mala"/>
                                 <connections>
                                     <action selector="touchUpCard:" destination="jVJ-8p-i2f" eventType="touchUpInside" id="uO9-4h-w0P"/>
                                 </connections>
@@ -28,6 +28,14 @@
                                 <rect key="frame" x="87" y="129" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsP-LX-QYd">
+                                <rect key="frame" x="182" y="471" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="gukbap"/>
+                                <connections>
+                                    <action selector="touchUpGukbap:" destination="jVJ-8p-i2f" eventType="touchUpInside" id="tMC-s2-wSA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hdp-ML-JF5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,11 +51,11 @@
             <objects>
                 <viewController storyboardIdentifier="CardViewController" id="NTY-oc-hTW" customClass="CardViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZh-Jn-lxx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgW-wP-3y1">
-                                <rect key="frame" x="29" y="220" width="354" height="473"/>
+                                <rect key="frame" x="28" y="169.66666666666663" width="319" height="473"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="store name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-ek-HJ8">
                                         <rect key="frame" x="20" y="24" width="106" height="24"/>
@@ -56,7 +64,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3k-3h-nqf">
-                                        <rect key="frame" x="20" y="421" width="314" height="1"/>
+                                        <rect key="frame" x="20" y="421" width="279" height="1"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aJC-LJ-fxZ"/>
@@ -78,7 +86,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39y-Jz-4XB">
-                                        <rect key="frame" x="20" y="354" width="314" height="51"/>
+                                        <rect key="frame" x="20" y="354" width="279" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="gRs-K3-Ya6"/>
                                         </constraints>
@@ -87,13 +95,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgGukbab" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-6h-gxB">
-                                        <rect key="frame" x="0.0" y="83" width="354" height="228"/>
+                                        <rect key="frame" x="0.0" y="83" width="319" height="228"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="228" id="F52-Xc-rzQ"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7En-S4-b2g">
-                                        <rect key="frame" x="127" y="438" width="99" height="19"/>
+                                        <rect key="frame" x="127" y="438" width="64" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="f4S-vc-G16"/>
                                         </constraints>
@@ -132,10 +140,8 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XJo-X5-o9U"/>
                         <constraints>
-                            <constraint firstItem="XJo-X5-o9U" firstAttribute="trailing" secondItem="OgW-wP-3y1" secondAttribute="trailing" constant="31" id="1d2-Tz-00i"/>
-                            <constraint firstItem="XJo-X5-o9U" firstAttribute="bottom" secondItem="OgW-wP-3y1" secondAttribute="bottom" constant="169" id="87B-Sx-PU7"/>
-                            <constraint firstItem="OgW-wP-3y1" firstAttribute="leading" secondItem="XJo-X5-o9U" secondAttribute="leading" constant="29" id="jUr-Pg-3Rf"/>
-                            <constraint firstItem="OgW-wP-3y1" firstAttribute="top" secondItem="XJo-X5-o9U" secondAttribute="top" constant="176" id="qqg-wb-LM2"/>
+                            <constraint firstItem="OgW-wP-3y1" firstAttribute="centerX" secondItem="VZh-Jn-lxx" secondAttribute="centerX" id="wqX-27-i1A"/>
+                            <constraint firstItem="OgW-wP-3y1" firstAttribute="centerY" secondItem="VZh-Jn-lxx" secondAttribute="centerY" id="wy4-ig-tQZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dtm-Kj-1Tw"/>
