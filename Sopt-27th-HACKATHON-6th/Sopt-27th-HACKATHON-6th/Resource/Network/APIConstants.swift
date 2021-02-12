@@ -35,4 +35,6 @@ struct APIConstants
     // 랭킹뷰
     
     
+    // 유저정보뷰
+    static let userInfoURL = APIConstants.baseURL + "/user/profile"
 }
