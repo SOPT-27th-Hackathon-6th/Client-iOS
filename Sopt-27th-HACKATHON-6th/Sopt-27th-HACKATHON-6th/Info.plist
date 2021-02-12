@@ -60,7 +60,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>My</string>
+					<string>Card</string>
 				</dict>
 			</array>
 		</dict>

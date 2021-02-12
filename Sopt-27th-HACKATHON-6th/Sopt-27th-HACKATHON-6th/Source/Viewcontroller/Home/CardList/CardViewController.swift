@@ -17,6 +17,7 @@ class CardViewController: UIViewController {
     @IBOutlet var reviewLabel: UILabel!
     @IBOutlet var divideBarLabel: UILabel!
     
+    var type: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class CardViewController: UIViewController {
         let storyboard = UIStoryboard(name: "HomeList", bundle: nil)
         if let nextVC = storyboard.instantiateViewController (identifier: "HomeListViewController") as? HomeListViewController {
 //            self.modalPresentationStyle = .overCurrentContext
+            nextVC.type = self.type
             self.present(nextVC, animated: true, completion: nil)
 
         }
