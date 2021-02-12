@@ -25,13 +25,15 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     
     
     
+    
     //MARK:- Variable Part
     /// 뷰컨에 필요한 변수들을 선언합니다  // 변수명 lowerCamelCase 사용
     /// ex)  var imageViewList : [UIImageView] = []
     
     
     private let maxLength = 8
-    
+    var beforeNickname = ""
+    var beforeProfileImage = ""
     
     
     //MARK:- Constraint Part
@@ -63,6 +65,23 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
     
     @IBAction func editFinishBtn(_ sender: Any) {
+        
+        putUserInfoService.shared.putUserInfo(self.nicknameTF.text!, beforeProfileImage) { (result) in
+            switch(result) {
+            case .success(let data):
+                print(data)
+            case .requestErr(_):
+                print("error")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+        
+        
         NotificationCenter.default.post(name: NSNotification.Name("dataReceived"), object: nicknameTF.text!)
         editFinish()
         

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0s-az-mDn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0s-az-mDn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="textEdit"/>
                                 <connections>
-                                    <segue destination="IwX-7E-jwe" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="8zx-Og-v1T"/>
+                                    <action selector="editBtnClicked:" destination="Y0s-az-mDn" eventType="touchUpInside" id="i9V-R0-Epl"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjR-L0-WDK" userLabel="MaraView">
@@ -255,7 +255,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gukbabCountLabel" destination="MVX-gJ-T0k" id="AUR-NL-fsv"/>
+                        <outlet property="maraCountLabel" destination="PCg-mU-bUg" id="iJa-VZ-2dC"/>
                         <outlet property="nickNameLabel" destination="It9-gz-LtZ" id="SR8-8t-CVw"/>
+                        <outlet property="profileImage" destination="Vud-Up-4HQ" id="LW9-e5-adZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8D-JG-B5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -265,7 +268,7 @@
         <!--My Edit View Controller-->
         <scene sceneID="vda-vY-DLB">
             <objects>
-                <viewController id="IwX-7E-jwe" customClass="MyEditViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyEditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IwX-7E-jwe" customClass="MyEditViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uj1-vX-Bny">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
