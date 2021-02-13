@@ -13,8 +13,7 @@ class CardViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     var type: String!
-    let horizonInset: CGFloat = 30
-    let lineSpacing: CGFloat = 20
+    
     
     
     override func viewDidLoad() {
@@ -30,6 +29,11 @@ class CardViewController: UIViewController {
         }
     }
     func setCollectionView() {
+        let horizonInset: CGFloat = self.view.frame.width * 0.08 //30
+        let lineSpacing: CGFloat = self.view.frame.width * 0.05 //20
+        
+        print("horizonInset: \(horizonInset), lineSpacing: \(lineSpacing)")
+        
         let collectionViewLayout: UICollectionViewFlowLayout = {
             let layout = CustomCVFL()
             let cellHeight = collectionView.frame.height
