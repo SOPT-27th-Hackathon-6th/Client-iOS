@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XSu-Ho-u7h">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,30 +14,30 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="o8U-YV-tnV" customClass="LoginViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3C-dc-Xli">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-UO-749">
-                                <rect key="frame" x="41" y="762" width="331" height="48"/>
+                                <rect key="frame" x="41" y="708" width="307" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Z0j-AZ-lQK"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z0j-AZ-lQK"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7oO-fU-odW">
-                                <rect key="frame" x="121" y="260" width="172" height="172"/>
+                                <rect key="frame" x="109" y="260" width="172" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="tbS-Z3-wAn"/>
                                     <constraint firstAttribute="width" constant="172" id="zyQ-SN-WDs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국밥과 마라에 진심인 당신.당신의 진심을 기록하고 공유하세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gH9-8T-CZt">
-                                <rect key="frame" x="-37.5" y="492" width="489" height="24"/>
+                                <rect key="frame" x="-49.333333333333343" y="492" width="488.66666666666674" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-gf-qQD">
-                                <rect key="frame" x="41" y="697" width="331" height="48"/>
+                                <rect key="frame" x="41" y="643" width="307" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="eBr-0z-Yav"/>
                                 </constraints>
@@ -99,11 +99,11 @@
             <objects>
                 <viewController storyboardIdentifier="SetUpViewController" id="gdq-pZ-rco" customClass="SetUpViewController" customModule="Sopt_27th_HACKATHON_6th" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vBn-WM-A8G">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요 회원님!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feL-QB-1Hp">
-                                <rect key="frame" x="20" y="197" width="179.5" height="29"/>
+                                <rect key="frame" x="20" y="197" width="179.66666666666666" height="29"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -115,12 +115,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTQ-Di-YJe">
-                                <rect key="frame" x="20" y="412" width="374" height="25.5"/>
+                                <rect key="frame" x="20" y="412" width="350" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7q-Oq-8oz">
-                                <rect key="frame" x="20" y="764" width="374" height="56"/>
+                                <rect key="frame" x="20" y="712" width="350" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="gxT-BV-GSa"/>
                                 </constraints>
@@ -154,14 +154,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzG-EN-84h">
-                                <rect key="frame" x="20" y="444.5" width="374" height="1"/>
+                                <rect key="frame" x="20" y="444.66666666666669" width="350" height="1"/>
                                 <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="1a4-sB-kdf"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2글자 이상 8글자 이하로 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-28-wxm">
-                                <rect key="frame" x="22" y="451.5" width="212" height="17"/>
+                                <rect key="frame" x="22" y="451.66666666666669" width="212" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -205,7 +205,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowBack" width="12.5" height="20"/>
+        <image name="arrowBack" width="12.666666984558105" height="20"/>
         <image name="btn_back" width="48" height="48"/>
         <image name="logo" width="134" height="131"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>

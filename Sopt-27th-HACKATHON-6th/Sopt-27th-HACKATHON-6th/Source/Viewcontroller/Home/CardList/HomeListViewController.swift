@@ -16,22 +16,25 @@ class HomeListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var foodLabel: UILabel!
     
-    
+    var type: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        defaultListSet()
+        defaultTopViewSet()
         print(self.tableView.contentOffset.y)
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        tableView.reloadData()
+//    }
     
     @IBAction func touchUpDismiss(_ sender: Any) {
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
-    func defaultListSet() {
+    func defaultTopViewSet() {
         topUIView.backgroundColor = .white
         countUIView.layer.cornerRadius = countUIView.frame.height * 0.1
         
@@ -43,6 +46,15 @@ class HomeListViewController: UIViewController {
         self.topUIView.layer.shadowRadius = 10
         self.topUIView.layer.shouldRasterize = true
         self.topUIView.layer.masksToBounds = true
+        
+        if type == "Mala" {
+            foodLabel.text = "마라 누적횟수"
+            countUIView.layer.backgroundColor = CGColor(red: 203/255, green: 65/255, blue: 30/255, alpha: 1.0)
+        }
+        else {
+            foodLabel.text = "국밥 누적횟수"
+            countUIView.layer.backgroundColor = CGColor(gray: 0/255, alpha: 1.0)
+        }
     }
 }
 extension HomeListViewController: UITableViewDataSource {
@@ -54,28 +66,54 @@ extension HomeListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeListTableViewCell.identifier) as? HomeListTableViewCell else {
             return UITableViewCell()
         }
-        getListService.shared.getMalaList() { (result) in
-            switch(result) {
-            case .success(let data):
-                if let ListModel = data as? ListModel {
-                    let url = URL(string: ListModel.imageLink)
-                    let data = try? Data(contentsOf: url!)
-                    cell.foodImageView.image = UIImage(data: data!)
-                    cell.storeNameLabel.text = ListModel.resName
-                    cell.dateLabel.text = ListModel.updatedAt
-                    cell.reviewLabel.text = ListModel.review
+        if type == "Mala" {
+            getStoreListService.shared.getMalaStoreList() { (result) in
+                switch(result) {
+                case .success(let data):
+                    if let storeListModel = data as? StoreListModel {
+                        let url = URL(string: storeListModel.imageLink)
+                        print(url)
+    //                    let data = try? Data(contentsOf: url!)
+    //                    cell.foodImageView.image = UIImage(data: data!)
+                        cell.storeNameLabel.text = storeListModel.resName
+                        cell.dateLabel.text = storeListModel.updatedAt
+                        cell.reviewLabel.text = storeListModel.review
+                    }
+                case .requestErr(_):
+                    print("error")
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
                 }
-            case .requestErr(_):
-                print("error")
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
             }
         }
-        
+        else {
+            getStoreListService.shared.getGukbapStoreList() { (result) in
+                switch(result) {
+                case .success(let data):
+                    if let storeListModel = data as? StoreListModel {
+                        let url = URL(string: storeListModel.imageLink)
+                        print(url)
+    //                    let data = try? Data(contentsOf: url!)
+    //                    cell.foodImageView.image = UIImage(data: data!)
+                        cell.storeNameLabel.text = storeListModel.resName
+                        cell.dateLabel.text = storeListModel.updatedAt
+                        cell.reviewLabel.text = storeListModel.review
+                    }
+                case .requestErr(_):
+                    print("error")
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                }
+            }
+        }
         return cell
     }
 }

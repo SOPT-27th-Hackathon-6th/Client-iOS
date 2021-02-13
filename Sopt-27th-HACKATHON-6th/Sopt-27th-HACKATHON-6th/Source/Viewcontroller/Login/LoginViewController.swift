@@ -12,6 +12,9 @@ import KakaoSDKUser
 
 class LoginViewController: UIViewController {
 
+    // snsId, provider
+    // 회원이면 바로 홈으로, 가입이면 닉네임으로 가는 분기처리하기
+    
     //MARK:- IBOutlet Part
     @IBOutlet var appleSignInButton: UIStackView!
     @IBOutlet var introLabel: UILabel!
@@ -19,7 +22,8 @@ class LoginViewController: UIViewController {
     
 
     //MARK:- Variable Part
-
+    var userIdentifier: String!
+    
     //MARK:- Constraint Part
     
 
@@ -45,12 +49,13 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
-                    // do something
+                    
                     _ = oauthToken
-                    // 어세스토큰
-                    let accessToken = oauthToken?.accessToken
+                    
+//                    let accessToken = oauthToken?.accessToken
                     
                     //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 닉네임 설정 뷰로 이동
+                    
                     self.moveToNickView()
                 }
             }
@@ -62,12 +67,11 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     print("loginWithKakaoAccount() success.")
-
+                    
                     //do something
                     _ = oauthToken
                     // 어세스토큰
-                    let accessToken = oauthToken?.accessToken
-                    
+//                    let accessToken = oauthToken?.accessToken
                     self.moveToNickView()
                 }
             }
@@ -87,9 +91,33 @@ class LoginViewController: UIViewController {
         guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
         self.navigationController?.pushViewController(setUpVC, animated: true)
     }
+    
     func moveToNickView() {
-        guard let nickVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-        self.navigationController?.pushViewController(nickVC, animated: true)
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("me() success.")
+                //do something
+                _ = user
+                
+                guard let nickVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {
+                    return
+                }
+                print("id: \(user?.id)")
+                
+                if let snsId = user?.id {
+                    nickVC.snsId = String(snsId)
+                }
+                nickVC.provider = "kakao"
+//                if let url = user?.kakaoAccount?.profile?.profileImageUrl,
+//                   let data = try? Data(contentsOf: url) {
+//                    self.profileImageView.image = UIImage(data: data)
+//                }
+                self.navigationController?.pushViewController(nickVC, animated: true)
+            }
+        }
     }
     func setAppleSignInButton() {
         
@@ -128,7 +156,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
                 
             // 계정 정보 가져오기
-            let userIdentifier = appleIDCredential.user
+            userIdentifier = appleIDCredential.user
             let fullName = appleIDCredential.fullName
             let email = appleIDCredential.email
                 
@@ -162,20 +190,17 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     }
     
     private func showResultViewController(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
-        guard let setUpVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-
+        guard let setUpVC = storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {
+            return
+        }
+        setUpVC.snsId = userIdentifier
+        setUpVC.provider = "apple"
         self.navigationController?.pushViewController(setUpVC, animated: true)
 
         DispatchQueue.main.async {
 //            viewController.userIdentifierLabel.text = userIdentifier
 //            if let givenName = fullName?.givenName {
 //                viewController.givenNameLabel.text = givenName
-//            }
-//            if let familyName = fullName?.familyName {
-//                viewController.familyNameLabel.text = familyName
-//            }
-//            if let email = email {
-//                viewController.emailLabel.text = email
 //            }
             self.dismiss(animated: true, completion: nil)
         }
@@ -193,5 +218,6 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     // Apple ID 연동 실패 시
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
+        print("apple id 연동 실패")
     }
 }
