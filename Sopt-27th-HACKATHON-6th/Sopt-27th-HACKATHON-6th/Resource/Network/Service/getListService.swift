@@ -42,7 +42,7 @@ struct getListService {
         switch statusCode {
             
         case 200...299: return getFoodList(by: json)
-        case 400...499: return .pathErr
+        case 400...499: return .pathErr("")
         case 500: return .serverErr
         default: return .networkFail
         }
@@ -74,7 +74,7 @@ struct getListService {
         switch statusCode {
             
         case 200...299: return getFoodList(by: json)
-        case 400...499: return .pathErr
+        case 400...499: return .pathErr("")
         case 500: return .serverErr
         default: return .networkFail
         }

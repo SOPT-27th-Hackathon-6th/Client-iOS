@@ -68,7 +68,7 @@ struct getStoreListService {
     private func judge(by statusCode: Int, _ json: JSON) -> NetworkResult<Any>  {
         switch statusCode {
         case 200...299: return getStore(by: json)
-        case 400...499: return .pathErr
+        case 400...499: return .pathErr("")
         case 500: return .serverErr
         default: return .networkFail
         }

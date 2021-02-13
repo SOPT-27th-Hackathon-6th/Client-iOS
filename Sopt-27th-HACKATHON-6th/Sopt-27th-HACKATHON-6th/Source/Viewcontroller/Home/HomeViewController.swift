@@ -191,55 +191,54 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         guard let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
         
         
-        guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "AddPhotoViewController") as? AddPhotoViewController else {return}
+        guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "HomeAddInfoViewController") as? HomeAddInfoViewController else {return}
+        
         
         if self.selectIndex == 0
         {
-            confirmVC.isMara = true
+            confirmVC.isMala = true
         }
         else
         {
-            confirmVC.isMara = false
+            confirmVC.isMala = false
         }
+        confirmVC.thumbnailImage = image
         
         confirmVC.modalPresentationStyle = .fullScreen
         
         
         dismiss(animated: true) {
+            self.present(confirmVC, animated: true, completion: nil)
             
-            var isMara = false
-            if self.selectIndex == 0
-            {
-                isMara = true
-            }
+
             
-            //할까말까 했을때는
-            //마라
-            AddStampService.shared.addStamp(isMara: isMara) { (result) in
-                switch(result)
-                {
-                case .success(_):
-                    
-                    if isMara == true
-                    {
-                        self.titleTopLabel.text = "오늘... 마라에 빠져버리고"
-                        self.titleBottomLabel.text = "마라탕"
-                        self.subtitleBottomLabel.text = ""
-                    }
-                    else
-                    {
-                        self.titleTopLabel.text = "뜨끈하고 든든한"
-                        self.titleBottomLabel.text = "국밥"
-                        self.subtitleBottomLabel.text = "을 먹어버렸다.."
-                    }
-
-                    
-                    self.present(confirmVC, animated: true, completion: nil)
-
-                default :
-                    makeAlert(title: "오류", message: "등록에 실패하였습니다", vc: self)
-                }
-            }
+//            //할까말까 했을때는
+//            //마라
+//            AddStampService.shared.addStamp(isMara: isMara) { (result) in
+//                switch(result)
+//                {
+//                case .success(_):
+//
+//                    if isMara == true
+//                    {
+//                        self.titleTopLabel.text = "오늘... 마라에 빠져버리고"
+//                        self.titleBottomLabel.text = "마라탕"
+//                        self.subtitleBottomLabel.text = ""
+//                    }
+//                    else
+//                    {
+//                        self.titleTopLabel.text = "뜨끈하고 든든한"
+//                        self.titleBottomLabel.text = "국밥"
+//                        self.subtitleBottomLabel.text = "을 먹어버렸다.."
+//                    }
+//
+//
+//                    self.present(confirmVC, animated: true, completion: nil)
+//
+//                default :
+//                    makeAlert(title: "오류", message: "등록에 실패하였습니다", vc: self)
+//                }
+//            }
             
             
             
@@ -257,32 +256,21 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
             {
             case .success(let count):
                 self.maraCount = count as? Int ?? 0
-                print("마라 개수 갱신",self.maraCount)
+                print("마라 카운트",self.maraCount)
+                self.currentPageController.numberOfPages = (self.maraCount / 12) + 1
+                self.maraSelect()
+
+             
+                
+       
+                
+                
                 NotificationCenter.default.post(name: NSNotification.Name("showMaraCount"), object: self.gukbabCount)
                 self.stampCollectionView.reloadData()
                 
                 
-//                if self.maraCount % 3 == 0
-//                {
-//
-//
-//
-//                        let alert = UIAlertController(title: "Level up!", message: "마라 레벨이 올랐습니다. 마이페이지에서 확인해보세요", preferredStyle: .alert)
-//                        let ok = UIAlertAction(title: "확인하러 가기", style: .default) { (_) in
-//
-//                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "levelUP"), object: nil)
-//                        }
-//                        alert.addAction(ok)
-//                        self.present(alert, animated: true, completion: nil)
-//
-//
-//
-//
-//                }
-//                else
-//                {
-//                }
-//
+
+
                 
             default:
                 makeAlert(title: "알림", message: "개수 정보를 가져오는데 실패하였습니다", vc: self)
@@ -298,6 +286,10 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
             {
             case .success(let count):
                 self.gukbabCount = count as? Int ?? 0
+                print("국밥 카운트",self.gukbabCount)
+                self.currentPageController.numberOfPages = (self.gukbabCount / 12) + 1
+               
+              
             
                 NotificationCenter.default.post(name: NSNotification.Name("showGukbabCount"), object: self.gukbabCount)
                 
@@ -312,9 +304,17 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     func maraSelect()
     {
         
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "maraClicked"), object: nil)
         
         selectIndex = 0
+        
+        stampCollectionView.scrollToItem(at: IndexPath(index: 0), at: .left, animated: false)
+        currentPageController.currentPage = 0
+        currentPageController.currentPageIndicatorTintColor = .malaColor
+        self.currentPageController.numberOfPages = (self.maraCount / 12) + 1
         
         self.titleTopLabel.text = "이번달 마라 먹은지"
         self.titleBottomLabel.text = "벌써 4일"
@@ -328,14 +328,25 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
            
            gukbabLabel.textColor = .init(red: 97/255, green: 97/255, blue: 97/255, alpha: 1)
            gukbabLabel.font = UIFont.systemFont(ofSize: 16)
+        
+        stampCollectionView.reloadData()
            
     }
     
     func gukbabSelect()
     {
         
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
+        
+        stampCollectionView.scrollToItem(at: IndexPath(index: 0), at: .left, animated: false)
+        currentPageController.currentPage = 0
+        currentPageController.currentPageIndicatorTintColor = .gukbabColor
+        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "gukbabClicked"), object: nil)
 
+        self.currentPageController.numberOfPages = (self.gukbabCount / 12) + 1
         selectIndex = 1
         
         
@@ -355,6 +366,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         gukbabLabel.textColor = .init(red: 111/255, green: 79/255, blue: 40/255, alpha: 1)
         
         gukbabLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(700))
+        
+        stampCollectionView.reloadData()
     }
 
 
@@ -381,7 +394,15 @@ extension HomeViewController : UICollectionViewDataSource
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        
+        if selectIndex == 0
+        {
+            return maraCount/12 + 1
+        }
+        else
+        {
+            return gukbabCount/12 + 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

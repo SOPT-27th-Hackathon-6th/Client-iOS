@@ -42,7 +42,7 @@ struct getLevelService {
             switch statusCode {
                 
             case 200...299: return getLevel(by: json)
-            case 400...499: return .pathErr
+            case 400...499: return .pathErr("")
             case 500: return .serverErr
             default: return .networkFail
             }
