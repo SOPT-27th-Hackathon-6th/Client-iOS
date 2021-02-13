@@ -26,6 +26,7 @@
 		6BB3B5C42590D35000FF0A12 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */; };
 		6BE1512B259769E100BBD3F1 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512A259769E100BBD3F1 /* ListModel.swift */; };
 		6BE1512E25983DC800BBD3F1 /* getListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512D25983DC800BBD3F1 /* getListService.swift */; };
+		6BE932BB25D7B2DA009BE2DE /* CustomCVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DC2569744A00C8207E /* GradeDataModel.swift */; };
@@ -82,6 +83,7 @@
 		6BB3B5C32590D35000FF0A12 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		6BE1512A259769E100BBD3F1 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		6BE1512D25983DC800BBD3F1 /* getListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getListService.swift; sourceTree = "<group>"; };
+		6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCVFL.swift; sourceTree = "<group>"; };
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				6B6146FE258DA1F600CD8E65 /* CardViewController.swift */,
 				6B614707258DD6DA00CD8E65 /* HomeListViewController.swift */,
 				6B8C68E7259482900077CC2C /* CardTestViewController.swift */,
+				6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */,
 			);
 			path = CardList;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				FDB4D0FE256945A100931E12 /* StampPageCell.swift in Sources */,
 				FDB4D0EC256939B200931E12 /* RankingViewController.swift in Sources */,
 				D1E1FE4825D64F1500A6756F /* getUserInfoService.swift in Sources */,
+				6BE932BB25D7B2DA009BE2DE /* CustomCVFL.swift in Sources */,
 				6B8C68E8259482900077CC2C /* CardTestViewController.swift in Sources */,
 				D16B30E325699A2800C8207E /* calculateLevel.swift in Sources */,
 				FDB4D0E6256939A400931E12 /* TabBarViewController.swift in Sources */,
