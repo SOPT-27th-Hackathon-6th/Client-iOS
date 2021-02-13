@@ -28,25 +28,25 @@ class CardViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
-    
-//    @IBAction func touchUpList(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "HomeList", bundle: nil)
-//        if let nextVC = storyboard.instantiateViewController (identifier: "HomeListViewController") as? HomeListViewController {
-////            self.modalPresentationStyle = .overCurrentContext
-//            nextVC.type = self.type
-//            self.present(nextVC, animated: true, completion: nil)
-//
-//        }
-//
-//    }
-    
     func register() {
         collectionView.dataSource = self
         collectionView.delegate = self
         
         let cardCVNib = UINib(nibName: "CardCollectionViewCell", bundle: nil)
         collectionView.register(cardCVNib, forCellWithReuseIdentifier: "CardCollectionViewCell")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(touchUpListTap(_:)), name: Notification.Name("touchUpList"), object: nil)
+    }
+    
+    @objc func touchUpListTap(_ noti: NSNotification) {
+        let storyboard = UIStoryboard(name: "HomeList", bundle: nil)
+        if let nextVC = storyboard.instantiateViewController (identifier: "HomeListViewController") as? HomeListViewController {
+//            nextVC.type = self.type
+            let getType = noti.object as! String
+            nextVC.type = getType
+            self.present(nextVC, animated: true, completion: nil)
+
+        }
     }
 
 }
@@ -59,8 +59,12 @@ extension CardViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setCell()
-        cell.setItem(store: "신룽푸마라탕", date: "2020.10.24", review: "신룽푸는 소세지가 존맛인관계로 최소 8개는 넣어야한다 그게진리다신룽푸는 소세지가 존맛인관계로 최소 8개는 넣어야한다 그게진리다")
+        cell.type = self.type
+        if type == "Mala" {
+            cell.setItem(store: "신룽푸마라탕", date: "2020.10.24", review: "신룽푸는 소세지가 존맛인관계로 최소 8개는 넣어야한다 그게진리다신룽푸는 소세지가 존맛인관계로 최소 8개는 넣어야한다 그게진리다")
+        } else {
+            cell.setItem(store: "국밥국밥", date: "2020.10.24", review: "국밥 웅앵 국밥 웅앵 국밥 웅앵 국밥 웅앵 국밥 웅앵 국밥 웅앵")
+        }
         return cell
     }
     
@@ -69,7 +73,7 @@ extension CardViewController: UICollectionViewDataSource {
 extension CardViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellHeight = collectionView.frame.height
-        let cellWidth = (collectionView.frame.width - horizonInset - horizonInset)
+        let cellWidth = collectionView.frame.width - (2 * horizonInset)
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
