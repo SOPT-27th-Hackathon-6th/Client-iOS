@@ -26,8 +26,8 @@ class CustomCVFL: UICollectionViewFlowLayout {
             currentPage = min(currentPage + 1, itemsCount - 1)
         }
         
-        // Update offset by using item size + spacing
-        let updatedOffset = (itemSize.width + minimumInteritemSpacing) * CGFloat(currentPage)
+        // Update offset by using item size + spacing // minimumInteritemSpacing
+        let updatedOffset = (itemSize.width + minimumLineSpacing) * CGFloat(currentPage)
         previousOffset = updatedOffset
         
         return CGPoint(x: updatedOffset, y: proposedContentOffset.y)
