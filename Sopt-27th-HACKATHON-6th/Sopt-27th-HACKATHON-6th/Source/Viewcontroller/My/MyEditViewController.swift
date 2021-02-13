@@ -33,7 +33,7 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     
     private let maxLength = 8
     var beforeNickname = ""
-    var beforeProfileImage = ""
+    var beforeProfileImage = UIImage(named: "logo")
     
     
     //MARK:- Constraint Part
@@ -65,8 +65,9 @@ class MyEditViewController: UIViewController, UITextFieldDelegate {
     /// ex) @IBAction func answerSelectedButtonClicked(_ sender: Any) {  code .... }
     
     @IBAction func editFinishBtn(_ sender: Any) {
-        
-        putUserInfoService.shared.putUserInfo(self.nicknameTF.text!, beforeProfileImage) { (result) in
+        let nickName = self.nicknameTF.text!
+        let profileImg = self.beforeProfileImage
+        putUserInfoService.shared.putUserInfo(nickName, profileImg!) { (result) in
             switch(result) {
             case .success(let data):
                 print(data)
