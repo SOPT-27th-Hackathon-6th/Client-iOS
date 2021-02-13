@@ -22,7 +22,7 @@ class SetUpViewController: UIViewController {
         delegateSetting()
         defaultSetting()
         disableSignupButton()
-        
+        print(snsId, provider)
     }
     
     //MARK:- IBAction Part
