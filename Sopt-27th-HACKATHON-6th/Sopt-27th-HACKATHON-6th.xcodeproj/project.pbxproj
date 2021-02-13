@@ -10,6 +10,8 @@
 		1E8D9BA661F9C0A67416829D /* Pods_Sopt_27th_HACKATHON_6th.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4F2B165C97A5EC1421C093 /* Pods_Sopt_27th_HACKATHON_6th.framework */; };
 		6B0E75A625D68E6A00BB35BB /* StoreListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E75A525D68E6A00BB35BB /* StoreListModel.swift */; };
 		6B0E75A925D68F3C00BB35BB /* getStoreListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E75A825D68F3C00BB35BB /* getStoreListService.swift */; };
+		6B0E75AE25D7889600BB35BB /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E75AC25D7889600BB35BB /* CardCollectionViewCell.swift */; };
+		6B0E75AF25D7889600BB35BB /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0E75AD25D7889600BB35BB /* CardCollectionViewCell.xib */; };
 		6B6146FF258DA1F600CD8E65 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6146FE258DA1F600CD8E65 /* CardViewController.swift */; };
 		6B614702258DCA8400CD8E65 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B614701258DCA8400CD8E65 /* Card.storyboard */; };
 		6B614705258DD6C900CD8E65 /* HomeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B614704258DD6C900CD8E65 /* HomeList.storyboard */; };
@@ -63,6 +65,8 @@
 /* Begin PBXFileReference section */
 		6B0E75A525D68E6A00BB35BB /* StoreListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListModel.swift; sourceTree = "<group>"; };
 		6B0E75A825D68F3C00BB35BB /* getStoreListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreListService.swift; sourceTree = "<group>"; };
+		6B0E75AC25D7889600BB35BB /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B0E75AD25D7889600BB35BB /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		6B6146FE258DA1F600CD8E65 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		6B614701258DCA8400CD8E65 /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
 		6B614704258DD6C900CD8E65 /* HomeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeList.storyboard; sourceTree = "<group>"; };
@@ -351,6 +355,8 @@
 				FDB4D101256945B100931E12 /* StampCell.swift */,
 				6B61470B258DEE5A00CD8E65 /* HomeListTableViewCell.swift */,
 				6B61470C258DEE5A00CD8E65 /* HomeListTableViewCell.xib */,
+				6B0E75AC25D7889600BB35BB /* CardCollectionViewCell.swift */,
+				6B0E75AD25D7889600BB35BB /* CardCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				FDB4D0C0256937D500931E12 /* Assets.xcassets in Resources */,
 				FDB4D0BE256937D300931E12 /* Main.storyboard in Resources */,
 				FDB4D0E02569394C00931E12 /* Home.storyboard in Resources */,
+				6B0E75AF25D7889600BB35BB /* CardCollectionViewCell.xib in Resources */,
 				6B614705258DD6C900CD8E65 /* HomeList.storyboard in Resources */,
 				6B61470E258DEE5A00CD8E65 /* HomeListTableViewCell.xib in Resources */,
 				D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */,
@@ -509,6 +516,7 @@
 				D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */,
 				FDB4D0B7256937D300931E12 /* AppDelegate.swift in Sources */,
 				6BE1512E25983DC800BBD3F1 /* getListService.swift in Sources */,
+				6B0E75AE25D7889600BB35BB /* CardCollectionViewCell.swift in Sources */,
 				FDB4D0F925693BBD00931E12 /* calculateTime.swift in Sources */,
 				FDB4D11325695B8300931E12 /* AddStampService.swift in Sources */,
 				FD3C3651258BDDF700D1664B /* LoginViewController.swift in Sources */,
