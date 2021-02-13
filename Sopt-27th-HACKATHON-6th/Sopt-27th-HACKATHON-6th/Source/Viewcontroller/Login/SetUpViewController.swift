@@ -9,10 +9,13 @@ import UIKit
 
 class SetUpViewController: UIViewController {
 
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var nicknameTF: UITextField!
-    @IBOutlet var enterBtn: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nicknameTF: UITextField!
+    @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var warningLabel: UILabel!
+    
+    var snsId: String!
+    var provider: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +37,33 @@ class SetUpViewController: UIViewController {
     
     
     @IBAction func TouchUpHome(_ sender: UIButton) {
-        
-        
-        
         // 등록 성공했을 때에만 통신을 해야 함 .
         
+        guard let nickName = nicknameTF.text else {
+            return
+        }
+        postSignInUpService.shared.signUp(nickName: nickName, snsId: snsId, provider: provider) { (networkResult) in
+            switch networkResult {
+            case .success(let data):
+                print("회원가입 성공")
+                let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+                
+                guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
+        //        homeVC.nickName = nicknameTF.text
+                self.navigationController?.pushViewController(homeVC, animated: true)
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print("회원가입 실패 \(message)")
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
         
-        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        
-        guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
-//        homeVC.nickName = nicknameTF.text
-        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     
