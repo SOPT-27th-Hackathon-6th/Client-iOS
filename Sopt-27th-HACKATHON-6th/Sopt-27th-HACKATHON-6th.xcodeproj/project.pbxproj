@@ -27,6 +27,7 @@
 		6BE1512B259769E100BBD3F1 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512A259769E100BBD3F1 /* ListModel.swift */; };
 		6BE1512E25983DC800BBD3F1 /* getListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512D25983DC800BBD3F1 /* getListService.swift */; };
 		6BE932BB25D7B2DA009BE2DE /* CustomCVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */; };
+		6BE932BE25D7E5F2009BE2DE /* postSignInUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE932BD25D7E5F2009BE2DE /* postSignInUpService.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DC2569744A00C8207E /* GradeDataModel.swift */; };
@@ -84,6 +85,7 @@
 		6BE1512A259769E100BBD3F1 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		6BE1512D25983DC800BBD3F1 /* getListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getListService.swift; sourceTree = "<group>"; };
 		6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCVFL.swift; sourceTree = "<group>"; };
+		6BE932BD25D7E5F2009BE2DE /* postSignInUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postSignInUpService.swift; sourceTree = "<group>"; };
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				D1E1FE4725D64F1500A6756F /* getUserInfoService.swift */,
 				D1E1FE4D25D65ECF00A6756F /* putUserInfoService.swift */,
 				6B0E75A825D68F3C00BB35BB /* getStoreListService.swift */,
+				6BE932BD25D7E5F2009BE2DE /* postSignInUpService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				D16B30E325699A2800C8207E /* calculateLevel.swift in Sources */,
 				FDB4D0E6256939A400931E12 /* TabBarViewController.swift in Sources */,
 				FDB4D0B9256937D300931E12 /* SceneDelegate.swift in Sources */,
+				6BE932BE25D7E5F2009BE2DE /* postSignInUpService.swift in Sources */,
 				FDB4D0EF256939B800931E12 /* MyViewController.swift in Sources */,
 				6BE1512B259769E100BBD3F1 /* ListModel.swift in Sources */,
 				D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */,

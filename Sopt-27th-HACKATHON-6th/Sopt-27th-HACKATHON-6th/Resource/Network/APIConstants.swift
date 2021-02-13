@@ -16,8 +16,10 @@ struct APIConstants
     
     // ex) static let checkServerURL = APIConstants.baseURL + "/version"
     
+    // 회원가입 로그인 뷰
     
-    
+    static let signUpURL = APIConstants.baseURL + "/auth/signup"
+    static let signInURL = APIConstants.baseURL + "/auth/signin"
     
     // 홈 뷰
     
