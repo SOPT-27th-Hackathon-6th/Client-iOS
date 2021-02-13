@@ -21,11 +21,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    func setCell() {
         cardView.layer.cornerRadius = 15
+        // Initialization code
     }
     
     // 이미지는 나중에
@@ -35,13 +32,8 @@ class CardCollectionViewCell: UICollectionViewCell {
         reviewLabel.text = review
     }
     
-//    @IBAction func touchUpList(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "HomeList", bundle: nil)
-//        if let nextVC = storyboard.instantiateViewController (identifier: "HomeListViewController") as? HomeListViewController {
-//            nextVC.type = self.type
-//            self.present(nextVC, animated: true, completion: nil)
-//
-//        }
-//
-//    }
+    @IBAction func touchUpList(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name("touchUpList"),
+                                        object: type)
+    }
 }

@@ -22,7 +22,7 @@ class HomeListViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        defaultListSet()
+        defaultTopViewSet()
         print(self.tableView.contentOffset.y)
     }
     
@@ -34,7 +34,7 @@ class HomeListViewController: UIViewController {
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
-    func defaultListSet() {
+    func defaultTopViewSet() {
         topUIView.backgroundColor = .white
         countUIView.layer.cornerRadius = countUIView.frame.height * 0.1
         
@@ -46,6 +46,15 @@ class HomeListViewController: UIViewController {
         self.topUIView.layer.shadowRadius = 10
         self.topUIView.layer.shouldRasterize = true
         self.topUIView.layer.masksToBounds = true
+        
+        if type == "Mala" {
+            foodLabel.text = "마라 누적횟수"
+            countUIView.layer.backgroundColor = CGColor(red: 203/255, green: 65/255, blue: 30/255, alpha: 1.0)
+        }
+        else {
+            foodLabel.text = "국밥 누적횟수"
+            countUIView.layer.backgroundColor = CGColor(gray: 0/255, alpha: 1.0)
+        }
     }
 }
 extension HomeListViewController: UITableViewDataSource {
