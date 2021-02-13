@@ -16,6 +16,9 @@ PODS:
     - Kingfisher/Core (= 5.15.7)
   - Kingfisher/Core (5.15.7)
   - lottie-ios (3.1.9)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
@@ -27,6 +30,7 @@ DEPENDENCIES:
   - KakaoSDKUser
   - Kingfisher (~> 5.0)
   - lottie-ios
+  - NVActivityIndicatorView
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -39,6 +43,7 @@ SPEC REPOS:
     - KakaoSDKUser
     - Kingfisher
     - lottie-ios
+    - NVActivityIndicatorView
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -50,8 +55,9 @@ SPEC CHECKSUMS:
   KakaoSDKUser: 7951e09f9e6de3908ae2d7f8486290c8607c217a
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 095d5d5f96e2b38d8baa4b2d64f38fce59fe888e
+PODFILE CHECKSUM: 48994cdfd04fda3ff7d79c3d0efb98f511e6b9ea
 
 COCOAPODS: 1.10.0

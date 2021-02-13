@@ -13,62 +13,81 @@ import Foundation
 
 struct AddStampService {
     static let shared = AddStampService()
-    
-    private func makeParameter() -> Parameters {
+    private func makeParameter(_ title : String,_ content: String) -> Parameters {
         return [
-                "isStamp": 1
+                    "resName": title,
+                    "review": content
                 ]
     }
+
     
-
-
-    func addStamp(isMara : Bool, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        var stampURL = ""
-        if isMara == true
-        {
-            stampURL = APIConstants.maraStampURL
-        }
-        else
-        {
-            stampURL = APIConstants.gukbabStampURL
-        }
-            
-            
 
+    func write(isMala: Bool ,title: String,content: String,photo : UIImage, completion: @escaping (NetworkResult<Any>) -> Void)
+    {
+            
+//            guard let userToken = UserDefaults.standard.string(forKey: "token") else {return}
+        
+        let tempToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyNCwiaWF0IjoxNjEzMTI4NTM5LCJleHAiOjE2MTQ5NDI5MzksImlzcyI6Imd1a2JhYk1hbGEifQ.A9gk9vww5izrLzjkJcGdgiqvdT-yyHQQkM_q4tEKGzo"
 
-            
-            
-            
-            let dataRequest = AF.request(stampURL, method  : .post,
-                parameters: makeParameter(),
-                
-                 encoding:
-                JSONEncoding.default)
-            
-            
-            
-            dataRequest.responseData { dataResponse in
-                switch dataResponse.result {
-                case .success:
-                    
-                    guard let statusCode = dataResponse.response?.statusCode else { return }
-                    
-
-                    let networkResult = self.judge(by: statusCode)
-                    completion(networkResult)
-                    
-                case .failure: completion(.networkFail)
-                }
+            let header: HTTPHeaders = ["content-Type": "multipart/form-data",
+                                       "token" : tempToken]
+        
+        var articleURL : String = ""
+        
+        if isMala { articleURL = APIConstants.baseURL + "/mala"}
+        else { articleURL = APIConstants.baseURL + "/rice"}
+        
+        AF.upload(multipartFormData: { multipartFormData in
+         
+            print("URLURL",articleURL)
+            if let imageData = photo.jpegData(compressionQuality: 1){
+                multipartFormData.append(imageData, withName: "imageLink",fileName: ".jpeg",mimeType: "image/jpeg")
             }
+
+            for (key, value) in self.makeParameter(title, content)
+            {
+                multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+            }
+            
+        },  to: articleURL ,usingThreshold:  UInt64.init(), method: .post,
+        headers: header).response{ response in
+            
+            switch(response.result)
+            {
+    
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
+                
+                let json = JSON(value)
+                
+                
+                dump(response)
+                print("hello",json)
+                
+                let networkResult = self.judge(by: statusCode, json)
+                completion(networkResult)
+            case .failure:
+                
+                dump(response)
+                completion(.networkFail)
+            
+            
         }
+    
+            
+            
+        }
+    
+   
+    }
         
-        
-        private func judge(by statusCode: Int) -> NetworkResult<Any>  {
+        private func judge(by statusCode: Int, _ json: JSON) -> NetworkResult<Any>  {
             switch statusCode {
                 
             case 200...299: return .success("1")
-            case 400...499: return .pathErr
+            case 400...499: return .pathErr(json["message"].stringValue)
             case 500: return .serverErr
             default: return .networkFail
             }
