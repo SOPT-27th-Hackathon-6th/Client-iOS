@@ -172,9 +172,22 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
         gukbabLabel.text = "국밥"
         
         maraSelect()
+        NotificationCenter.default.addObserver(self, selector: #selector(touchUpStamp(_:)), name: Notification.Name("tappedStamp"), object: nil)
             
     }
     
+    @objc func touchUpStamp(_ noti: NSNotification) {
+        let storyboard = UIStoryboard(name: "Card", bundle: nil)
+        if let nextVC = storyboard.instantiateViewController (identifier: "CardViewController") as? CardViewController {
+            nextVC.modalPresentationStyle = .overCurrentContext
+            nextVC.modalTransitionStyle = .crossDissolve
+            nextVC.view.backgroundColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+            let getType = noti.object as! String
+            nextVC.type = getType
+            print("touchUpStamp - \(getType)")
+            self.present(nextVC, animated: true, completion: nil)
+        }
+    }
 
 
     //MARK:- Function Part
@@ -260,17 +273,8 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
                 self.currentPageController.numberOfPages = (self.maraCount / 12) + 1
                 self.maraSelect()
 
-             
-                
-       
-                
-                
                 NotificationCenter.default.post(name: NSNotification.Name("showMaraCount"), object: self.gukbabCount)
                 self.stampCollectionView.reloadData()
-                
-                
-
-
                 
             default:
                 makeAlert(title: "알림", message: "개수 정보를 가져오는데 실패하였습니다", vc: self)

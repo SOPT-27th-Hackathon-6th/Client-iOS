@@ -28,7 +28,8 @@ class StampPageCell: UICollectionViewCell {
     
     var pageNum : Int = 0
     var isMara : Bool = true
-    
+    var isFilled : Bool = true
+ 
     
     var maraCount : Int = 0
     var gukbabCount : Int = 0
@@ -100,6 +101,7 @@ class StampPageCell: UICollectionViewCell {
         gukbabCount = noti.object as? Int ?? 0
         stampPageCollectionView.reloadData()
     }
+
     func pageNum(num : Int)
     {
         self.pageNum = num
@@ -127,7 +129,18 @@ class StampPageCell: UICollectionViewCell {
 
 extension StampPageCell : UICollectionViewDelegate
 {
-    
+//    isMara
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("도장 하나 누름 \(indexPath.row), \(isFilled)")
+        
+//        rejectId = cancelData[indexPath.row].rejectReasonID!
+//        cafeId = cancelData[indexPath.row].id
+        if isMara == true {
+            NotificationCenter.default.post(name: Notification.Name("tappedStamp"), object: "Mala")
+        } else {
+            NotificationCenter.default.post(name: Notification.Name("tappedStamp"), object: "Gukbap")
+        }
+    }
 }
 
 extension StampPageCell : UICollectionViewDataSource
@@ -149,11 +162,13 @@ extension StampPageCell : UICollectionViewDataSource
             if index <= maraCount
             {
                 stampCell.settingCell(isMara: isMara, count: index,isFilled: true)
+                isFilled = true
                 
             }
             else
             {
                 stampCell.settingCell(isMara: isMara, count: index,isFilled: false)
+                isFilled = false
             }
         }
         else
@@ -161,10 +176,12 @@ extension StampPageCell : UICollectionViewDataSource
             if index <= gukbabCount
             {
                 stampCell.settingCell(isMara: isMara, count: index,isFilled: true)
+                isFilled = true
             }
             else
             {
                 stampCell.settingCell(isMara: isMara, count: index,isFilled: false)
+                isFilled = false
             }
         }
 
@@ -197,3 +214,4 @@ extension StampPageCell : UICollectionViewDelegateFlowLayout
         return 0
     }
 }
+

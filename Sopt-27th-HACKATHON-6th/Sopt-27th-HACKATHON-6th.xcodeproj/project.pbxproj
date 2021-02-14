@@ -28,18 +28,19 @@
 		6BE1512E25983DC800BBD3F1 /* getListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1512D25983DC800BBD3F1 /* getListService.swift */; };
 		6BE932BB25D7B2DA009BE2DE /* CustomCVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */; };
 		6BE932BE25D7E5F2009BE2DE /* postSignInUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE932BD25D7E5F2009BE2DE /* postSignInUpService.swift */; };
+		6BE932E725D8F7E7009BE2DE /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE932E625D8F7E7009BE2DE /* SplashVC.swift */; };
 		D16B30BD2569428200C8207E /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30BB2569428200C8207E /* RankingTableViewCell.swift */; };
 		D16B30BE2569428200C8207E /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16B30BC2569428200C8207E /* RankingTableViewCell.xib */; };
 		D16B30DD2569744A00C8207E /* GradeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DC2569744A00C8207E /* GradeDataModel.swift */; };
 		D16B30E02569769600C8207E /* RankingDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30DF2569769600C8207E /* RankingDummyData.swift */; };
 		D16B30E325699A2800C8207E /* calculateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B30E225699A2800C8207E /* calculateLevel.swift */; };
 		D1CBAB18258FAA740018E524 /* MyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CBAB17258FAA740018E524 /* MyEditViewController.swift */; };
-		FD0364DB25D6938D0019F96C /* HomeAddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0364DA25D6938D0019F96C /* HomeAddInfoViewController.swift */; };
-		FD0364DE25D6939C0019F96C /* HomeShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0364DD25D6939C0019F96C /* HomeShareViewController.swift */; };
-		FD0364E125D7ACE20019F96C /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0364E025D7ACE20019F96C /* ImageFileManager.swift */; };
 		D1E1FE4825D64F1500A6756F /* getUserInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1FE4725D64F1500A6756F /* getUserInfoService.swift */; };
 		D1E1FE4B25D6540600A6756F /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1FE4A25D6540600A6756F /* UserInfoModel.swift */; };
 		D1E1FE4E25D65ECF00A6756F /* putUserInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1FE4D25D65ECF00A6756F /* putUserInfoService.swift */; };
+		FD0364DB25D6938D0019F96C /* HomeAddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0364DA25D6938D0019F96C /* HomeAddInfoViewController.swift */; };
+		FD0364DE25D6939C0019F96C /* HomeShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0364DD25D6939C0019F96C /* HomeShareViewController.swift */; };
+		FD0364E125D7ACE20019F96C /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0364E025D7ACE20019F96C /* ImageFileManager.swift */; };
 		FD3C3651258BDDF700D1664B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C3650258BDDF700D1664B /* LoginViewController.swift */; };
 		FD3C3659258BDFCF00D1664B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C3658258BDFCF00D1664B /* MyProfileViewController.swift */; };
 		FD4DA0AE25D5A5930013CBDB /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4DA0AD25D5A5930013CBDB /* UIColor + Extension.swift */; };
@@ -90,6 +91,7 @@
 		6BE1512D25983DC800BBD3F1 /* getListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getListService.swift; sourceTree = "<group>"; };
 		6BE932BA25D7B2DA009BE2DE /* CustomCVFL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCVFL.swift; sourceTree = "<group>"; };
 		6BE932BD25D7E5F2009BE2DE /* postSignInUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postSignInUpService.swift; sourceTree = "<group>"; };
+		6BE932E625D8F7E7009BE2DE /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		B6C519C92400A3519835CA3F /* Pods-Sopt-27th-HACKATHON-6th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; path = "Target Support Files/Pods-Sopt-27th-HACKATHON-6th/Pods-Sopt-27th-HACKATHON-6th.release.xcconfig"; sourceTree = "<group>"; };
 		D16B30BB2569428200C8207E /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		D16B30BC2569428200C8207E /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 		FDB4D0CE2569380700931E12 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				6BE932E625D8F7E7009BE2DE /* SplashVC.swift */,
 				FD3C364F258BDDE100D1664B /* Login */,
 				FDB4D0E5256939A400931E12 /* TabBarViewController.swift */,
 				FDB4D0BA256937D300931E12 /* ViewController.swift */,
@@ -544,6 +547,7 @@
 				FD3C3651258BDDF700D1664B /* LoginViewController.swift in Sources */,
 				6BB3B5C12590D00300FF0A12 /* KeychainItem.swift in Sources */,
 				FDB4D0FE256945A100931E12 /* StampPageCell.swift in Sources */,
+				6BE932E725D8F7E7009BE2DE /* SplashVC.swift in Sources */,
 				FDB4D0EC256939B200931E12 /* RankingViewController.swift in Sources */,
 				D1E1FE4825D64F1500A6756F /* getUserInfoService.swift in Sources */,
 				6BE932BB25D7B2DA009BE2DE /* CustomCVFL.swift in Sources */,

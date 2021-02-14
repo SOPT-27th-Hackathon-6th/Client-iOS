@@ -62,15 +62,11 @@ class StampCell: UICollectionViewCell {
                 {
                     plateImageView.image = UIImage(named: "malaStampUnstamped")
                 }
-                
-                
-                
-
 
         }
         else // 국밥의 경우
         {
-                
+               
                 if isFilled == true
                 {
                     plateImageView.image = UIImage(named: "gukbabStampStamped")
