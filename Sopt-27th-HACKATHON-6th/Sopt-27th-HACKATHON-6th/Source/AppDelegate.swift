@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch credentialState {
             case .authorized:
                 // The Apple ID credential is valid.
-                print("해당 ID는 연동되어있습니다.")
+                print("해당 ID는 연동되어있습니다. \(KeychainItem.currentUserIdentifier)")
             case .revoked:
                 // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
                 print("해당 ID는 연동되어있지않습니다.")

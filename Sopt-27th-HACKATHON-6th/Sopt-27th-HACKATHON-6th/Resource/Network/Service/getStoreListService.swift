@@ -16,7 +16,7 @@ struct getStoreListService {
     func getMalaStoreList(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         // 임시 토큰 값
-        let header : HTTPHeaders = ["token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyNCwiaWF0IjoxNjEzMTA5NzkzLCJleHAiOjE2MTMxMTMzOTMsImlzcyI6Imd1a2JhYk1hbGEifQ.C8eb1cmmUFzjdSase2vu9QFkUEkzkczx7dlYmFx3Rhk"]
+        let header : HTTPHeaders = ["token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyNCwiaWF0IjoxNjEzMTI4NTM5LCJleHAiOjE2MTQ5NDI5MzksImlzcyI6Imd1a2JhYk1hbGEifQ.A9gk9vww5izrLzjkJcGdgiqvdT-yyHQQkM_q4tEKGzo"]
         
         let url = APIConstants.maraStampURL
             
@@ -42,7 +42,7 @@ struct getStoreListService {
     func getGukbapStoreList(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         // 임시 토큰 값
-        let header : HTTPHeaders = ["token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyNCwiaWF0IjoxNjEzMTA5NzkzLCJleHAiOjE2MTMxMTMzOTMsImlzcyI6Imd1a2JhYk1hbGEifQ.C8eb1cmmUFzjdSase2vu9QFkUEkzkczx7dlYmFx3Rhk"]
+        let header : HTTPHeaders = ["token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoyNCwiaWF0IjoxNjEzMTI4NTM5LCJleHAiOjE2MTQ5NDI5MzksImlzcyI6Imd1a2JhYk1hbGEifQ.A9gk9vww5izrLzjkJcGdgiqvdT-yyHQQkM_q4tEKGzo"]
 
         let url = APIConstants.gukbabStampURL
             
