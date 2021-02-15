@@ -87,11 +87,6 @@ class LoginViewController: UIViewController {
     }
 
     //MARK:- Function Part
-    func showLoginViewController() {
-        guard let setUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SetUpViewController") as? SetUpViewController else {return}
-        self.navigationController?.pushViewController(setUpVC, animated: true)
-    }
-    
     func moveToNickView() {
         UserApi.shared.me() {(user, error) in
             if let error = error {
@@ -183,7 +178,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     }
     private func saveUserInKeychain(_ userIdentifier: String) {
         do {
-            try KeychainItem(service: "com.example.apple-samplecode.juice", account: "userIdentifier").saveItem(userIdentifier)
+            try KeychainItem(service: "sopt.gukbabmara.releases", account: "userIdentifier").saveItem(userIdentifier)
         } catch {
             print("Unable to save userIdentifier to keychain.")
         }
